@@ -5,6 +5,7 @@ Projet 7 du parcours OpenClassrooms "Développeur Java EE" : Développer le nouv
 ## Contenu 
 
 Le dossier **Conception** comprend les différents diagrammes de l'architecture de l'application :
+
 *(Le fichier .mdj contient les diagrammes et à été créé via StarUML)*
 
 * Le ***diagramme de package***, qui décrit le découpage de l'application
