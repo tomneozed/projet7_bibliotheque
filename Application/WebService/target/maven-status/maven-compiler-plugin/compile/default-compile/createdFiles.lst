@@ -1,0 +1,7 @@
+com\bibliothek\pojo\OuvrageBibliotheque.class
+BibliothekService.class
+com\bibliothek\pojo\Pret.class
+com\bibliothek\pojo\Auteur.class
+com\bibliothek\pojo\Bibliotheque.class
+com\bibliothek\pojo\Ouvrage.class
+com\bibliothek\pojo\Utilisateur.class
