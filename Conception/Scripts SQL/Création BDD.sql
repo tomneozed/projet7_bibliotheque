@@ -1,14 +1,15 @@
 
-CREATE SEQUENCE utilisateur_id_seq;
 
-CREATE TABLE Utilisateur (
-                id INTEGER NOT NULL DEFAULT nextval('utilisateur_id_seq'),
+CREATE SEQUENCE public.utilisateur_id_seq;
+
+CREATE TABLE public.Utilisateur (
+                id INTEGER NOT NULL DEFAULT nextval('public.utilisateur_id_seq'),
                 nom VARCHAR NOT NULL,
                 prenom VARCHAR NOT NULL,
                 pseudo VARCHAR NOT NULL,
                 mot_de_passe VARCHAR NOT NULL,
                 email VARCHAR NOT NULL,
-                numero_telephone INTEGER NOT NULL,
+                numero_telephone VARCHAR(10) NOT NULL,
                 adresse VARCHAR NOT NULL,
                 departement VARCHAR NOT NULL,
                 ville VARCHAR NOT NULL,
@@ -17,29 +18,29 @@ CREATE TABLE Utilisateur (
 );
 
 
-ALTER SEQUENCE utilisateur_id_seq OWNED BY Utilisateur.id;
+ALTER SEQUENCE public.utilisateur_id_seq OWNED BY public.Utilisateur.id;
 
-CREATE SEQUENCE bibiotheque_id_seq;
+CREATE SEQUENCE public.bibliotheque_id_seq;
 
-CREATE TABLE Bibiotheque (
-                id INTEGER NOT NULL DEFAULT nextval('bibiotheque_id_seq'),
+CREATE TABLE public.Bibliotheque (
+                id INTEGER NOT NULL DEFAULT nextval('public.bibliotheque_id_seq'),
                 nom VARCHAR NOT NULL,
                 adresse VARCHAR NOT NULL,
                 ville VARCHAR NOT NULL,
                 departement VARCHAR NOT NULL,
                 horaires VARCHAR NOT NULL,
                 email VARCHAR NOT NULL,
-                numero_telephone INTEGER NOT NULL,
-                CONSTRAINT bibiotheque_pk PRIMARY KEY (id)
+                numero_telephone VARCHAR(10),
+                CONSTRAINT bibliotheque_pk PRIMARY KEY (id)
 );
 
 
-ALTER SEQUENCE bibiotheque_id_seq OWNED BY Bibiotheque.id;
+ALTER SEQUENCE public.bibliotheque_id_seq OWNED BY public.Bibliotheque.id;
 
-CREATE SEQUENCE auteur_id_seq;
+CREATE SEQUENCE public.auteur_id_seq;
 
-CREATE TABLE Auteur (
-                id INTEGER NOT NULL DEFAULT nextval('auteur_id_seq'),
+CREATE TABLE public.Auteur (
+                id INTEGER NOT NULL DEFAULT nextval('public.auteur_id_seq'),
                 nom VARCHAR NOT NULL,
                 prenom VARCHAR NOT NULL,
                 nationalite VARCHAR NOT NULL,
@@ -49,13 +50,13 @@ CREATE TABLE Auteur (
 );
 
 
-ALTER SEQUENCE auteur_id_seq OWNED BY Auteur.id;
+ALTER SEQUENCE public.auteur_id_seq OWNED BY public.Auteur.id;
 
-CREATE SEQUENCE ouvrage_id_seq;
+CREATE SEQUENCE public.ouvrage_id_seq;
 
-CREATE TABLE Ouvrage (
-                id INTEGER NOT NULL DEFAULT nextval('ouvrage_id_seq'),
-                titre VARCHAR(40) NOT NULL,
+CREATE TABLE public.Ouvrage (
+                id INTEGER NOT NULL DEFAULT nextval('public.ouvrage_id_seq'),
+                titre VARCHAR(60) NOT NULL,
                 editeur VARCHAR NOT NULL,
                 nature VARCHAR NOT NULL,
                 date_parution DATE NOT NULL,
@@ -66,16 +67,9 @@ CREATE TABLE Ouvrage (
 );
 
 
-ALTER SEQUENCE ouvrage_id_seq OWNED BY Ouvrage.id;
+ALTER SEQUENCE public.ouvrage_id_seq OWNED BY public.Ouvrage.id;
 
-CREATE TABLE Auteur_Ouvrage (
-                id_auteur INTEGER NOT NULL,
-                id_ouvrage INTEGER NOT NULL,
-                CONSTRAINT auteur_ouvrage_pk PRIMARY KEY (id_auteur, id_ouvrage)
-);
-
-
-CREATE TABLE Ouvrage_Bibliotheque (
+CREATE TABLE public.Ouvrage_Bibliotheque (
                 id_ouvrage INTEGER NOT NULL,
                 id_bibliotheque INTEGER NOT NULL,
                 nombre_exemplaire INTEGER NOT NULL,
@@ -83,8 +77,17 @@ CREATE TABLE Ouvrage_Bibliotheque (
 );
 
 
-CREATE TABLE Pret (
-                id INTEGER NOT NULL,
+CREATE TABLE public.Auteur_Ouvrage (
+                id_auteur INTEGER NOT NULL,
+                id_ouvrage INTEGER NOT NULL,
+                CONSTRAINT auteur_ouvrage_pk PRIMARY KEY (id_auteur, id_ouvrage)
+);
+
+
+CREATE SEQUENCE public.pret_id_seq;
+
+CREATE TABLE public.Pret (
+                id INTEGER NOT NULL DEFAULT nextval('public.pret_id_seq'),
                 date_debut_pret DATE NOT NULL,
                 date_fin_pret DATE NOT NULL,
                 prolongation BOOLEAN NOT NULL,
@@ -96,51 +99,53 @@ CREATE TABLE Pret (
 );
 
 
-ALTER TABLE Pret ADD CONSTRAINT utilisateur_pret_fk
+ALTER SEQUENCE public.pret_id_seq OWNED BY public.Pret.id;
+
+ALTER TABLE public.Pret ADD CONSTRAINT utilisateur_pret_fk
 FOREIGN KEY (id_utilisateur)
-REFERENCES Utilisateur (id)
+REFERENCES public.Utilisateur (id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
-ALTER TABLE Pret ADD CONSTRAINT bibiotheque_pret_fk
+ALTER TABLE public.Pret ADD CONSTRAINT bibiotheque_pret_fk
 FOREIGN KEY (id_bibliotheque)
-REFERENCES Bibiotheque (id)
+REFERENCES public.Bibliotheque (id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
-ALTER TABLE Ouvrage_Bibliotheque ADD CONSTRAINT bibiotheque_ouvrage_bibliotheque_fk
+ALTER TABLE public.Ouvrage_Bibliotheque ADD CONSTRAINT bibiotheque_ouvrage_bibliotheque_fk
 FOREIGN KEY (id_bibliotheque)
-REFERENCES Bibiotheque (id)
+REFERENCES public.Bibliotheque (id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
-ALTER TABLE Auteur_Ouvrage ADD CONSTRAINT auteur_auteur_ouvrage_fk
+ALTER TABLE public.Auteur_Ouvrage ADD CONSTRAINT auteur_auteur_ouvrage_fk
 FOREIGN KEY (id_auteur)
-REFERENCES Auteur (id)
+REFERENCES public.Auteur (id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
-ALTER TABLE Pret ADD CONSTRAINT ouvrage_pret_fk
+ALTER TABLE public.Pret ADD CONSTRAINT ouvrage_pret_fk
 FOREIGN KEY (id_ouvrage)
-REFERENCES Ouvrage (id)
+REFERENCES public.Ouvrage (id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
-ALTER TABLE Ouvrage_Bibliotheque ADD CONSTRAINT ouvrage_ouvrage_bibliotheque_fk
+ALTER TABLE public.Auteur_Ouvrage ADD CONSTRAINT ouvrage_auteur_ouvrage_fk
 FOREIGN KEY (id_ouvrage)
-REFERENCES Ouvrage (id)
+REFERENCES public.Ouvrage (id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
-ALTER TABLE Auteur_Ouvrage ADD CONSTRAINT ouvrage_auteur_ouvrage_fk
+ALTER TABLE public.Ouvrage_Bibliotheque ADD CONSTRAINT ouvrage_ouvrage_bibliotheque_fk
 FOREIGN KEY (id_ouvrage)
-REFERENCES Ouvrage (id)
+REFERENCES public.Ouvrage (id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;

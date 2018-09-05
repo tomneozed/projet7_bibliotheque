@@ -252,11 +252,11 @@
    <relationship id="REL70" populated="true" UUID="a98715cb-eb00-49d6-aac1-701689315799" deferrability="7" deleteRule="3" fk-table-ref="TAB32" fkCardinality="7" identifying="false" name="Ouvrage_Pret_fk" physicalName="Ouvrage_Pret_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP71" populated="true" UUID="cd5ccfc5-42cf-4b84-bf6a-e38925291cb5" fk-column-ref="COL40" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL72" populated="true" UUID="0c9a5588-c586-45ca-ac25-b74871708d46" deferrability="7" deleteRule="3" fk-table-ref="TAB57" fkCardinality="7" identifying="false" name="Ouvrage_Ouvrage_Bibliotheque_fk" physicalName="Ouvrage_Ouvrage_Bibliotheque_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP73" populated="true" UUID="a2e7cde6-d967-42f4-b60a-711b58ff4fee" fk-column-ref="COL58" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   <relationship id="REL72" populated="true" UUID="63fd4d59-89f6-45ce-b221-97dd66f4401d" deferrability="7" deleteRule="3" fk-table-ref="TAB64" fkCardinality="7" identifying="false" name="Ouvrage_Auteur_Ouvrage_fk" physicalName="Ouvrage_Auteur_Ouvrage_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP73" populated="true" UUID="912cf5a1-006a-4629-9a2e-8f37c361816f" fk-column-ref="COL66" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL74" populated="true" UUID="63fd4d59-89f6-45ce-b221-97dd66f4401d" deferrability="7" deleteRule="3" fk-table-ref="TAB64" fkCardinality="7" identifying="false" name="Ouvrage_Auteur_Ouvrage_fk" physicalName="Ouvrage_Auteur_Ouvrage_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP75" populated="true" UUID="912cf5a1-006a-4629-9a2e-8f37c361816f" fk-column-ref="COL66" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   <relationship id="REL74" populated="true" UUID="0c9a5588-c586-45ca-ac25-b74871708d46" deferrability="7" deleteRule="3" fk-table-ref="TAB57" fkCardinality="7" identifying="false" name="Ouvrage_Ouvrage_Bibliotheque_fk" physicalName="Ouvrage_Ouvrage_Bibliotheque_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP75" populated="true" UUID="a2e7cde6-d967-42f4-b60a-711b58ff4fee" fk-column-ref="COL58" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
    <relationship id="REL76" populated="true" UUID="601665b1-8544-4c9a-a9d8-4a5ab6a1a0d6" deferrability="7" deleteRule="3" fk-table-ref="TAB64" fkCardinality="7" identifying="false" name="Auteur_Auteur_Ouvrage_fk" physicalName="Auteur_Auteur_Ouvrage_fk" pk-table-ref="TAB12" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP77" populated="true" UUID="21a0da98-7f72-4502-9140-3d1833e2fd72" fk-column-ref="COL65" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL13" />
@@ -286,10 +286,10 @@
   <table-link relationship-ref="REL82" pkConnection="0.5362318840579711" fkConnection="0.37735849056603776" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL78" pkConnection="0.5471698113207547" fkConnection="0.29559748427672955" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
   <table-link relationship-ref="REL70" pkConnection="0.5207373271889401" fkConnection="0.41472868217054265" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL72" pkConnection="0.5345911949685535" fkConnection="0.43157894736842106" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL74" pkConnection="0.5345911949685535" fkConnection="0.43157894736842106" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL80" pkConnection="0.5690376569037657" fkConnection="0.4878048780487805" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
   <table-link relationship-ref="REL76" pkConnection="0.3700787401574803" fkConnection="0.7872340425531915" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL74" pkConnection="0.7419354838709677" fkConnection="0.40772532188841204" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL72" pkConnection="0.7419354838709677" fkConnection="0.40772532188841204" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">
