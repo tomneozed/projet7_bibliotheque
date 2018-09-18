@@ -11,6 +11,8 @@ public interface UtilisateurDao {
 
     int create(Utilisateur utilisateur) throws DaoException;
 
+    Utilisateur findByPseudo(String pseudo) throws DaoException;
+
     void delete(Utilisateur utilisateur) throws DaoException;
 
     void update(Utilisateur utilisateur) throws DaoException;

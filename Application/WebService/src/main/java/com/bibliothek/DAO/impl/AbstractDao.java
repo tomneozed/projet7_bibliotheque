@@ -2,10 +2,17 @@ package com.bibliothek.DAO.impl;
 
 import com.bibliothek.DAO.HibernateFactory;
 import com.bibliothek.DAO.exceptions.DaoException;
+import com.bibliothek.DAO.pojo.Ouvrage;
+import com.bibliothek.DAO.pojo.Pret;
+import com.bibliothek.DAO.pojo.Utilisateur;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 
@@ -91,6 +98,77 @@ public abstract class AbstractDao {
             HibernateFactory.close(session);
         }
         return objects;
+    }
+
+    public Object findByPseudo(String pseudo) throws DaoException
+    {
+        Object object = null;
+        try{
+            startOperation();
+            object = session.createQuery("from Utilisateur where pseudo = :pseudo").setParameter("pseudo", pseudo).getSingleResult();
+            if(object == null)
+            {
+                throw new DaoException("Pseudo " + pseudo +" doesn't seems to correspond to any object from the database " );
+            }
+            transaction.commit();
+        }catch(HibernateException e)
+        {
+            handleException(e);
+        }finally{
+            HibernateFactory.close(session);
+        }
+        return object;
+    }
+
+    protected List<Pret> findAllPretByUtilisateur(Utilisateur util) throws DaoException
+    {
+        List<Pret> prets = null;
+        try{
+            startOperation();
+            prets = session.createQuery("from Pret where idUtilisateur = :idUtil").setParameter("idUtil", util.getId()).getResultList();
+            if(prets.isEmpty())
+            {
+                throw new DaoException("There is no loan for the user : " + util.getNom()+ " " + util.getPrenom()) ;
+            }
+            transaction.commit();
+        }catch(HibernateException e)
+        {
+            handleException(e);
+        }finally{
+            HibernateFactory.close(session);
+        }
+        return prets;
+    }
+
+    protected List<Ouvrage> findAllByParam(String param) throws DaoException{
+        List<Ouvrage> ouvrages = null;
+        try{
+            startOperation();
+
+            CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
+
+            CriteriaQuery<Ouvrage> cr = criteriaBuilder.createQuery(Ouvrage.class);
+
+            Root<Ouvrage> root = cr.from(Ouvrage.class);
+
+
+            cr.select(root).where(criteriaBuilder.like(root.get("titre"), "%param%"));
+
+            Query<Ouvrage> query = session.createQuery(cr);
+            ouvrages = query.getResultList();
+
+            if(ouvrages.isEmpty())
+            {
+                throw new DaoException(param + " doesn't seems to correspond to any object from the database" ) ;
+            }
+            transaction.commit();
+        }catch(HibernateException e)
+        {
+            handleException(e);
+        }finally{
+            HibernateFactory.close(session);
+        }
+        return ouvrages;
     }
 
     /**

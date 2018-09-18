@@ -26,6 +26,12 @@ public class UtilisateurDaoImpl extends AbstractDao implements UtilisateurDao {
     }
 
     @Override
+    public Utilisateur findByPseudo(String pseudo) throws DaoException {
+
+        return (Utilisateur)super.findByPseudo(pseudo);
+    }
+
+    @Override
     public void delete(Utilisateur utilisateur) throws DaoException {
         super.delete(utilisateur);
     }

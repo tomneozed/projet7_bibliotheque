@@ -9,6 +9,8 @@ public interface OuvrageDao {
 
     Ouvrage findById(int id) throws DaoException;
 
+    List<Ouvrage> findAllByAuteurId(int auteurId) throws DaoException;
+
     int create(Ouvrage ouvrage) throws DaoException;
 
     void delete(Ouvrage ouvrage) throws DaoException;
