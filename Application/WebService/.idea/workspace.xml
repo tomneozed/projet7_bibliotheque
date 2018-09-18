@@ -2,9 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a959011-b7d2-4600-824f-8d56cd7ac4b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AuteurOuvrageDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/AuteurOuvrageDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurOuvrage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/exceptions/FunctionalException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/exceptions/TechnicalException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Auteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Auteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Ouvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Ouvrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AuteurDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AuteurDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/BibliothequeDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageBibliothequeDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/PretDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/PretDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/UtilisateurDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/UtilisateurDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/AuteurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/AuteurDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/BibliothequeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/OuvrageBibliothequeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/OuvrageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/OuvrageDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/PretDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/PretDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/UtilisateurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/UtilisateurDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Auteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Auteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Bibliotheque.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Ouvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Ouvrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/OuvrageBibliotheque.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Pret.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Pret.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Utilisateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,17 +56,17 @@
         <counts>
           <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="40" />
+          <entry key="java" value="68" />
           <entry key="sql" value="1" />
           <entry key="xml" value="1" />
         </counts>
@@ -52,97 +74,27 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="40" />
+          <entry key="JAVA" value="68" />
           <entry key="Scratch" value="1" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="150" />
+          <entry key="java" value="151" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="150" />
+          <entry key="JAVA" value="151" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageBibliothequeDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AuteurDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1037">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/OuvrageBibliotheque.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Auteur.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="30" column="62" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="30" selection-end-column="62" />
-              <folding>
-                <element signature="e#866#875#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Ouvrage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#921#929#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -165,13 +117,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageBibliothequeDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/AuteurDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/BibliothequeDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/OuvrageDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/PretDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/UtilisateurDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Ouvrage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Auteur.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/AuteurDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Pret.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/BibliothequeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AuteurOuvrageDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurAndOuvragesResponse.java" />
       </list>
     </option>
   </component>
@@ -205,10 +160,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -220,7 +175,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,6 +206,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -260,47 +223,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
               <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
@@ -321,13 +246,14 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536177686616" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537288321809" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -336,19 +262,22 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bibliothek.DAO.impl" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bibliothek.DAO.impl" />
+      <recent name="com.bibliothek.DAO.interfaces" />
+      <recent name="com.bibliothek.DAO.pojo" />
+      <recent name="com.bibliothek.DAO.exceptions" />
+      <recent name="com.bibliothek.DAO" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek" />
       <recent name="C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\DAO\interfaces" />
       <recent name="C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\DAO\impl" />
       <recent name="C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\resources" />
       <recent name="C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\pojo" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.bibliothek.DAO.impl" />
-      <recent name="com.bibliothek.DAO.exceptions" />
-      <recent name="com.bibliothek.DAO" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.bibliothek.DAO.impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -398,17 +327,17 @@
       <workItem from="1536172836333" duration="1661000" />
       <workItem from="1536410057462" duration="219000" />
       <workItem from="1536597925411" duration="935000" />
+      <workItem from="1537288081854" duration="439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5609000" />
+    <option name="totallyTimeSpent" value="6048000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5388514" visible="true" weight="0.21409395" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5388514" visible="true" weight="0.21677852" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -469,20 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Pret.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Utilisateur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -503,54 +418,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/UtilisateurDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/PretDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/BibliothequeDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/AuteurDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageBibliothequeDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/BibliothequeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/OuvrageBibliothequeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/OuvrageDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/PretDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/UtilisateurDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -561,20 +442,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Auteur.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Auteur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="30" column="62" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="30" selection-end-column="62" />
+        <state relative-caret-position="374">
+          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
           <folding>
-            <element signature="e#866#875#0" expanded="true" />
+            <element signature="e#870#879#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageBibliothequeDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurOuvrage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Utilisateur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Pret.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Ouvrage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/BibliothequeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/PretDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -585,27 +508,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/UtilisateurDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/AuteurDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1037">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="85">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/pojo/Ouvrage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/OuvrageBibliothequeDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#921#929#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/PretDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/UtilisateurDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/OuvrageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/AuteurOuvrageDao.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AuteurOuvrageDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/exceptions/TechnicalException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/exceptions/FunctionalException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionPret.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionPretImpl.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionUtilisateur.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/UtilisateurResponse.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurResponse.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionAuteur.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionAuteurImpl.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionOuvrageImpl.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionUtilisateurImpl.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurAndOuvragesResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
         </state>
       </provider>
     </entry>

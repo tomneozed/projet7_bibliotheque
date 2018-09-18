@@ -2,7 +2,7 @@ package com.bibliothek.DAO.impl;
 
 import com.bibliothek.DAO.exceptions.DaoException;
 import com.bibliothek.DAO.interfaces.OuvrageDao;
-import com.bibliothek.pojo.Ouvrage;
+import com.bibliothek.DAO.pojo.Ouvrage;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

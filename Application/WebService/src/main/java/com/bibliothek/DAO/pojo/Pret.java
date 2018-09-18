@@ -1,4 +1,4 @@
-package com.bibliothek.pojo;
+package com.bibliothek.DAO.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,8 +25,6 @@ public class Pret implements Serializable {
     @Column(name="id_utilisateur")
     private int idUtilisateur;
 
-    @Column(name="id_bibliotheque")
-    private int idBibliotheque;
 
     @Column(name="id_ouvrage")
     private int idOuvrage;
@@ -34,14 +32,13 @@ public class Pret implements Serializable {
     public Pret() {
     }
 
-    public Pret(int id, Date dateDebutPret, Date dateFinPret, boolean prolongation, String etat, int idUtilisateur, int idBibliotheque, int idOuvrage) {
+    public Pret(int id, Date dateDebutPret, Date dateFinPret, boolean prolongation, String etat, int idUtilisateur, int idOuvrage) {
         this.id = id;
         this.dateDebutPret = dateDebutPret;
         this.dateFinPret = dateFinPret;
         this.prolongation = prolongation;
         this.etat = etat;
         this.idUtilisateur = idUtilisateur;
-        this.idBibliotheque = idBibliotheque;
         this.idOuvrage = idOuvrage;
     }
 
@@ -93,13 +90,6 @@ public class Pret implements Serializable {
         this.idUtilisateur = idUtilisateur;
     }
 
-    public int getIdBibliotheque() {
-        return idBibliotheque;
-    }
-
-    public void setIdBibliotheque(int idBibliotheque) {
-        this.idBibliotheque = idBibliotheque;
-    }
 
     public int getIdOuvrage() {
         return idOuvrage;

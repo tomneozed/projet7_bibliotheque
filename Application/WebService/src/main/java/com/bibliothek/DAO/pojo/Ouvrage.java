@@ -1,4 +1,4 @@
-package com.bibliothek.pojo;
+package com.bibliothek.DAO.pojo;
 
 import javax.persistence.*;
 import java.io.Serializable;

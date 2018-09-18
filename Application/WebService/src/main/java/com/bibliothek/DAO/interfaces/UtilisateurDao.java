@@ -1,7 +1,7 @@
 package com.bibliothek.DAO.interfaces;
 
 import com.bibliothek.DAO.exceptions.DaoException;
-import com.bibliothek.pojo.Utilisateur;
+import com.bibliothek.DAO.pojo.Utilisateur;
 
 import java.util.List;
 

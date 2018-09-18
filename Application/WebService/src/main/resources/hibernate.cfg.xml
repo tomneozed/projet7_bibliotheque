@@ -35,12 +35,12 @@
         <property name="hbm2ddl.auto">update</property>
 
         <!-- Names the annotated entity class -->
-        <mapping class="com.bibliothek.pojo.Auteur"/>
-        <mapping class="com.bibliothek.pojo.Bibliotheque"/>
-        <mapping class="com.bibliothek.pojo.Ouvrage"/>
-        <mapping class="com.bibliothek.pojo.OuvrageBibliotheque"/>
-        <mapping class="com.bibliothek.pojo.Pret"/>
-        <mapping class="com.bibliothek.pojo.Utilisateur"/>
+        <mapping class="com.bibliothek.DAO.pojo.Auteur"/>
+        <mapping class="com.bibliothek.DAO.pojo.Bibliotheque"/>
+        <mapping class="com.bibliothek.DAO.pojo.Ouvrage"/>
+        <mapping class="com.bibliothek.DAO.pojo.OuvrageBibliotheque"/>
+        <mapping class="com.bibliothek.DAO.pojo.Pret"/>
+        <mapping class="com.bibliothek.DAO.pojo.Utilisateur"/>
 
 
     </session-factory>
