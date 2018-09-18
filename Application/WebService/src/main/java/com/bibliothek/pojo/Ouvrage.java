@@ -30,7 +30,7 @@ public class Ouvrage implements Serializable {
 
     private double prix;
 
-    @OneToMany(cascade = CascadeType.ALL )
+    @ManyToMany(cascade = CascadeType.ALL )
     @JoinTable(name="auteur_ouvrage", joinColumns = @JoinColumn(name="id_ouvrage"), inverseJoinColumns = @JoinColumn(name="id_auteur"))
     private List<Auteur> auteurs = new ArrayList<Auteur>();
 

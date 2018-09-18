@@ -3,14 +3,14 @@ INSERT INTO public.utilisateur
 VALUES
 	(1, 'Alain', 'Terrieur', 'alainTerrieur@email.com', 'alainTerrieur', 'motDePasse', '0606060606', '43 rue des fleurs', 'Haute Garonne', 'Toulouse', 'France'),
 	(2, 'Alex', 'Terrieur', 'alexTerrieur@email.com', 'alexTerrieur', 'motDePasse', '0707070707', '28 avenue du Chene', 'Haute Garonne', 'Toulouse', 'France'),
-	(3, 'Georges', 'Washington', 'georgesWashington@email.com','georgesWashington', 'motDePasse', '0808080808', '56 route  des glands', 'Haute Garonne', 'Toulouse', 'France'),
-	(4, 'Marie', 'Curry', 'marieCurry@email.com', 'marieCurry', 'motDePasse','0635412547', '2 impasse Olignon', 'Haute Garonne', 'Toulouse', 'France'),
-	(5, 'Josephine', 'Langegardien', 'josephineLangegardien@email.com', 'josephineLangegardien', 'motDePasse', '0658974563', '17 avenue du midi' , 'Haute Garonne', 'Toulouse', 'France'),
-	(6, 'Marilyn', 'Monroe', 'marilynMonroe@email.com', 'marilynMonroe', 'motDePasse', '0632569874', '96 rue Avignon', 'Haute Garonne', 'Toulouse', 'France'),
-	(7, 'Gaston', 'Lagaffe', 'gastonLagaffe@email.com', 'gastonLagaffe', 'motDePasse', '0632541225', '45 avenue de la liberté', 'Haute Garonne', 'Toulouse', 'France'),
-	(8, 'Shtroumpf', 'Farceur', 'shtroumpfFarceur@email.com', 'shtroumpfFarceur', 'motDePasse', '0600541235', '34 impasse de la fortune', 'Haute Garonne', 'Toulouse', 'France'),
-	(9, 'Gunter', 'Pauli', 'gunterPauli@email.com', 'gunterPauli', 'motDePasse', '0699875498', '85 avenue Charles de Gaulle', 'Haute Garonne', 'Toulouse', 'France'),
-	(10, 'Madame', 'Columbo', 'madameColumbo@email.com', 'madameColumbo', 'motDePasse', '0656323256', '74 rue des plantes', 'Haute Garonne', 'Toulouse', 'France')
+	(3, 'Georges', 'Washington', 'georgesWashington@email.com','alainTerrieur', 'motDePasse', '0808080808', '56 route  des glands', 'Haute Garonne', 'Toulouse', 'France'),
+	(4, 'Marie', 'Curry', 'marieCurry@email.com', 'alainTerrieur', 'motDePasse','0635412547', '2 impasse Olignon', 'Haute Garonne', 'Toulouse', 'France'),
+	(5, 'Josephine', 'Langegardien', 'josephineLangegardien@email.com', 'alainTerrieur', 'motDePasse', '0658974563', '17 avenue du midi' , 'Haute Garonne', 'Toulouse', 'France'),
+	(6, 'Marilyn', 'Monroe', 'marilynMonroe@email.com', 'alainTerrieur', 'motDePasse', '0632569874', '96 rue Avignon', 'Haute Garonne', 'Toulouse', 'France'),
+	(7, 'Gaston', 'Lagaffe', 'gastonLagaffe@email.com', 'alainTerrieur', 'motDePasse', '0632541225', '45 avenue de la liberté', 'Haute Garonne', 'Toulouse', 'France'),
+	(8, 'Shtroumpf', 'Farceur', 'shtroumpfFarceur@email.com', 'alainTerrieur', 'motDePasse', '0600541235', '34 impasse de la fortune', 'Haute Garonne', 'Toulouse', 'France'),
+	(9, 'Gunter', 'Pauli', 'gunterPauli@email.com', 'alainTerrieur', 'motDePasse', '0699875498', '85 avenue Charles de Gaulle', 'Haute Garonne', 'Toulouse', 'France'),
+	(10, 'Madame', 'Columbo', 'madameColumbo@email.com', 'alainTerrieur', 'motDePasse', '0656323256', '74 rue des plantes', 'Haute Garonne', 'Toulouse', 'France')
 ;
 
 INSERT INTO public.ouvrage

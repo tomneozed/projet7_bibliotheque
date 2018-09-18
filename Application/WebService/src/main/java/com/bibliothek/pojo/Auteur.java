@@ -2,7 +2,9 @@ package com.bibliothek.pojo;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Auteur implements Serializable {
@@ -23,6 +25,10 @@ public class Auteur implements Serializable {
 
     @Column(name="date_deces")
     private Date dateDeces;
+
+    @ManyToMany(cascade = CascadeType.ALL )
+    @JoinTable(name="auteur_ouvrage", joinColumns = @JoinColumn(name="id_auteur"), inverseJoinColumns = @JoinColumn(name="id_ouvrage"))
+    private List<Ouvrage> ouvrages = new ArrayList<Ouvrage>();
 
     public Auteur() {
     }
