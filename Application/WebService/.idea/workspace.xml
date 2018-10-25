@@ -2,70 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a959011-b7d2-4600-824f-8d56cd7ac4b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurAndOuvragesBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/OuvrageAndAuteursBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/BibliothekService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/request/PretRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/responses/OuvrageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/responses/PretResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/responses/UtilisateurResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BibliothekService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AuteurDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AuteurDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/PretDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/PretDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/UtilisateurDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/UtilisateurDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/AuteurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/AuteurDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/OuvrageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/OuvrageDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/PretDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/PretDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/UtilisateurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/UtilisateurDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Auteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurOuvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurOuvragePojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Ouvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/OuvragePojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Pret.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/PretPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/UtilisateurPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AbstractResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/responses/AbstractResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurAndOuvragesResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/OuvrageAndAuteursResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/OuvrageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/OuvrageBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/PretResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/PretBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/UtilisateurResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/UtilisateurBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionAuteurImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionAuteurImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionOuvrageImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionOuvrageImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionPretImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionPretImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionUtilisateurImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionUtilisateurImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionAuteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionAuteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionOuvrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionOuvrage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionPret.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionPret.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionUtilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/BibliothekService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/HibernateFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/exceptions/DaoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/impl/AbstractDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/impl/AuteurDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/impl/BibliothequeDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/impl/OuvrageBibliothequeDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/impl/OuvrageDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/impl/PretDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/impl/UtilisateurDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/interfaces/AuteurDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/interfaces/BibliothequeDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/interfaces/OuvrageBibliothequeDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/interfaces/OuvrageDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/interfaces/PretDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/interfaces/UtilisateurDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/pojo/Auteur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/pojo/Bibliotheque.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/pojo/Ouvrage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/pojo/OuvrageBibliotheque.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/pojo/Pret.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/pojo/Utilisateur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../batch/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../batch/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -93,13 +32,14 @@
     <session id="1362679742">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -134,20 +74,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/OuvragePojo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="90" column="10" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -280,10 +211,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="y" value="2" />
+    <option name="width" value="1939" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -294,6 +225,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -325,7 +258,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
@@ -333,8 +266,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
-              <item name="webservice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
@@ -354,8 +287,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -437,18 +368,19 @@
       <workItem from="1536410057462" duration="219000" />
       <workItem from="1536597925411" duration="935000" />
       <workItem from="1537288081854" duration="1846000" />
-      <workItem from="1540467448519" duration="772000" />
+      <workItem from="1540467448519" duration="2500000" />
+      <workItem from="1540474249226" duration="18000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8227000" />
+    <option name="totallyTimeSpent" value="9973000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="830" extended-state="1" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5388514" weight="0.4216366" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5388514" visible="true" weight="0.20671141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -459,7 +391,7 @@
       <window_info id="Persistence" order="8" sideWeight="0.46114865" side_tool="true" weight="0.20604026" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19368723" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19148937" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -489,19 +421,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/PretResponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurResponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AbstractResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/PretResponse.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurResponse.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AbstractResponse.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -509,13 +431,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurAndOuvragesResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurAndOuvragesResponse.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1479">
@@ -530,16 +446,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BibliothekService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-159">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BibliothekService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/responses/AbstractResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -606,18 +513,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionOuvrageImpl.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/interfaces/GestionAuteur.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/interfaces/GestionUtilisateur.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/interfaces/GestionPret.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/interfaces/GestionOuvrage.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/interfaces/GestionAuteur.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/interfaces/GestionUtilisateur.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/interfaces/GestionPret.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/interfaces/GestionOuvrage.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionUtilisateur.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -638,40 +537,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/DAO/pojo/OuvragePojo.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/gestion/interfaces/GestionAuteur.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/DAO/impl/AuteurOuvrageDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/gestion/impl/GestionPretImpl.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/webservice/responses/OuvrageResponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/DAO/impl/AuteurDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/DAO/interfaces/OuvrageDao.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/gestion/beans/AuteurBean.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/gestion/beans/OuvrageBean.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/webservice/request/PretRequest.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/DAO/pojo/OuvragePojo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/gestion/interfaces/GestionAuteur.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/DAO/impl/AuteurOuvrageDaoImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/gestion/impl/GestionPretImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/webservice/responses/OuvrageResponse.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/DAO/impl/AuteurDaoImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/DAO/interfaces/OuvrageDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/gestion/beans/AuteurBean.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/gestion/beans/OuvrageBean.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/webservice/request/PretRequest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionAuteur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="90" column="10" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/OuvragePojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -712,20 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/OuvragePojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="90" column="10" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
         </state>
       </provider>
     </entry>
