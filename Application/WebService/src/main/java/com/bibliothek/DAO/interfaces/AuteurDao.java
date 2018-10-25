@@ -1,19 +1,22 @@
 package com.bibliothek.DAO.interfaces;
 
 import com.bibliothek.DAO.exceptions.DaoException;
-import com.bibliothek.DAO.pojo.Auteur;
+import com.bibliothek.DAO.pojo.AuteurPojo;
 
 import java.util.List;
 
 public interface AuteurDao {
 
-    Auteur findById(int id) throws DaoException;
 
-    int create(Auteur auteur) throws DaoException;
+    AuteurPojo findById(int id) throws DaoException;
 
-    void delete(Auteur auteur) throws DaoException;
+    int create(AuteurPojo auteurPojo) throws DaoException;
 
-    void update(Auteur auteur) throws DaoException;
+    void delete(AuteurPojo auteurPojo) throws DaoException;
+
+    void update(AuteurPojo auteurPojo) throws DaoException;
 
     List findAll() throws DaoException;
+
+    List<AuteurPojo> findAllByOuvrageId(int ouvrageId);
 }

@@ -1,7 +1,8 @@
 package com.bibliothek.gestion.impl;
 
 import com.bibliothek.DAO.impl.UtilisateurDaoImpl;
-import com.bibliothek.DAO.pojo.Utilisateur;
+import com.bibliothek.DAO.pojo.UtilisateurPojo;
+import com.bibliothek.gestion.beans.UtilisateurBean;
 import com.bibliothek.gestion.interfaces.GestionUtilisateur;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,23 +13,25 @@ public class GestionUtilisateurImpl implements GestionUtilisateur {
 
     @Override
     public boolean verifMotDePasse(String pseudo, String motDePasse) {
-        Utilisateur u = utilisateurDao.findByPseudo(pseudo);
-
-        if (u.getMotDePasse().equals(motDePasse)) {
-            return true;
-        } else {
-            return false;
-        }
+        UtilisateurPojo u = utilisateurDao.findByPseudo(pseudo);
+        return u.getMotDePasse().equals(motDePasse);
     }
 
     @Override
-    public void createUtilisateur(Utilisateur utilisateur){
-        utilisateurDao.create(utilisateur);
+    public UtilisateurBean findUtilisateurByPseudo(String pseudo){
+        UtilisateurBean utilisateurBean = new UtilisateurBean();
+        utilisateurBean.setUtilisateur(utilisateurDao.findByPseudo(pseudo));
+        return utilisateurBean;
     }
 
     @Override
-    public void deleteUtilisateur(Utilisateur utilisateur){
-        utilisateurDao.delete(utilisateur);
+    public void createUtilisateur(UtilisateurPojo utilisateurPojo){
+        utilisateurDao.create(utilisateurPojo);
+    }
+
+    @Override
+    public void deleteUtilisateur(UtilisateurPojo utilisateurPojo){
+        utilisateurDao.delete(utilisateurPojo);
     }
 
 

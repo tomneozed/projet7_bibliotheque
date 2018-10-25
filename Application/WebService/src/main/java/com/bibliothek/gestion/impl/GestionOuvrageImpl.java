@@ -2,10 +2,10 @@ package com.bibliothek.gestion.impl;
 
 import com.bibliothek.DAO.impl.AuteurDaoImpl;
 import com.bibliothek.DAO.impl.OuvrageDaoImpl;
-import com.bibliothek.DAO.pojo.Auteur;
-import com.bibliothek.DAO.pojo.Ouvrage;
-import com.bibliothek.gestion.beans.AuteurAndOuvragesResponse;
-import com.bibliothek.gestion.beans.OuvrageResponse;
+import com.bibliothek.DAO.pojo.AuteurPojo;
+import com.bibliothek.DAO.pojo.OuvragePojo;
+import com.bibliothek.gestion.beans.AuteurAndOuvragesBean;
+import com.bibliothek.gestion.beans.OuvrageBean;
 import com.bibliothek.gestion.interfaces.GestionOuvrage;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,60 +21,59 @@ public class GestionOuvrageImpl implements GestionOuvrage {
     private AuteurDaoImpl auteurDao = new AuteurDaoImpl();
 
     @Override
-    public OuvrageResponse findOuvrageById(int id)
+    public OuvrageBean findOuvrageById(int id)
     {
-        OuvrageResponse ouvrageResponse = new OuvrageResponse();
+        OuvrageBean ouvrageBean = new OuvrageBean();
 
-        ouvrageResponse.setOuvrage(ouvrageDao.findById(id));
+        ouvrageBean.setOuvrage(ouvrageDao.findById(id));
 
-        return ouvrageResponse;
+        return ouvrageBean;
     }
 
     @Override
-    public List<OuvrageResponse> findAllOuvrages(){
+    public List<OuvrageBean> findAllOuvrages(){
 
-        List<OuvrageResponse> ouvrageResponseList = new ArrayList<>();
-        List<Ouvrage> ouvrages = ouvrageDao.findAll();
+        List<OuvrageBean> ouvrageBeanList = new ArrayList<>();
+        List<OuvragePojo> ouvragePojos = ouvrageDao.findAll();
 
-        for (Ouvrage ouvrage : ouvrages) {
-            OuvrageResponse ouvrageResponse = new OuvrageResponse();
-            ouvrageResponse.setOuvrage(ouvrage);
-            ouvrageResponseList.add(ouvrageResponse);
+        for (OuvragePojo ouvragePojo : ouvragePojos) {
+            OuvrageBean ouvrageBean = new OuvrageBean();
+            ouvrageBean.setOuvrage(ouvragePojo);
+            ouvrageBeanList.add(ouvrageBean);
         }
 
-        return ouvrageResponseList;
+        return ouvrageBeanList;
     }
 
     @Override
-    public List<OuvrageResponse> findAllOuvragesByParameter(String parameter)
+    public List<OuvrageBean> findAllOuvragesByParameter(String parameter)
     {
-        List<OuvrageResponse> ouvrageResponseList = new ArrayList<>();
-        List<Ouvrage> ouvrages = ouvrageDao.findAllByParam(parameter);
+        List<OuvrageBean> ouvrageBeanList = new ArrayList<>();
+        List<OuvragePojo> ouvragePojos = ouvrageDao.findAllByParam(parameter);
 
-        for (Ouvrage ouvrage : ouvrages) {
-            OuvrageResponse ouvrageResponse = new OuvrageResponse();
-            ouvrageResponse.setOuvrage(ouvrage);
-            ouvrageResponseList.add(ouvrageResponse);
+        for (OuvragePojo ouvragePojo : ouvragePojos) {
+            OuvrageBean ouvrageBean = new OuvrageBean();
+            ouvrageBean.setOuvrage(ouvragePojo);
+            ouvrageBeanList.add(ouvrageBean);
         }
 
-        return ouvrageResponseList;
+        return ouvrageBeanList;
     }
 
     @Override
-    public AuteurAndOuvragesResponse findAllOuvragesByAuteurId(Auteur auteur)
+    public AuteurAndOuvragesBean findAllOuvragesByAuteurId(AuteurPojo auteurPojo)
     {
-        return new AuteurAndOuvragesResponse(auteurDao.findById(auteur.getId()));
-    }
-
-
-    @Override
-    public void createOuvrage(Ouvrage ouvrage){
-        ouvrageDao.create(ouvrage);
+        return new AuteurAndOuvragesBean(auteurDao.findById(auteurPojo.getId()));
     }
 
     @Override
-    public void deleteOuvrage(Ouvrage ouvrage){
-        ouvrageDao.delete(ouvrage);
+    public void createOuvrage(OuvragePojo ouvragePojo){
+        ouvrageDao.create(ouvragePojo);
+    }
+
+    @Override
+    public void deleteOuvrage(OuvragePojo ouvragePojo){
+        ouvrageDao.delete(ouvragePojo);
     }
 
 

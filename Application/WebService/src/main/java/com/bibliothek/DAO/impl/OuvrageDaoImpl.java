@@ -2,8 +2,9 @@ package com.bibliothek.DAO.impl;
 
 import com.bibliothek.DAO.exceptions.DaoException;
 import com.bibliothek.DAO.interfaces.OuvrageDao;
-import com.bibliothek.DAO.pojo.AuteurOuvrage;
-import com.bibliothek.DAO.pojo.Ouvrage;
+import com.bibliothek.DAO.pojo.AuteurOuvragePojo;
+import com.bibliothek.DAO.pojo.AuteurPojo;
+import com.bibliothek.DAO.pojo.OuvragePojo;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -18,49 +19,85 @@ public class OuvrageDaoImpl extends AbstractDao implements OuvrageDao {
     }
 
     @Override
-    public Ouvrage findById(int id) throws DaoException {
-
-        return (Ouvrage)super.find(Ouvrage.class, id);
+    public OuvragePojo findById(int id) throws DaoException {
+        OuvragePojo ouvragePojo = (OuvragePojo) super.find(OuvragePojo.class, id);
+        //ouvragePojo.setAuteurPojos(extractAuteurs(id));
+        return ouvragePojo;
     }
 
     @Override
-    public List<Ouvrage> findAllByAuteurId(int auteurId) throws DaoException{
+    public List<OuvragePojo> findAllByParam(String param) throws DaoException{
+        return super.findAllByParam(param);
+    }
 
-        List<AuteurOuvrage> tousLesOuvrages = super.findAll(AuteurOuvrage.class);
+    @Override
+    public List<OuvragePojo> findAllByAuteurId(int auteurId) throws DaoException{
 
-        List<Ouvrage> ouvrages = new ArrayList<>();
+        List<AuteurOuvragePojo> tousLesOuvrages = super.findAll(AuteurOuvragePojo.class);
+
+        List<OuvragePojo> ouvragePojos = new ArrayList<>();
         for (int i=0; i< tousLesOuvrages.size(); i++ )
         {
             if(tousLesOuvrages.get(i).getAuteurId() == auteurId)
             {
-                ouvrages.add((Ouvrage)super.find(Ouvrage.class, tousLesOuvrages.get(i).getOuvrageId()));
+                ouvragePojos.add((OuvragePojo)super.find(OuvragePojo.class, tousLesOuvrages.get(i).getOuvrageId()));
             }
         }
-        return ouvrages;
+        return ouvragePojos;
     }
 
     @Override
-    public int create(Ouvrage ouvrage) throws DaoException {
-        super.saveOrUpdate(ouvrage);
-        System.out.println(ouvrage.getId());
-        return ouvrage.getId();
+    public int create(OuvragePojo ouvragePojo) throws DaoException{
+        super.update(ouvragePojo);
+        System.out.println(ouvragePojo.getId());
+        return ouvragePojo.getId();
     }
 
     @Override
-    public void delete(Ouvrage ouvrage) throws DaoException {
-        super.delete(ouvrage);
+    public void delete(OuvragePojo ouvragePojo) throws DaoException{
+        super.delete(ouvragePojo);
     }
 
     @Override
-    public void update(Ouvrage ouvrage) throws DaoException {
-        super.saveOrUpdate(ouvrage);
+    public void update(OuvragePojo ouvragePojo) throws DaoException{
+        super.update(ouvragePojo);
     }
 
 
+    /**
+     * Find all ouvrages and associated authors
+     * @return
+     * @throws DaoException
+     */
     @Override
-    public List findAll() throws DaoException {
+    public List findAll() throws DaoException{
+        List<OuvragePojo> ouvragePojos = super.findAll(OuvragePojo.class);
 
-        return super.findAll(Ouvrage.class);
+//        for (int i = 0; i < ouvragePojos.size(); i++) {
+//            ouvragePojos.get(i).setAuteurPojos(extractAuteurs(ouvragePojos.get(i).getId()));
+//        }
+
+        return ouvragePojos;
+    }
+
+    /**
+     * Filters and returns auteurs from specified ouvragePojo
+     * @param ouvragePojo
+     * @return
+     */
+    private List<AuteurPojo> extractAuteurs(OuvragePojo ouvragePojo)
+    {
+        List<AuteurOuvragePojo> tousLesAuteurs = super.findAll(AuteurOuvragePojo.class);
+
+        List<AuteurPojo> auteurPojos = new ArrayList<AuteurPojo>();
+        for (int i=0; i< tousLesAuteurs.size(); i++ )
+        {
+            if(tousLesAuteurs.get(i).getOuvrageId() == ouvragePojo.getId())
+            {
+                auteurPojos.add((AuteurPojo)super.find(AuteurPojo.class, tousLesAuteurs.get(i).getAuteurId()));
+            }
+        }
+    return auteurPojos;
     }
 
 }

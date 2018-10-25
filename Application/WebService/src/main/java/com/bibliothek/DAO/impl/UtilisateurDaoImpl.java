@@ -2,7 +2,7 @@ package com.bibliothek.DAO.impl;
 
 import com.bibliothek.DAO.exceptions.DaoException;
 import com.bibliothek.DAO.interfaces.UtilisateurDao;
-import com.bibliothek.DAO.pojo.Utilisateur;
+import com.bibliothek.DAO.pojo.UtilisateurPojo;
 
 import java.util.List;
 
@@ -13,38 +13,38 @@ public class UtilisateurDaoImpl extends AbstractDao implements UtilisateurDao {
     }
 
     @Override
-    public Utilisateur findById(int id) throws DaoException {
+    public UtilisateurPojo findById(int id) throws DaoException {
 
-        return (Utilisateur)super.find(Utilisateur.class, id);
+        return (UtilisateurPojo)super.find(UtilisateurPojo.class, id);
     }
 
     @Override
-    public int create(Utilisateur utilisateur) throws DaoException {
-        super.saveOrUpdate(utilisateur);
-        System.out.println(utilisateur.getId());
-        return utilisateur.getId();
+    public UtilisateurPojo findByPseudo(String pseudo) throws DaoException {
+
+        return (UtilisateurPojo)super.findByPseudo(pseudo);
     }
 
     @Override
-    public Utilisateur findByPseudo(String pseudo) throws DaoException {
-
-        return (Utilisateur)super.findByPseudo(pseudo);
+    public int create(UtilisateurPojo utilisateurPojo) throws DaoException{
+        super.update(utilisateurPojo);
+        System.out.println(utilisateurPojo.getId());
+        return utilisateurPojo.getId();
     }
 
     @Override
-    public void delete(Utilisateur utilisateur) throws DaoException {
-        super.delete(utilisateur);
+    public void delete(UtilisateurPojo utilisateurPojo) throws DaoException{
+        super.delete(utilisateurPojo);
     }
 
     @Override
-    public void update(Utilisateur utilisateur) throws DaoException {
-        super.saveOrUpdate(utilisateur);
+    public void update(UtilisateurPojo utilisateurPojo) throws DaoException{
+        super.update(utilisateurPojo);
     }
 
 
     @Override
-    public List findAll() throws DaoException {
+    public List findAll() throws DaoException{
 
-        return super.findAll(Utilisateur.class);
+        return super.findAll(UtilisateurPojo.class);
     }
 }

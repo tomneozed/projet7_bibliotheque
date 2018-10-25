@@ -1,9 +1,10 @@
 package com.bibliothek.gestion.interfaces;
 
-import com.bibliothek.DAO.pojo.Pret;
-import com.bibliothek.DAO.pojo.Utilisateur;
+import com.bibliothek.DAO.exceptions.DaoException;
+import com.bibliothek.DAO.pojo.PretPojo;
+import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import com.bibliothek.exceptions.FunctionalException;
-import com.bibliothek.gestion.beans.PretResponse;
+import com.bibliothek.gestion.beans.PretBean;
 
 import java.util.List;
 
@@ -13,32 +14,45 @@ public interface GestionPret {
      * @param idPret
      * @return
      */
-    Pret prolongerPret(int idPret) throws FunctionalException;
+    PretPojo prolongerPret(int idPret) throws FunctionalException;
 
     /**
      * Extends the loan of id idPret for 4 weeks
-     * @param pret
+     * @param pretPojo
      * @return
      */
-    Pret prolongerPret(Pret pret) throws FunctionalException;
+    PretPojo prolongerPret(PretPojo pretPojo) throws FunctionalException;
 
     /**
-     * Returns utilisateur's loans
-     * @param utilisateur
+     * Returns utilisateurPojo's loans
+     * @param utilisateurPojo
      * @return
      */
-    List<PretResponse> remonterPrets(Utilisateur utilisateur);
+    List<PretBean> remonterPrets(UtilisateurPojo utilisateurPojo);
 
     /**
      * Returns utilisateur's loans
      * @param utilisateurId
      * @return
      */
-    List<PretResponse> remonterPrets(int utilisateurId);
+    List<PretBean> remonterPrets(int utilisateurId);
+
+    PretBean remonterPret(int pretId);
+
+    List<PretBean> remonterPretsNonRendus();
+
+    List<PretBean> remonterTousLesPrets();
 
     /**
-     * Saves new Pret into database
-     * @param pret
+     * Saves new PretPojo into database
+     * @param pretPojo
      */
-    void nouveauPret(Pret pret);
+    int nouveauPret(PretPojo pretPojo) throws FunctionalException;
+
+    PretBean retourPret(int pretId) throws DaoException;
+
+    /**
+     * Check loans date and update their states if needed
+     */
+    void majPret();
 }

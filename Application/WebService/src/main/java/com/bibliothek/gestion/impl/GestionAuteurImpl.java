@@ -2,8 +2,8 @@ package com.bibliothek.gestion.impl;
 
 import com.bibliothek.DAO.exceptions.DaoException;
 import com.bibliothek.DAO.impl.AuteurDaoImpl;
-import com.bibliothek.DAO.pojo.Auteur;
-import com.bibliothek.gestion.beans.AuteurResponse;
+import com.bibliothek.DAO.pojo.AuteurPojo;
+import com.bibliothek.gestion.beans.AuteurBean;
 import com.bibliothek.gestion.interfaces.GestionAuteur;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,66 +16,42 @@ public class GestionAuteurImpl implements GestionAuteur {
     AuteurDaoImpl auteurDao = new AuteurDaoImpl();
 
     @Override
-    public AuteurResponse findAuteurById(Auteur auteur)
+    public AuteurBean findAuteurById(int auteurId) throws DaoException
     {
-        AuteurResponse auteurResponse = new AuteurResponse();
-        try{
-            auteurResponse.setAuteur(auteurDao.findById(auteur.getId()));
-        }catch(DaoException daoE){
-            auteurResponse.setTypeErreur(2);
-            auteurResponse.setMessageErreur(daoE.getMessage());
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        return auteurResponse;
+        AuteurBean auteurBean = new AuteurBean();
+
+        auteurBean.setAuteur(auteurDao.findById(auteurId));
+
+        return auteurBean;
     }
 
     @Override
-    public List<AuteurResponse> findAllAuteurs(){
+    public List<AuteurBean> findAllAuteurs()throws DaoException {
 
-        List<AuteurResponse> auteurResponseList = new ArrayList<>();
-        List<Auteur> auteurs = auteurDao.findAll();
+        List<AuteurBean> auteurBeanList = new ArrayList<>();
+        List<AuteurPojo> auteurPojoList ;
+        auteurPojoList =  auteurDao.findAll();
 
-        for(int i = 0; i < auteurs.size(); i++){
-            try
-            {
-                auteurResponseList.get(i).setAuteur(auteurs.get(i));
-            }catch(DaoException e){
-                auteurResponseList.get(i).setTypeErreur(2);
-                auteurResponseList.get(i).setMessageErreur(e.getMessage());
-            }catch(Exception e){
-                e.printStackTrace();
-            }
+        for(int i = 0; i < auteurPojoList.size(); i++){
 
+            AuteurBean auteurBean = new AuteurBean();
+            auteurBean.setAuteur(auteurPojoList.get(i));
+            auteurBeanList.add(auteurBean);
         }
 
-        return auteurResponseList;
+        return auteurBeanList;
     }
 
     @Override
-    public void createAuteur(Auteur a){
-        try{
-            auteurDao.create(a);
-        }catch(DaoException daoE)
-        {
-            daoE.printStackTrace();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+    public void createAuteur(AuteurPojo a) throws DaoException{
 
+        auteurDao.create(a);
     }
 
     @Override
-    public void deleteAuteur(Auteur a){
-        try{
-            auteurDao.delete(a);
-        }catch(DaoException daoE)
-        {
-            daoE.printStackTrace();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+    public void deleteAuteur(AuteurPojo a) throws DaoException{
 
+        auteurDao.delete(a);
     }
 
 

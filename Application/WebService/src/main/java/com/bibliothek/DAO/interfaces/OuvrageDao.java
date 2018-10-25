@@ -1,21 +1,25 @@
 package com.bibliothek.DAO.interfaces;
 
 import com.bibliothek.DAO.exceptions.DaoException;
-import com.bibliothek.DAO.pojo.Ouvrage;
+import com.bibliothek.DAO.pojo.OuvragePojo;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface OuvrageDao {
 
-    Ouvrage findById(int id) throws DaoException;
+    OuvragePojo findById(int id);
 
-    List<Ouvrage> findAllByAuteurId(int auteurId) throws DaoException;
+    List<OuvragePojo> findAllByParam(String param);
 
-    int create(Ouvrage ouvrage) throws DaoException;
+    List<OuvragePojo> findAllByAuteurId(int auteurId);
 
-    void delete(Ouvrage ouvrage) throws DaoException;
+    int create(OuvragePojo ouvragePojo);
 
-    void update(Ouvrage ouvrage) throws DaoException;
+    void delete(OuvragePojo ouvragePojo) throws DaoException;
+
+    void update(OuvragePojo ouvragePojo) throws DaoException;
 
     List findAll() throws DaoException;
 }

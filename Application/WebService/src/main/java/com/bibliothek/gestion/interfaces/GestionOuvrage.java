@@ -1,9 +1,9 @@
 package com.bibliothek.gestion.interfaces;
 
-import com.bibliothek.DAO.pojo.Auteur;
-import com.bibliothek.DAO.pojo.Ouvrage;
-import com.bibliothek.gestion.beans.AuteurAndOuvragesResponse;
-import com.bibliothek.gestion.beans.OuvrageResponse;
+import com.bibliothek.DAO.pojo.AuteurPojo;
+import com.bibliothek.DAO.pojo.OuvragePojo;
+import com.bibliothek.gestion.beans.AuteurAndOuvragesBean;
+import com.bibliothek.gestion.beans.OuvrageBean;
 
 import java.util.List;
 
@@ -13,13 +13,13 @@ public interface GestionOuvrage {
      * @param id
      * @return
      */
-    OuvrageResponse findOuvrageById(int id);
+    OuvrageBean findOuvrageById(int id);
 
     /**
      * Returns all ouvrages from the database
      * @return
      */
-    List<OuvrageResponse> findAllOuvrages();
+    List<OuvrageBean> findAllOuvrages();
 
 
     /**
@@ -27,25 +27,25 @@ public interface GestionOuvrage {
      * @param parameter
      * @return
      */
-    List<OuvrageResponse> findAllOuvragesByParameter(String parameter);
+    List<OuvrageBean> findAllOuvragesByParameter(String parameter);
 
     /**
-     * Returns all ouvrages from specified auteur
-     * @param auteur
+     * Returns all ouvrages from specified auteurPojo
+     * @param auteurPojo
      * @return
      */
-    AuteurAndOuvragesResponse findAllOuvragesByAuteurId(Auteur auteur);
+    AuteurAndOuvragesBean findAllOuvragesByAuteurId(AuteurPojo auteurPojo);
 
 
     /**
-     * Saves the specified ouvrage in the database
-     * @param ouvrage
+     * Saves the specified ouvragePojo in the database
+     * @param ouvragePojo
      */
-    void createOuvrage(Ouvrage ouvrage);
+    void createOuvrage(OuvragePojo ouvragePojo);
 
     /**
-     * Deletes the specified ouvrage from database
-     * @param ouvrage
+     * Deletes the specified ouvragePojo from database
+     * @param ouvragePojo
      */
-    void deleteOuvrage(Ouvrage ouvrage);
+    void deleteOuvrage(OuvragePojo ouvragePojo);
 }
