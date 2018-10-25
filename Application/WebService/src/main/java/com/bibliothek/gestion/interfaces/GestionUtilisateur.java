@@ -1,6 +1,7 @@
 package com.bibliothek.gestion.interfaces;
 
-import com.bibliothek.DAO.pojo.Utilisateur;
+import com.bibliothek.DAO.pojo.UtilisateurPojo;
+import com.bibliothek.gestion.beans.UtilisateurBean;
 
 public interface GestionUtilisateur {
     /**
@@ -13,14 +14,21 @@ public interface GestionUtilisateur {
 
 
     /**
-     * Saves the specified user in the database
-     * @param utilisateur
+     * Finds user by pseudo and returns it into a UtilisateurBean
+     * @param pseudo
+     * @return
      */
-    void createUtilisateur(Utilisateur utilisateur);
+    UtilisateurBean findUtilisateurByPseudo(String pseudo);
+
+    /**
+     * Saves the specified user in the database
+     * @param utilisateurPojo
+     */
+    void createUtilisateur(UtilisateurPojo utilisateurPojo);
 
     /**
      * Delete specified user from the database
-     * @param utilisateur
+     * @param utilisateurPojo
      */
-    void deleteUtilisateur(Utilisateur utilisateur);
+    void deleteUtilisateur(UtilisateurPojo utilisateurPojo);
 }

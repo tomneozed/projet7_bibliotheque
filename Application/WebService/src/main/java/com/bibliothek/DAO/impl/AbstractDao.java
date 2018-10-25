@@ -2,23 +2,21 @@ package com.bibliothek.DAO.impl;
 
 import com.bibliothek.DAO.HibernateFactory;
 import com.bibliothek.DAO.exceptions.DaoException;
-import com.bibliothek.DAO.pojo.Ouvrage;
-import com.bibliothek.DAO.pojo.Pret;
-import com.bibliothek.DAO.pojo.Utilisateur;
+import com.bibliothek.DAO.pojo.AuteurPojo;
+import com.bibliothek.DAO.pojo.OuvragePojo;
+import com.bibliothek.DAO.pojo.PretPojo;
+import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
+import java.util.ArrayList;
 import java.util.List;
 
 
 public abstract class AbstractDao {
 
-    private Session session;
+    protected Session session;
     private Transaction transaction;
 
     public AbstractDao(){
@@ -26,13 +24,13 @@ public abstract class AbstractDao {
     }
 
     /**
-     * CRUD's Create and Update method
+     * CRUD's Update method
      * @param object
      */
-    protected void saveOrUpdate(Object object){
+    protected void update(Object object){
         try{
             startOperation();
-            session.saveOrUpdate(object);
+            session.update(object);
             transaction.commit();
         }catch(HibernateException e)
         {
@@ -40,6 +38,30 @@ public abstract class AbstractDao {
         }finally{
             HibernateFactory.close(session);
         }
+    }
+
+    /**
+     * CRUD's Create method
+     * @param object
+     * @return
+     */
+    protected Integer save(Object object){
+        Integer id = -1;
+        try{
+            startOperation();
+            id = (Integer)session.save(object);
+            transaction.commit();
+            if(id == -1)
+            {
+                throw new DaoException("Saving object " + object.toString() + " failed");
+            }
+        }catch(HibernateException e)
+        {
+            handleException(e);
+        }finally{
+            HibernateFactory.close(session);
+        }
+        return id;
     }
 
     /**
@@ -65,11 +87,15 @@ public abstract class AbstractDao {
      * @param id
      * @return
      */
-    protected Object find(Class clazz, int id) {
+    protected Object find(Class clazz, int id) throws DaoException{
         Object object = null;
         try{
             startOperation();
             object = session.get(clazz, id);
+            if(object == null)
+            {
+                throw new DaoException("The id " + id +" doesn't seems to correspond to any object from the table " + clazz.getName());
+            }
             transaction.commit();
         }catch(HibernateException e)
         {
@@ -85,11 +111,15 @@ public abstract class AbstractDao {
      * @param clazz
      * @return
      */
-    protected List findAll(Class clazz){
+    protected List findAll(Class clazz) throws DaoException {
         List<Class> objects = null;
         try{
             startOperation();
             objects = session.createQuery("from " + clazz.getName()).getResultList();
+            if(objects == null)
+            {
+                throw new DaoException("There is no object from " + clazz.getName() + " in the database" );
+            }
             transaction.commit();
         }catch(HibernateException e)
         {
@@ -100,12 +130,13 @@ public abstract class AbstractDao {
         return objects;
     }
 
-    public Object findByPseudo(String pseudo) throws DaoException
+
+    protected Object findByPseudo(String pseudo) throws DaoException
     {
         Object object = null;
         try{
             startOperation();
-            object = session.createQuery("from Utilisateur where pseudo = :pseudo").setParameter("pseudo", pseudo).getSingleResult();
+            object = session.createQuery("from utilisateur where pseudo = :pseudo").setParameter("pseudo", pseudo).getSingleResult();
             if(object == null)
             {
                 throw new DaoException("Pseudo " + pseudo +" doesn't seems to correspond to any object from the database " );
@@ -120,13 +151,13 @@ public abstract class AbstractDao {
         return object;
     }
 
-    protected List<Pret> findAllPretByUtilisateur(Utilisateur util) throws DaoException
+    protected List<PretPojo> findAllPretByUtilisateur(UtilisateurPojo util) throws DaoException
     {
-        List<Pret> prets = null;
+        List<PretPojo> pretPojos = null;
         try{
             startOperation();
-            prets = session.createQuery("from Pret where idUtilisateur = :idUtil").setParameter("idUtil", util.getId()).getResultList();
-            if(prets.isEmpty())
+            pretPojos = session.createQuery("from pret where idUtilisateur = :idUtil").setParameter("idUtil", util.getId()).getResultList();
+            if(pretPojos.isEmpty())
             {
                 throw new DaoException("There is no loan for the user : " + util.getNom()+ " " + util.getPrenom()) ;
             }
@@ -137,27 +168,31 @@ public abstract class AbstractDao {
         }finally{
             HibernateFactory.close(session);
         }
-        return prets;
+        return pretPojos;
     }
 
-    protected List<Ouvrage> findAllByParam(String param) throws DaoException{
-        List<Ouvrage> ouvrages = null;
+    protected List<OuvragePojo> findAllByParam(String param) throws DaoException{
+        List<OuvragePojo> ouvragePojos = new ArrayList<>();
+        List<OuvragePojo> ouvragePojosByTitre ;
+        List<AuteurPojo> auteurPojoList;
+        String params[] = param.split(" ");
+
+
         try{
             startOperation();
 
-            CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
+            for(int i = 0; i< params.length; i++)
+            {
+                params[i] = params[i].toLowerCase();
+                params[i] = "%"+params[i]+"%";
+                ouvragePojosByTitre = session.createQuery("from ouvrage where lower(titre) like :param").setParameter("param", params[i]).getResultList();
+                auteurPojoList = session.createQuery("from auteur where lower(nom) like :param or lower(prenom) like :param").setParameter("param", params[i]).getResultList();
 
-            CriteriaQuery<Ouvrage> cr = criteriaBuilder.createQuery(Ouvrage.class);
+                ouvragePojos = addList(ouvragePojos, ouvragePojosByTitre, auteurPojoList);
+            }
 
-            Root<Ouvrage> root = cr.from(Ouvrage.class);
 
-
-            cr.select(root).where(criteriaBuilder.like(root.get("titre"), "%param%"));
-
-            Query<Ouvrage> query = session.createQuery(cr);
-            ouvrages = query.getResultList();
-
-            if(ouvrages.isEmpty())
+            if(ouvragePojos.isEmpty())
             {
                 throw new DaoException(param + " doesn't seems to correspond to any object from the database" ) ;
             }
@@ -168,15 +203,16 @@ public abstract class AbstractDao {
         }finally{
             HibernateFactory.close(session);
         }
-        return ouvrages;
+        return ouvragePojos;
     }
+
 
     /**
      * Rollbaks current Transaction and throws DaoException
      * @param e
      * @throws DaoException
      */
-    protected void handleException(HibernateException e) throws DaoException {
+    protected void handleException(HibernateException e) throws DaoException{
         HibernateFactory.rollback(transaction);
         throw new DaoException(e);
     }
@@ -188,6 +224,47 @@ public abstract class AbstractDao {
     protected void startOperation() throws HibernateException{
         session = HibernateFactory.openSession();
         transaction = session.beginTransaction();
+    }
+
+    private List<OuvragePojo> addList(List<OuvragePojo> ouvragePojoARetourner, List<OuvragePojo> ouvragePojoList, List<AuteurPojo> auteurPojoList)
+    {
+        if(!auteurPojoList.isEmpty())
+        {
+            for(int i = 0; i < auteurPojoList.size(); i++)
+            {
+                for(int j = 0; j < auteurPojoList.get(i).getOuvragePojos().size(); j++)
+                {
+                    if(!ouvragePojoARetourner.isEmpty()){
+
+                        if(!ouvragePojoARetourner.contains(auteurPojoList.get(i).getOuvragePojos().get(j)))
+                        {
+                            ouvragePojoARetourner.add(auteurPojoList.get(i).getOuvragePojos().get(j));
+                        }
+                    }else{
+                        ouvragePojoARetourner.add(auteurPojoList.get(i).getOuvragePojos().get(j));
+                    }
+
+                }
+            }
+        }
+
+        if(!ouvragePojoList.isEmpty())
+        {
+            for(int i = 0; i < ouvragePojoList.size(); i++)
+            {
+                if(!ouvragePojoARetourner.isEmpty())
+                {
+                    if(!ouvragePojoARetourner.contains(ouvragePojoList.get(i)))
+                    {
+                        ouvragePojoARetourner.add(ouvragePojoList.get(i));
+                    }
+                }else{
+                    ouvragePojoARetourner.add(ouvragePojoList.get(i));
+                }
+            }
+        }
+
+        return ouvragePojoARetourner;
     }
 
 

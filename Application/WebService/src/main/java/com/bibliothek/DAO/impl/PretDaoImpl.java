@@ -2,7 +2,8 @@ package com.bibliothek.DAO.impl;
 
 import com.bibliothek.DAO.exceptions.DaoException;
 import com.bibliothek.DAO.interfaces.PretDao;
-import com.bibliothek.DAO.pojo.Pret;
+import com.bibliothek.DAO.pojo.PretPojo;
+import com.bibliothek.DAO.pojo.UtilisateurPojo;
 
 import java.util.List;
 
@@ -13,32 +14,35 @@ public class PretDaoImpl extends AbstractDao implements PretDao {
     }
 
     @Override
-    public Pret findById(int id) throws DaoException {
+    public PretPojo findById(int id) throws DaoException {
 
-        return (Pret)super.find(Pret.class, id);
+        return (PretPojo)super.find(PretPojo.class, id);
     }
 
     @Override
-    public int create(Pret pret) throws DaoException {
-        super.saveOrUpdate(pret);
-        System.out.println(pret.getId());
-        return pret.getId();
+    public int create(PretPojo pretPojo) throws DaoException{
+        return super.save(pretPojo);
     }
 
     @Override
-    public void delete(Pret pret) throws DaoException {
-        super.delete(pret);
+    public void delete(PretPojo pretPojo) throws DaoException{
+        super.delete(pretPojo);
     }
 
     @Override
-    public void update(Pret pret) throws DaoException {
-        super.saveOrUpdate(pret);
+    public void update(PretPojo pretPojo) throws DaoException{
+        super.update(pretPojo);
     }
 
 
     @Override
-    public List findAll() throws DaoException {
+    public List findAll() throws DaoException{
 
-        return super.findAll(Pret.class);
+        return super.findAll(PretPojo.class);
+    }
+
+    @Override
+    public List<PretPojo> findAllByUtilisateur(UtilisateurPojo utilisateurPojo){
+        return super.findAllPretByUtilisateur(utilisateurPojo);
     }
 }
