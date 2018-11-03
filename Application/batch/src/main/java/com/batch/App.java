@@ -1,14 +1,18 @@
 package com.batch;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
- * Hello world!
+ *
  *
  */
 public class App 
 {
+
     public static void main( String[] args )
-    {   
-    	System.out.println("Debut App.main");
+    {
+    	System.out.println("Starting App.main");
     	Application app = new Application();
     	try {
 			app.run();
@@ -16,7 +20,5 @@ public class App
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    
     }
-
 }
