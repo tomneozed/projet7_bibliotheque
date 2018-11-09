@@ -6,7 +6,6 @@ com\bibliothek\exceptions\FunctionalException.class
 com\bibliothek\DAO\impl\PretDaoImpl.class
 com\bibliothek\DAO\pojo\UtilisateurPojo.class
 com\bibliothek\DAO\pojo\AuteurOuvragePojo.class
-com\bibliothek\Test.class
 com\bibliothek\gestion\interfaces\GestionPret.class
 com\bibliothek\webservice\responses\AbstractResponse.class
 com\bibliothek\gestion\beans\AuteurAndOuvragesBean.class

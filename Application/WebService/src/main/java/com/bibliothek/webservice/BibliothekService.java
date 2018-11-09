@@ -20,7 +20,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlElement;
 
-@WebService(serviceName = "bibliothek")
+@WebService()
 public class BibliothekService {
 
     @Autowired
