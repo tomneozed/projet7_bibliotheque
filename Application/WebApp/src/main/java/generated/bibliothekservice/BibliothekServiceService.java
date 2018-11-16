@@ -30,7 +30,7 @@ public class BibliothekServiceService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://laptop-nv02e10l:8080/bibliothek4045088692351894296/BibliothekServiceService?wsdl");
+            url = new URL("http://192.168.1.34:8083/bibliothek?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

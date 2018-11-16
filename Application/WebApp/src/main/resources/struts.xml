@@ -8,9 +8,18 @@
 
         <action name="login"
                 class="com.action.LoginAction">
-            <result name="success">/jsp/success.jsp</result>
+            <result name="success">/jsp/account.jsp</result>
             <result name="login">/jsp/login.jsp</result>
             <result name="input">/jsp/login.jsp</result>
+        </action>
+    </package>
+
+    <package name="loans" namespace="/loans" extends="struts-default">
+        <action name="currentLoans"
+                class="com.action.LoanAction"
+                method="loansList">
+            <result name="success">/jsp/loans_list.jsp</result>
+            <result name="error">/jsp/loans_list.jsp</result>
         </action>
     </package>
 </struts>
