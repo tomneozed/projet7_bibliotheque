@@ -7,61 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17995fb6-72b8-4076-b5a2-9d3173338ed7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/action/AbstractAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/action/OuvragesAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/ouvrage/ouvrage_detail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/ouvrage/ouvrage_list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/action/LoanAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/action/LoanAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/action/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/action/LoginAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generated/bibliothekservice/BibliothekServiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/generated/bibliothekservice/BibliothekServiceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/login.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/account.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/loans_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/loans_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/action/LoginAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/action/LoginAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generated/bibliothekservice/BibliothekServiceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generated/bibliothekservice/BibliothekServiceService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webapp-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/webapp-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/com/action/LoginAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/com/action/LoginAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/generated/bibliothekservice/BibliothekServiceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/generated/bibliothekservice/BibliothekServiceService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webapp-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/webapp-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/webapp-1.0-SNAPSHOT/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/webapp-1.0-SNAPSHOT/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/.idea/dataSources/97c17d4f-f4fd-42b9-a07a-2cd156fc5b29.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/.idea/dataSources/97c17d4f-f4fd-42b9-a07a-2cd156fc5b29.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/.idea/dataSources/97c17d4f-f4fd-42b9-a07a-2cd156fc5b29/storage_v2/_src_/database/p7_test.CnQFiA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/.idea/dataSources/97c17d4f-f4fd-42b9-a07a-2cd156fc5b29/storage_v2/_src_/database/p7_test.CnQFiA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/DAO/pojo/AuteurOuvragePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/DAO/pojo/AuteurOuvragePojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/DAO/pojo/AuteurPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/DAO/pojo/AuteurPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/DAO/pojo/OuvragePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/DAO/pojo/OuvragePojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/DAO/pojo/PretPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/DAO/pojo/PretPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/DAO/pojo/UtilisateurPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/DAO/pojo/UtilisateurPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/src/main/java/com/bibliothek/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/bibliothek.war" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/bibliothek.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/impl/AbstractDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/impl/AbstractDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/AuteurOuvragePojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/AuteurOuvragePojo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/AuteurPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/AuteurPojo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/OuvragePojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/OuvragePojo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/PretPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/PretPojo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/UtilisateurPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/UtilisateurPojo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/com/bibliothek/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/bibliothek/WEB-INF/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/DAO/impl/AbstractDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/DAO/impl/AbstractDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/DAO/pojo/AuteurOuvragePojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/DAO/pojo/AuteurOuvragePojo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/DAO/pojo/AuteurPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/DAO/pojo/AuteurPojo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/DAO/pojo/OuvragePojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/DAO/pojo/OuvragePojo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/DAO/pojo/PretPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/DAO/pojo/PretPojo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/DAO/pojo/UtilisateurPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/DAO/pojo/UtilisateurPojo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/classes/com/bibliothek/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebService/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../WebService/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../batch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../batch/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soapUI/bibliothek-wsdl-soapui-project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../soapUI/bibliothek-wsdl-soapui-project.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -312,7 +261,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1911" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -426,7 +375,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542536513274" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542537171390" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -543,12 +492,12 @@
       <workItem from="1541842556610" duration="1877000" />
       <workItem from="1542380018878" duration="941000" />
       <workItem from="1542459292045" duration="3213000" />
-      <workItem from="1542527551809" duration="5248000" />
+      <workItem from="1542527551809" duration="6007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25169000" />
+    <option name="totallyTimeSpent" value="25928000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -560,8 +509,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1913" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="1913" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1885906" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -602,18 +550,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/action/LoginAction.java</url>
-          <line>73</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/generated/bibliothekservice/UtilisateurPojo.java">
