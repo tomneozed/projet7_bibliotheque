@@ -3,9 +3,11 @@ package com.bibliothek.DAO.pojo;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity(name="utilisateur")
+@Table(name="utilisateur")
 public class UtilisateurPojo implements Serializable {
 
     @Id

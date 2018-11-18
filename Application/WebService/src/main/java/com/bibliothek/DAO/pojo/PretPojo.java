@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Entity(name="pret")
+@Table(name="pret")
 public class PretPojo implements Serializable {
 
     @Id

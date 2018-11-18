@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity(name="ouvrage")
+@Table(name="ouvrage")
 public class OuvragePojo implements Serializable {
 
     @Id

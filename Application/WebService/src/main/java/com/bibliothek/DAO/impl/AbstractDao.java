@@ -113,6 +113,7 @@ public abstract class AbstractDao {
      */
     protected List findAll(Class clazz) throws DaoException {
         List<Class> objects = null;
+        String className = parsePojo(clazz.getName());
         try{
             startOperation();
             objects = session.createQuery("from " + clazz.getName()).getResultList();
@@ -265,6 +266,17 @@ public abstract class AbstractDao {
         }
 
         return ouvragePojoARetourner;
+    }
+
+
+    private String parsePojo(String str)
+    {
+        String value ="";
+        for(int i =0 ; i < str.length() -4; i++)
+        {
+            value += str.charAt(i);
+        }
+        return value;
     }
 
 

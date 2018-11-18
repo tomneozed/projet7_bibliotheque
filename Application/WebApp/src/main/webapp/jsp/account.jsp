@@ -12,6 +12,9 @@
     <title>Login</title>
 </head>
 <body>
+<header>
+    <%@include file="_include/navbar.jsp"%>
+</header>
 <s:if test="#session.user">
     <li>
         <s:property value="#session.user.username"/>

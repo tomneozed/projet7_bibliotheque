@@ -5,22 +5,39 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.service.LoginService;
-import generated.bibliothekservice.BibliothekService;
-import generated.bibliothekservice.BibliothekServiceService;
-import generated.bibliothekservice.UtilisateurBean;
 import generated.bibliothekservice.UtilisateurResponse;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.Map;
 
-public class LoginAction extends ActionSupport implements ModelDriven<User> {
+public class LoginAction extends AbstractAction implements ModelDriven<User>, SessionAware {
 
-    BibliothekServiceService bibliothekServiceService = new BibliothekServiceService();
+    //=========  ATTRIBUTES  =========
 
-    @Autowired
-    private BibliothekService bibliothekService = bibliothekServiceService.getBibliothekServicePort();
     private User user = new User();
+
+    private Map<String, Object> session;
+
+    //=========  GETTERS & SETTERS  =========
+
+    public User getModel() {
+        return user;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setSession(Map<String, Object> map) {
+        this.session = map;
+    }
+
+    //=========  METHODS  =========
 
     public void validate()
     {
@@ -34,40 +51,31 @@ public class LoginAction extends ActionSupport implements ModelDriven<User> {
         }
     }
 
-    public String execute()
+    public String doLogin()
     {
-        UtilisateurResponse userbean = new UtilisateurResponse();
-        userbean = bibliothekService.identification(user.getUsername(), user.getPassword());
+        String vResult = ActionSupport.INPUT;
+        UtilisateurResponse userbean ;
+        userbean = getBibliothekService().identification(user.getUsername(), user.getPassword());
         LoginService loginService = new LoginService();
 
         if(userbean.getUtilisateurBeanList().size() > 0)
         {
-            Map session = ActionContext.getContext().getSession();
+            session = ActionContext.getContext().getSession();
             session.put("user", user);
-            return ActionSupport.SUCCESS;
+            vResult = ActionSupport.SUCCESS;
         }else
         {
-            return ActionSupport.LOGIN;
+            vResult = ActionSupport.LOGIN;
         }
+        return vResult;
     }
 
-    public BibliothekService getBibliothekService() {
-        return bibliothekService;
+    public String doLogout() {
+        session = ActionContext.getContext().getSession();
+
+        session.remove("user");
+        return ActionSupport.SUCCESS;
     }
 
-    public void setBibliothekService(BibliothekService bibliothekService) {
-        this.bibliothekService = bibliothekService;
-    }
 
-    public User getModel() {
-        return user;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 }

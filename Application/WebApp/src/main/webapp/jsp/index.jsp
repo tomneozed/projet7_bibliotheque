@@ -12,6 +12,13 @@
     <title>Index</title>
 </head>
 <body>
+<header>
+    <%@ include file="_include/navbar.jsp" %>
+</header>
 INDEX
+
+<s:a action="all_ouvrages">
+    <s:text name="Rechercher un ouvrage"/>
+</s:a>
 </body>
 </html>
