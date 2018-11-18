@@ -12,9 +12,12 @@
     <title>Login</title>
 </head>
 <body>
+<header>
+    <%@include file="_include/navbar.jsp"%>
+</header>
 <s:form action="login">
-    <s:textfield label="Username " key="username" />
-    <s:password label="Password " key="password" />
+    <s:textfield label="Username " key="user.username" />
+    <s:password label="Password " key="user.password" />
     <s:submit />
 </s:form>
 </body>

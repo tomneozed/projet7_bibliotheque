@@ -18,16 +18,16 @@
             <s:property value="#session.user.username"/>
         </li>
 
-        <ul>
-            <s:iterator value="loansList">
-                <li>
-                    <s:a action="currentLoans">
-                        <s:param name="id" value="id"/>
-                        <s:property value="id"/>
-                    </s:a>
-                </li>
-            </s:iterator>
-        </ul>
+        <%--<ul>--%>
+            <%--<s:iterator value="loansList">--%>
+                <%--<li>--%>
+                    <%--<s:a action="currentLoans">--%>
+                        <%--<s:param name="id" value="id"/>--%>
+                        <%--<s:property value="id"/>--%>
+                    <%--</s:a>--%>
+                <%--</li>--%>
+            <%--</s:iterator>--%>
+        <%--</ul>--%>
     </s:if>
 </body>
 </html>

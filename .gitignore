@@ -3,6 +3,13 @@
 
 ### Java-Web ###
 ## ignoring target file
-target/
+/Application/WebService/target/
+/Application/WebService/.idea/
+/Application/WebService/WebService.iml/
+
+/Application/WebApp/target/
+/Application/WebApp/.idea/
+/Application/WebApp/WebService.iml/
+
 
 # End of https://www.gitignore.io/api/java-web

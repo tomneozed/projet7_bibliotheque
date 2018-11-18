@@ -1,44 +1,30 @@
 package com.action;
 
+import com.model.User;
 import com.opensymphony.xwork2.ActionSupport;
 import generated.bibliothekservice.BibliothekService;
+import generated.bibliothekservice.BibliothekServiceService;
 import generated.bibliothekservice.PretBean;
 import generated.bibliothekservice.PretResponse;
+import org.apache.struts2.interceptor.SessionAware;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-public class LoanAction extends ActionSupport {
+public class LoanAction extends AbstractAction implements SessionAware {
 
-    private BibliothekService bibliothekService;
+    //=========  ATTRIBUTES  =========
 
     private PretResponse userLoans = new PretResponse();
 
     private List<PretBean> loansList= new ArrayList<PretBean>();
 
-    public String loansList()
-    {
-        userLoans = bibliothekService.userLoansByPseudo("username");
+    private Map<String, Object> session;
 
-        loansList = userLoans.getPretBeanList();
 
-        if(userLoans.getPretBeanList().isEmpty())
-        {
-            return ERROR;
-            //addActionMessage("You don't have any loans");
-        }else
-        {
-            return SUCCESS;
-        }
-    }
-
-    public BibliothekService getBibliothekService() {
-        return bibliothekService;
-    }
-
-    public void setBibliothekService(BibliothekService bibliothekService) {
-        this.bibliothekService = bibliothekService;
-    }
+    //=========  GETTERS & SETTERS  =========
 
     public PretResponse getUserLoans() {
         return userLoans;
@@ -55,4 +41,30 @@ public class LoanAction extends ActionSupport {
     public void setLoansList(List<PretBean> loansList) {
         this.loansList = loansList;
     }
+
+    public void setSession(Map<String, Object> map) {
+        this.session = map;
+    }
+
+
+    //=========  METHODS  =========
+
+    public String loansListByUser()
+    {
+        userLoans = getBibliothekService().userLoansByPseudo("alainTerrieur");
+
+        loansList = userLoans.getPretBeanList();
+
+        if(loansList.size() == 0)
+        {
+            return ERROR;
+            //addActionMessage("You don't have any loans");
+        }else
+        {
+            return SUCCESS;
+        }
+    }
+
+
+
 }
