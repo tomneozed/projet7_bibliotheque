@@ -9,6 +9,7 @@
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
+
 <hibernate-configuration>
 
     <session-factory>
@@ -35,12 +36,12 @@
         <property name="hbm2ddl.auto">update</property>
 
         <!-- Names the annotated entity class -->
-        <mapping class="com.bibliothek.DAO.pojo.Auteur"/>
-        <mapping class="com.bibliothek.DAO.pojo.Bibliotheque"/>
-        <mapping class="com.bibliothek.DAO.pojo.Ouvrage"/>
-        <mapping class="com.bibliothek.DAO.pojo.OuvrageBibliotheque"/>
-        <mapping class="com.bibliothek.DAO.pojo.Pret"/>
-        <mapping class="com.bibliothek.DAO.pojo.Utilisateur"/>
+        <mapping class="com.bibliothek.DAO.pojo.AuteurOuvragePojo"/>
+        <mapping class="com.bibliothek.DAO.pojo.AuteurPojo"/>
+        <mapping class="com.bibliothek.DAO.pojo.OuvragePojo"/>
+        <mapping class="com.bibliothek.DAO.pojo.PretPojo"/>
+        <mapping class="com.bibliothek.DAO.pojo.UtilisateurPojo"/>
+
 
 
     </session-factory>

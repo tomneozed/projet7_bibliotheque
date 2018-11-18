@@ -2,15 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a959011-b7d2-4600-824f-8d56cd7ac4b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../WebApp/src/main/java/com/action/AbstractAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApp/src/main/java/com/action/OuvragesAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApp/src/main/webapp/jsp/ouvrage/ouvrage_detail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApp/src/main/webapp/jsp/ouvrage/ouvrage_list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/src/main/java/com/action/LoanAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/src/main/java/com/action/LoanAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/src/main/java/com/action/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/src/main/java/com/action/LoginAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/src/main/java/generated/bibliothekservice/BibliothekServiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/src/main/java/generated/bibliothekservice/BibliothekServiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/src/main/resources/login.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/src/main/resources/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/src/main/resources/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/src/main/webapp/jsp/account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/src/main/webapp/jsp/account.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/src/main/webapp/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/src/main/webapp/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/src/main/webapp/jsp/loans_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/src/main/webapp/jsp/loans_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/src/main/webapp/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/src/main/webapp/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/target/classes/com/action/LoginAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/target/classes/com/action/LoginAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/target/classes/generated/bibliothekservice/BibliothekServiceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/target/classes/generated/bibliothekservice/BibliothekServiceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/target/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/target/classes/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebApp/target/webapp-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/target/webapp-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/com/action/LoginAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/com/action/LoginAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/generated/bibliothekservice/BibliothekServiceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/generated/bibliothekservice/BibliothekServiceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/target/webapp-1.0-SNAPSHOT/WEB-INF/classes/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/target/webapp-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/target/webapp-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/target/webapp-1.0-SNAPSHOT/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/target/webapp-1.0-SNAPSHOT/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/97c17d4f-f4fd-42b9-a07a-2cd156fc5b29.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/97c17d4f-f4fd-42b9-a07a-2cd156fc5b29.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/97c17d4f-f4fd-42b9-a07a-2cd156fc5b29/storage_v2/_src_/database/p7_test.CnQFiA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/97c17d4f-f4fd-42b9-a07a-2cd156fc5b29/storage_v2/_src_/database/p7_test.CnQFiA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/BibliothekService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/BibliothekService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurOuvragePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurOuvragePojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/OuvragePojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/OuvragePojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/PretPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/PretPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/UtilisateurPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/UtilisateurPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliothek/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliothek/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bibliothek.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/bibliothek.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/impl/AbstractDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/impl/AbstractDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/AuteurOuvragePojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/AuteurOuvragePojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/AuteurPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/AuteurPojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/OuvragePojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/OuvragePojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/PretPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/PretPojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/UtilisateurPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/DAO/pojo/UtilisateurPojo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/com/bibliothek/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/bibliothek/WEB-INF/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/impl/AbstractDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/impl/AbstractDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/pojo/AuteurOuvragePojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/pojo/AuteurOuvragePojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/pojo/AuteurPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/pojo/AuteurPojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/pojo/OuvragePojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/pojo/OuvragePojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/pojo/PretPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/pojo/PretPojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/pojo/UtilisateurPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bibliothek/DAO/pojo/UtilisateurPojo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/bibliothek/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bibliothek/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,126 +77,182 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="p7_test@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="p7_test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="p7_test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="p7_test: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="p7_test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="p7_test: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="p7_test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="p7_test: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="p7_test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="p7_test: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1362679742">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="bibliotheque" value="2" />
+          <entry key="class" value="3" />
           <entry key="iml" value="1" />
-          <entry key="java" value="143" />
+          <entry key="java" value="162" />
+          <entry key="ouvrage" value="2" />
+          <entry key="ouvrage_bibliotheque" value="1" />
+          <entry key="pret" value="3" />
           <entry key="sql" value="1" />
-          <entry key="xml" value="2" />
+          <entry key="utilisateur" value="2" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="3" />
+          <entry key="Database Element" value="10" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="143" />
+          <entry key="JAVA" value="162" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="2" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="165" />
+          <entry key="cell" value="141" />
+          <entry key="java" value="737" />
           <entry key="txt" value="7" />
+          <entry key="xml" value="76" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="165" />
+          <entry key="JAVA" value="737" />
           <entry key="PLAIN_TEXT" value="7" />
+          <entry key="Scratch" value="141" />
+          <entry key="XML" value="76" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/BibliothekService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="-657">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="238">
+              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AuteurOuvrageDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionPretImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <entry file="das://97c17d4f-f4fd-42b9-a07a-2cd156fc5b29/database/p7_test/schema/public/table/utilisateur">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/responses/OuvrageResponse.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="135">
+              <caret line="118" selection-start-line="118" selection-end-line="118" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AuteurDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/interfaces/OuvrageDao.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurBean.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="234">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/OuvrageBean.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionOuvrageImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/request/PretRequest.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.6.Final/hibernate-core-5.3.6.Final.jar!/org/hibernate/internal/AbstractSharedSessionContract.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="381">
+              <caret line="572" selection-start-line="572" selection-end-line="572" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/OuvragePojo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-748">
+              <caret line="40" column="33" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,7 +288,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurAndOuvragesResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionUtilisateurImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/UtilisateurDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/BibliothekService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionAuteurImpl.java" />
@@ -194,8 +295,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionOuvrage.java" />
         <option value="$PROJECT_DIR$/src/main/java/bibliothek/webservice/request/PretRequest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/BibliothekService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurOuvragePojo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurPojo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/OuvragePojo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/PretPojo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/UtilisateurPojo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliothek/main.java" />
       </list>
     </option>
   </component>
@@ -229,10 +337,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1050" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -243,8 +351,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,7 +401,40 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+              <item name="DAO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
+              <item name="DAO" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
+              <item name="DAO" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
+              <item name="DAO" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
@@ -306,6 +445,39 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
               <item name="gestion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
+              <item name="gestion" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
+              <item name="gestion" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliothek" type="462c0819:PsiDirectoryNode" />
+              <item name="gestion" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bibliothek" type="b2602c69:ProjectViewProjectNode" />
@@ -335,13 +507,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540743784201" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542536513313" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -381,6 +556,19 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bibliothek.main" />
+      <module name="WebService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bibliothek.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="GlassfishConfiguration" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
       <option name="LOCAL" value="false" />
       <deployment />
@@ -399,6 +587,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -422,16 +615,20 @@
       <workItem from="1540748260766" duration="506000" />
       <workItem from="1541172896227" duration="657000" />
       <workItem from="1541775633834" duration="697000" />
+      <workItem from="1542381813345" duration="22000" />
+      <workItem from="1542382001194" duration="615000" />
+      <workItem from="1542527672895" duration="6771000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12064000" />
+    <option name="totallyTimeSpent" value="19472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5388514" visible="true" weight="0.2181208" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5388514" visible="true" weight="0.22818792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -440,16 +637,17 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info id="Persistence" order="8" sideWeight="0.46114865" side_tool="true" weight="0.20604026" />
+      <window_info anchor="bottom" id="Database Console" weight="0.3035461" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19148937" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19148937" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2851064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="9" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32907802" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
@@ -459,8 +657,8 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="right" id="Maven Projects" order="5" visible="true" weight="0.12080537" />
-      <window_info anchor="right" id="Database" order="6" weight="0.1738255" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.12080537" />
+      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.1738255" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -471,53 +669,25 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bibliothek/main.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java</url>
+          <line>118</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurResponse.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AbstractResponse.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/AuteurAndOuvragesResponse.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/UtilisateurDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BibliothekService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/responses/AbstractResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/responses/PretResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/responses/UtilisateurResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/beans/PretBean.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -534,24 +704,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurOuvragePojo.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurPojo.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/PretPojo.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionUtilisateurImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionOuvrageImpl.java">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/interfaces/GestionAuteur.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/interfaces/GestionUtilisateur.java" />
@@ -587,45 +745,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/gestion/beans/AuteurBean.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/gestion/beans/OuvrageBean.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/bibliothek/webservice/request/PretRequest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionAuteur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
           <caret line="90" column="10" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/OuvragePojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/UtilisateurPojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/BibliothekService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -636,13 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/responses/OuvrageResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -666,6 +782,162 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/responses/OuvrageResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://97c17d4f-f4fd-42b9-a07a-2cd156fc5b29/database/p7_test/schema/public/table/ouvrage_bibliotheque">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="2328" column="20" selection-start-line="2328" selection-start-column="20" selection-end-line="2328" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurPojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/PretPojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/UtilisateurPojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/AuteurOuvragePojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/interfaces/GestionAuteur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.6.Final/hibernate-core-5.3.6.Final.jar!/org/hibernate/internal/AbstractSharedSessionContract.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="572" selection-start-line="572" selection-end-line="572" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/OuvrageDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/gestion/impl/GestionOuvrageImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://97c17d4f-f4fd-42b9-a07a-2cd156fc5b29/database/p7_test/schema/public/table/bibliotheque">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://97c17d4f-f4fd-42b9-a07a-2cd156fc5b29/database/p7_test/schema/public/table/pret">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://97c17d4f-f4fd-42b9-a07a-2cd156fc5b29/database/p7_test/schema/public/table/ouvrage">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/pojo/OuvragePojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-748">
+          <caret line="40" column="33" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/DAO/impl/AbstractDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/webservice/BibliothekService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-657">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://97c17d4f-f4fd-42b9-a07a-2cd156fc5b29/database/p7_test/schema/public/table/utilisateur">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliothek/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
