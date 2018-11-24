@@ -2,6 +2,7 @@ package com.bibliothek;
 
 import com.bibliothek.gestion.beans.OuvrageBean;
 import com.bibliothek.webservice.BibliothekService;
+import com.bibliothek.webservice.responses.OuvrageResponse;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ public class main {
     {
         BibliothekService bibliothekService = new BibliothekService();
 
-        //List<OuvrageBean> loans =bibliothekService.userLoansByPseudo();
+        OuvrageResponse ouvrages =bibliothekService.allOuvrages();
         System.out.println("bonjour");
     }
 }
