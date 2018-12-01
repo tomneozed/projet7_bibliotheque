@@ -2,10 +2,8 @@ package com.action;
 
 import com.model.User;
 import com.opensymphony.xwork2.ActionSupport;
-import generated.bibliothekservice.BibliothekService;
-import generated.bibliothekservice.BibliothekServiceService;
-import generated.bibliothekservice.PretBean;
-import generated.bibliothekservice.PretResponse;
+import generated.PretBean;
+import generated.PretResponse;
 import org.apache.struts2.interceptor.SessionAware;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -1,7 +1,7 @@
 package com.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import generated.bibliothekservice.OuvrageBean;
+import generated.OuvrageBean;
 
 import java.util.List;
 

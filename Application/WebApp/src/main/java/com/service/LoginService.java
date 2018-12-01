@@ -1,7 +1,6 @@
 package com.service;
 
 import com.model.User;
-import generated.bibliothekservice.BibliothekService;
 
 public class LoginService {
 

@@ -5,7 +5,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.service.LoginService;
-import generated.bibliothekservice.UtilisateurResponse;
+import generated.UtilisateurResponse;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.interceptor.SessionAware;
 
@@ -71,11 +71,10 @@ public class LoginAction extends AbstractAction implements ModelDriven<User>, Se
     }
 
     public String doLogout() {
+        System.out.println("logout");
         session = ActionContext.getContext().getSession();
 
         session.remove("user");
         return ActionSupport.SUCCESS;
     }
-
-
 }

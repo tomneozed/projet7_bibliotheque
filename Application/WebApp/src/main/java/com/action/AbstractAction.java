@@ -1,8 +1,8 @@
 package com.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import generated.bibliothekservice.BibliothekService;
-import generated.bibliothekservice.BibliothekServiceService;
+import generated.BibliothekService;
+import generated.BibliothekServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class AbstractAction extends ActionSupport {

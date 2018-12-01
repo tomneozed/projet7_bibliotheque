@@ -15,7 +15,7 @@
 <header>
     <%@ include file="../_include/navbar.jsp" %>
 </header>
-<h2>Liste des projets</h2>
+<h2>Liste des Ouvrages</h2>
 
 <ul>
     <s:iterator value="ouvrageList">
