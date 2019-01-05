@@ -12,18 +12,20 @@ import com.bibliothek.gestion.interfaces.GestionOuvrage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.inject.Inject;
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Named
 public class GestionOuvrageImpl implements GestionOuvrage {
 
     //ATTRIBUTES
-    //@Autowired
-    private OuvrageDao ouvrageDao = new OuvrageDaoImpl();
+    @Inject
+    private OuvrageDao ouvrageDao;
 
-    //@Autowired
-    private AuteurDao auteurDao = new AuteurDaoImpl();
+    @Inject
+    private AuteurDao auteurDao;
 
     //CONTRUCTORS
     public GestionOuvrageImpl() {

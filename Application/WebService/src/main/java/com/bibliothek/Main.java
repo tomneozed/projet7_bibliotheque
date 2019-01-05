@@ -7,13 +7,16 @@ import com.bibliothek.webservice.responses.OuvrageResponse;
 import com.bibliothek.webservice.responses.PretResponse;
 import com.bibliothek.webservice.responses.UtilisateurResponse;
 import org.springframework.boot.SpringApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
 
     public static void main(String[] args )
     {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        ApplicationContext vApplicationContext = new ClassPathXmlApplicationContext("classpath:/spring.xml");
+
+        BibliothekService vBS = vApplicationContext.getBean("bibliothekService", BibliothekService.class);
 
         BibliothekService bibliothekService = new BibliothekService();
 

@@ -16,23 +16,29 @@ import com.bibliothek.gestion.interfaces.GestionPret;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.inject.Inject;
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-@Component
+@Named
 public class GestionPretImpl implements GestionPret {
 
     //ATTRIBUTES
-    //@Autowired
-    private PretDao pretDao = new PretDaoImpl();
+    @Inject
+    private PretDao pretDao;
 
-    //@Autowired
-    private UtilisateurDao utilisateurDao = new UtilisateurDaoImpl();
+    @Inject
+    private UtilisateurDao utilisateurDao;
 
-    //@Autowired
-    private OuvrageDao ouvrageDao = new OuvrageDaoImpl();
+    @Inject
+    private OuvrageDao ouvrageDao;
+
+    //CONSTRUCTORS
+    public GestionPretImpl() {
+    }
 
     //METHODS
     @Override

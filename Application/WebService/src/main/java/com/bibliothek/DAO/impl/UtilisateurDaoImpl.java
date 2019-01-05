@@ -5,9 +5,10 @@ import com.bibliothek.DAO.interfaces.UtilisateurDao;
 import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import org.springframework.stereotype.Component;
 
+import javax.inject.Named;
 import java.util.List;
 
-@Component
+@Named
 public class UtilisateurDaoImpl extends AbstractDao implements UtilisateurDao {
 
     public UtilisateurDaoImpl(){

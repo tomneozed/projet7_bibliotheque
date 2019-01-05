@@ -8,12 +8,20 @@ import com.bibliothek.gestion.interfaces.GestionUtilisateur;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+import javax.inject.Inject;
+import javax.inject.Named;
+
+@Named
 public class GestionUtilisateurImpl implements GestionUtilisateur {
 
     //ATTRIBUTES
-    //@Autowired
-    private UtilisateurDao utilisateurDao = new UtilisateurDaoImpl();
+    @Inject
+    private UtilisateurDao utilisateurDao;
+
+    //CONSTRUCTORS
+
+    public GestionUtilisateurImpl() {
+    }
 
     //METHODS
     @Override

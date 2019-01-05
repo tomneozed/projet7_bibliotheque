@@ -1,6 +1,8 @@
 package com.action;
 
 import com.opensymphony.xwork2.ActionContext;
+import generated.bibliothek.PretBean;
+import generated.bibliothek.PretResponse;
 import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.ArrayList;

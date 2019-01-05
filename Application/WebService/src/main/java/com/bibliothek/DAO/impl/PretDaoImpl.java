@@ -6,9 +6,10 @@ import com.bibliothek.DAO.pojo.PretPojo;
 import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import org.springframework.stereotype.Component;
 
+import javax.inject.Named;
 import java.util.List;
 
-@Component
+@Named
 public class PretDaoImpl extends AbstractDao implements PretDao {
 
     public PretDaoImpl(){

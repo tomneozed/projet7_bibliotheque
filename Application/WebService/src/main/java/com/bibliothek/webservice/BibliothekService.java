@@ -14,6 +14,7 @@ import com.bibliothek.gestion.impl.GestionPretImpl;
 import com.bibliothek.gestion.impl.GestionUtilisateurImpl;
 import com.bibliothek.gestion.interfaces.GestionOuvrage;
 import com.bibliothek.gestion.interfaces.GestionPret;
+import com.bibliothek.gestion.interfaces.GestionUtilisateur;
 import com.bibliothek.webservice.request.PretRequest;
 import com.bibliothek.webservice.responses.OuvrageResponse;
 import com.bibliothek.webservice.responses.PretResponse;
@@ -24,6 +25,8 @@ import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
+import javax.inject.Inject;
+import javax.inject.Named;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlElement;
@@ -33,13 +36,23 @@ import java.util.List;
 public class BibliothekService {
 
     //ATTRIBUTES
-    //@Autowired
-    protected GestionOuvrage gestionOuvrage = new GestionOuvrageImpl();
+    @Inject
+    protected GestionOuvrage gestionOuvrage;
 
-    //@Autowired
-    protected GestionPret gestionPret = new GestionPretImpl();
+    @Inject
+    protected GestionPret gestionPret;
+
+    @Inject
+    protected GestionUtilisateur gestionUtilisateur;
 
     //CONSTRUCTORS
+    public BibliothekService(GestionOuvrage gestionOuvrage, GestionPret gestionPret,GestionUtilisateur gestionUtilisateur)
+    {
+        this.gestionPret = gestionPret;
+        this.gestionOuvrage = gestionOuvrage;
+        this.gestionUtilisateur = gestionUtilisateur;
+    }
+
     public BibliothekService() {
     }
 
@@ -88,13 +101,12 @@ public class BibliothekService {
      */
     @WebMethod(operationName = "identification")
     public UtilisateurResponse identification(@XmlElement(name = "pseudo") String pseudo, @XmlElement(name = "motDePasse") String motDePasse) {
-        GestionUtilisateurImpl gestionUtilisateurImpl = new GestionUtilisateurImpl();
         UtilisateurResponse utilisateurResponse = new UtilisateurResponse();
 
-        if(gestionUtilisateurImpl.verifMotDePasse(pseudo, motDePasse))
+        if(gestionUtilisateur.verifMotDePasse(pseudo, motDePasse))
         {
             try{
-                utilisateurResponse.getUtilisateurBeanList().add(gestionUtilisateurImpl.findUtilisateurByPseudo(pseudo));
+                utilisateurResponse.getUtilisateurBeanList().add(gestionUtilisateur.findUtilisateurByPseudo(pseudo));
             }catch(HibernateException h)
             {
                 utilisateurResponse.setTypeErreur(2);
@@ -251,5 +263,13 @@ public class BibliothekService {
 
     public void setGestionPret(GestionPret gestionPret) {
         this.gestionPret = gestionPret;
+    }
+
+    public GestionUtilisateur getGestionUtilisateur() {
+        return gestionUtilisateur;
+    }
+
+    public void setGestionUtilisateur(GestionUtilisateur gestionUtilisateur) {
+        this.gestionUtilisateur = gestionUtilisateur;
     }
 }

@@ -3,9 +3,10 @@ package com.bibliothek.DAO.impl;
 import com.bibliothek.DAO.interfaces.AuteurOuvrageDao;
 import org.springframework.stereotype.Component;
 
+import javax.inject.Named;
 import java.util.List;
 
-@Component
+@Named
 public class AuteurOuvrageDaoImpl extends AbstractDao implements AuteurOuvrageDao {
 
     public AuteurOuvrageDaoImpl() {super();}

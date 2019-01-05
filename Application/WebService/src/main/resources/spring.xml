@@ -1,8 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
 
-<beans>
-    <bean id="auteurPojo" class="com.bibliothek.DAO.pojo.AuteurPojo">
-    </bean>
+    <!-- Prend en compte la configuration des injections (@Inject...) -->
+    <context:annotation-config/>
+
+    <!-- Scanne les packages pour trouver les beans qui se déclarent (@Named...) -->
+    <context:component-scan base-package="com.bibliothek"/>
+
     <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+
+    <bean id="auteurDao" class="com.bibliothek.DAO.impl.AuteurDaoImpl"/>
+    <bean id="auteurOuvrageDao" class="com.bibliothek.DAO.impl.AuteurOuvrageDaoImpl"/>
+    <bean id="ouvrageDao" class="com.bibliothek.DAO.impl.OuvrageDaoImpl"/>
+    <bean id="pretDao" class="com.bibliothek.DAO.impl.PretDaoImpl"/>
+    <bean id="utilisateurDao" class="com.bibliothek.DAO.impl.UtilisateurDaoImpl"/>
+
+    <bean id="gestionAuteur" class="com.bibliothek.gestion.impl.GestionAuteurImpl">
+        <property name = "auteurDao" ref="auteurDao" ></property>
+    </bean>
+
+    <bean id="gestionOuvrage" class="com.bibliothek.gestion.impl.GestionOuvrageImpl">
+        <property name = "ouvrageDao" ref="ouvrageDao" ></property>
+    </bean>
+
+    <bean id="gestionPret" class="com.bibliothek.gestion.impl.GestionPretImpl">
+        <property name = "pretDao" ref="pretDao" ></property>
+    </bean>
+
+    <bean id="gestionUtilisateur" class="com.bibliothek.gestion.impl.GestionUtilisateurImpl">
+        <property name = "utilisateurDao" ref="utilisateurDao" ></property>
+    </bean>
+
+    <bean id="bibliothekService" class="com.bibliothek.webservice.BibliothekService">
+        <property name = "gestionPret" ref="gestionPret" ></property>
+        <property name = "gestionOuvrage" ref="gestionOuvrage" ></property>
+        <property name = "gestionUtilisateur" ref="gestionUtilisateur" ></property>
+    </bean>
 </beans>

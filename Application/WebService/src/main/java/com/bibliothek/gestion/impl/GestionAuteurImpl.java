@@ -9,15 +9,21 @@ import com.bibliothek.gestion.interfaces.GestionAuteur;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.inject.Inject;
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Named
 public class GestionAuteurImpl implements GestionAuteur {
 
     //ATTRIBUTES
-    //@Autowired
-    private AuteurDao auteurDao = new AuteurDaoImpl();
+    @Inject
+    private AuteurDao auteurDao;
+
+    //CONSTRUCTOR
+    public GestionAuteurImpl() {
+    }
 
     //METHODS
     @Override

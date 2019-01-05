@@ -7,10 +7,11 @@ import com.bibliothek.DAO.pojo.AuteurPojo;
 import com.bibliothek.DAO.pojo.OuvragePojo;
 import org.springframework.stereotype.Component;
 
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Named
 public class OuvrageDaoImpl extends AbstractDao implements OuvrageDao {
 
     public OuvrageDaoImpl(){

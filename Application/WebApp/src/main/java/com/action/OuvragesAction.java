@@ -2,6 +2,8 @@ package com.action;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import generated.bibliothek.OuvrageBean;
+import generated.bibliothek.OuvrageResponse;
 import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.List;
