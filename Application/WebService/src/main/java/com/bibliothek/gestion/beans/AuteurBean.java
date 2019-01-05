@@ -1,10 +1,15 @@
 package com.bibliothek.gestion.beans;
 
 import com.bibliothek.DAO.pojo.AuteurPojo;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
+@Component
 public class AuteurBean {
+
+    //ATTRIBUTES
+    private int id;
 
     private String nom;
 
@@ -16,16 +21,26 @@ public class AuteurBean {
 
     private Date dateDeces;
 
-
+    //CONTRUCTORS
     public AuteurBean() {
     }
 
-    public AuteurBean(String nom, String prenom, String nationalite, Date dateNaissance, Date dateDeces) {
+    public AuteurBean(int id, String nom, String prenom, String nationalite, Date dateNaissance, Date dateDeces) {
+        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.nationalite = nationalite;
         this.dateNaissance = dateNaissance;
         this.dateDeces = dateDeces;
+    }
+
+    //GETTERS & SETTERS
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNom() {
@@ -68,7 +83,6 @@ public class AuteurBean {
         this.dateDeces = dateDeces;
     }
 
-
     public void setAuteur(AuteurPojo a){
         this.nom = a.getNom();
         this.prenom = a.getPrenom();
@@ -76,7 +90,4 @@ public class AuteurBean {
         this.dateNaissance = a.getDateNaissance();
         this.dateDeces = a.getDateDeces();
     }
-
-
-
 }

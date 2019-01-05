@@ -7,6 +7,7 @@ import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import java.util.List;
 
 public interface PretDao {
+
     PretPojo findById(int id) throws DaoException;
 
     int create(PretPojo pretPojo) throws DaoException;

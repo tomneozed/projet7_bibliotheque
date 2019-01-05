@@ -1,11 +1,7 @@
 package com.action;
 
-import com.model.User;
-import com.opensymphony.xwork2.ActionSupport;
-import generated.PretBean;
-import generated.PretResponse;
+import com.opensymphony.xwork2.ActionContext;
 import org.apache.struts2.interceptor.SessionAware;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,11 +11,15 @@ public class LoanAction extends AbstractAction implements SessionAware {
 
     //=========  ATTRIBUTES  =========
 
+    private int loanId;
+
     private PretResponse userLoans = new PretResponse();
 
     private List<PretBean> loansList= new ArrayList<PretBean>();
 
     private Map<String, Object> session;
+
+    private PretBean loan;
 
 
     //=========  GETTERS & SETTERS  =========
@@ -44,10 +44,29 @@ public class LoanAction extends AbstractAction implements SessionAware {
         this.session = map;
     }
 
+    public Map<String, Object> getSession() {
+        return session;
+    }
+
+    public int getLoanId() {
+        return loanId;
+    }
+
+    public void setLoanId(int loanId) {
+        this.loanId = loanId;
+    }
+
+    public PretBean getLoan() {
+        return loan;
+    }
+
+    public void setLoan(PretBean loan) {
+        this.loan = loan;
+    }
 
     //=========  METHODS  =========
 
-    public String loansListByUser()
+    public String doListByUser()
     {
         userLoans = getBibliothekService().userLoansByPseudo("alainTerrieur");
 
@@ -59,10 +78,42 @@ public class LoanAction extends AbstractAction implements SessionAware {
             //addActionMessage("You don't have any loans");
         }else
         {
+            session = ActionContext.getContext().getSession();
+            session.put("userLoanList", loansList);
             return SUCCESS;
         }
     }
 
+    public String doDetail()
+    {
+        userLoans = getBibliothekService().userLoansByPseudo("alainTerrieur");
 
+        loansList = (List<PretBean>)session.get("userLoanList");
+        if(!loansList.isEmpty())
+        {
+            for (PretBean p : loansList) {
+                if(p.getId() == loanId){
+                    loan = p;
+                }
+            }
+        }
+        if(loan == null)
+        {
+            return ERROR;
+            //addActionMessage("You don't have any loans");
+        }else
+        {
+            return SUCCESS;
+        }
+    }
 
+    public String doExtend()
+    {
+        if(getLoanId() > 0)
+        {
+            getBibliothekService().extendLoan(loanId);
+            return SUCCESS;
+        }
+        return ERROR;
+    }
 }

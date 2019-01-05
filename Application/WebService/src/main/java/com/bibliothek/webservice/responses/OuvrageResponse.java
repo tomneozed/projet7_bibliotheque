@@ -9,9 +9,7 @@ public class OuvrageResponse extends AbstractResponse {
 
     private List<OuvrageBean> ouvrages = new ArrayList<>();
 
-    public OuvrageResponse() {
-
-    }
+    public OuvrageResponse() { }
 
     public OuvrageResponse(List<OuvrageBean> ouvrages) {
         this.ouvrages = ouvrages;

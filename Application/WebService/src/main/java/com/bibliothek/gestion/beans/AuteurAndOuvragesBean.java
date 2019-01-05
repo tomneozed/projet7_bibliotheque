@@ -3,10 +3,12 @@ package com.bibliothek.gestion.beans;
 import com.bibliothek.DAO.impl.OuvrageDaoImpl;
 import com.bibliothek.DAO.pojo.AuteurPojo;
 import com.bibliothek.DAO.pojo.OuvragePojo;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class AuteurAndOuvragesBean extends AuteurBean {
 
     private List<OuvrageBean> ouvrageBeanList;
@@ -27,7 +29,6 @@ public class AuteurAndOuvragesBean extends AuteurBean {
         this.ouvrageBeanList = ouvrageBeanList;
     }
 
-
     public List<OuvrageBean> findOuvragesFromAuteur(int auteurId){
         List<OuvrageBean> ouvrageBeanList = new ArrayList<>();
         List<OuvragePojo> ouvragesByAuteur ;
@@ -42,14 +43,6 @@ public class AuteurAndOuvragesBean extends AuteurBean {
 
             ouvrageBeanList.add(ouvrageBean);
         }
-
         return ouvrageBeanList;
     }
-
-
-
-
-
-
-
 }

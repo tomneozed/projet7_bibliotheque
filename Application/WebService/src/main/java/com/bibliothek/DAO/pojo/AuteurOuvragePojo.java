@@ -10,6 +10,7 @@ import java.io.Serializable;
 @Table(name="auteur_ouvrage")
 public class AuteurOuvragePojo implements Serializable {
 
+    //ATTRIBUTES
     @Id
     @Column(name = "id_auteur")
     private int auteurId;
@@ -18,6 +19,7 @@ public class AuteurOuvragePojo implements Serializable {
     @Column(name="id_ouvrage")
     private int ouvrageId;
 
+    //CONTRUCTORS
     public AuteurOuvragePojo() {
     }
 
@@ -26,6 +28,7 @@ public class AuteurOuvragePojo implements Serializable {
         this.ouvrageId = ouvrageId;
     }
 
+    //GETTERS & SETTERS
     public int getAuteurId() {
         return auteurId;
     }

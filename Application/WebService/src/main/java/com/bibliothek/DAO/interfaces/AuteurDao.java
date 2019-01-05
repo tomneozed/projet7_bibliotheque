@@ -7,7 +7,6 @@ import java.util.List;
 
 public interface AuteurDao {
 
-
     AuteurPojo findById(int id) throws DaoException;
 
     int create(AuteurPojo auteurPojo) throws DaoException;

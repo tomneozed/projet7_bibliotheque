@@ -26,12 +26,8 @@
         </li>
     </s:if>
     <s:if test="#session.user">
-        <li>
             <s:property value="#session.user.username"/>
-        </li>
-        <li>
             <s:a action="logout">Logout</s:a>
-        </li>
     </s:if>
     <s:else>
         <li>

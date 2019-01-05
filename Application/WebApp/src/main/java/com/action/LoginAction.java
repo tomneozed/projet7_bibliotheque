@@ -5,8 +5,6 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.service.LoginService;
-import generated.UtilisateurResponse;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.Map;
@@ -38,18 +36,6 @@ public class LoginAction extends AbstractAction implements ModelDriven<User>, Se
     }
 
     //=========  METHODS  =========
-
-    public void validate()
-    {
-        if(StringUtils.isEmpty(user.getUsername()))
-        {
-            addFieldError("username", "Username cannot be blank");
-        }
-        if(StringUtils.isEmpty(user.getPassword()))
-        {
-            addFieldError("password", "Password cannot be blank");
-        }
-    }
 
     public String doLogin()
     {

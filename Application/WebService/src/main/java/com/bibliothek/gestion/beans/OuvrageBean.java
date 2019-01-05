@@ -1,10 +1,15 @@
 package com.bibliothek.gestion.beans;
 
 import com.bibliothek.DAO.pojo.OuvragePojo;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
+@Component
 public class OuvrageBean {
+
+    //ATTRIBUTES
+    private int id;
 
     private String titre;
 
@@ -24,11 +29,12 @@ public class OuvrageBean {
 
     private int nombreExemplairesDispo;
 
-
+    //CONTRUCTORS
     public OuvrageBean() {
     }
 
-    public OuvrageBean(String titre, String editeur, String nature, String resume, int nombrePages, Date dateParution, double prix, int nombreExemplaires, int nombreExemplairesDispo) {
+    public OuvrageBean(int id, String titre, String editeur, String nature, String resume, int nombrePages, Date dateParution, double prix, int nombreExemplaires, int nombreExemplairesDispo) {
+        this.id = id;
         this.titre = titre;
         this.editeur = editeur;
         this.nature = nature;
@@ -38,6 +44,15 @@ public class OuvrageBean {
         this.prix = prix;
         this.nombreExemplaires = nombreExemplaires;
         this.nombreExemplairesDispo = nombreExemplairesDispo;
+    }
+
+    //GETTERS & SETTERS
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitre() {
@@ -113,6 +128,7 @@ public class OuvrageBean {
     }
 
     public void setOuvrage(OuvragePojo o){
+        this.id = o.getId();
         this.titre = o.getTitre();
         this.editeur = o.getEditeur();
         this.nature = o.getNature();
@@ -123,6 +139,4 @@ public class OuvrageBean {
         this.nombreExemplaires = o.getNombreExemplaires();
         this.nombreExemplairesDispo = o.getNombreExemplairesDispo();
     }
-
-
 }

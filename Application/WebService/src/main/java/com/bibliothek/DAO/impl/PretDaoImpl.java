@@ -4,9 +4,11 @@ import com.bibliothek.DAO.exceptions.DaoException;
 import com.bibliothek.DAO.interfaces.PretDao;
 import com.bibliothek.DAO.pojo.PretPojo;
 import com.bibliothek.DAO.pojo.UtilisateurPojo;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class PretDaoImpl extends AbstractDao implements PretDao {
 
     public PretDaoImpl(){

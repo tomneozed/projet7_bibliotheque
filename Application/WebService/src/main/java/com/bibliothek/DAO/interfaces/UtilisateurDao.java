@@ -6,6 +6,7 @@ import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import java.util.List;
 
 public interface UtilisateurDao {
+
     UtilisateurPojo findById(int id) throws DaoException;
 
     UtilisateurPojo findByPseudo(String pseudo) throws DaoException;

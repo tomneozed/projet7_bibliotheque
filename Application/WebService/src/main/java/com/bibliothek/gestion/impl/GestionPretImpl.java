@@ -5,6 +5,8 @@ import com.bibliothek.DAO.impl.OuvrageDaoImpl;
 import com.bibliothek.DAO.impl.PretDaoImpl;
 import com.bibliothek.DAO.impl.UtilisateurDaoImpl;
 import com.bibliothek.DAO.interfaces.OuvrageDao;
+import com.bibliothek.DAO.interfaces.PretDao;
+import com.bibliothek.DAO.interfaces.UtilisateurDao;
 import com.bibliothek.DAO.pojo.OuvragePojo;
 import com.bibliothek.DAO.pojo.PretPojo;
 import com.bibliothek.DAO.pojo.UtilisateurPojo;
@@ -12,24 +14,27 @@ import com.bibliothek.exceptions.FunctionalException;
 import com.bibliothek.gestion.beans.PretBean;
 import com.bibliothek.gestion.interfaces.GestionPret;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+@Component
 public class GestionPretImpl implements GestionPret {
 
-    @Autowired
-    PretDaoImpl pretDao = new PretDaoImpl();
+    //ATTRIBUTES
+    //@Autowired
+    private PretDao pretDao = new PretDaoImpl();
 
-    @Autowired
-    UtilisateurDaoImpl utilisateurDao = new UtilisateurDaoImpl();
+    //@Autowired
+    private UtilisateurDao utilisateurDao = new UtilisateurDaoImpl();
 
-    @Autowired
-    OuvrageDao ouvrageDao = new OuvrageDaoImpl();
+    //@Autowired
+    private OuvrageDao ouvrageDao = new OuvrageDaoImpl();
 
-
+    //METHODS
     @Override
     public PretPojo prolongerPret(int idPret) throws FunctionalException {
         PretPojo pretPojo;
@@ -176,12 +181,10 @@ public class GestionPretImpl implements GestionPret {
         return remonterPret(pretId);
     }
 
-
     @Override
     public void majPret(){
         List<PretPojo> pretPojoList;
         OuvragePojo ouvrage;
-
 
         pretPojoList = pretDao.findAll();
 
@@ -195,7 +198,6 @@ public class GestionPretImpl implements GestionPret {
             majDispoOuvrages(pretPojoList);
         }
     }
-
 
     private void majDispoOuvrages(List<PretPojo> prets)
     {
@@ -219,7 +221,6 @@ public class GestionPretImpl implements GestionPret {
         }
     }
 
-
     /**
      * Takes a PretPojo list and returns only non-rendered ones
      * @param pretPojoList
@@ -236,4 +237,29 @@ public class GestionPretImpl implements GestionPret {
         return nonRenderedLoans;
     }
 
+    //GETTERS & SETTERS
+
+    public PretDao getPretDao() {
+        return pretDao;
+    }
+
+    public void setPretDao(PretDao pretDao) {
+        this.pretDao = pretDao;
+    }
+
+    public UtilisateurDao getUtilisateurDao() {
+        return utilisateurDao;
+    }
+
+    public void setUtilisateurDao(UtilisateurDao utilisateurDao) {
+        this.utilisateurDao = utilisateurDao;
+    }
+
+    public OuvrageDao getOuvrageDao() {
+        return ouvrageDao;
+    }
+
+    public void setOuvrageDao(OuvrageDao ouvrageDao) {
+        this.ouvrageDao = ouvrageDao;
+    }
 }

@@ -1,19 +1,23 @@
 package com.action;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-import generated.OuvrageBean;
+import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.List;
+import java.util.Map;
 
-public class OuvragesAction extends AbstractAction {
+public class OuvragesAction extends AbstractAction implements SessionAware {
 
     //=========  ATTRIBUTES  =========
     private List<OuvrageBean> ouvrageList;
-    private int id;
+    private OuvrageResponse ouvragesResearch;
+    private int ouvrageId;
     private OuvrageBean ouvrage;
+    private Map<String, Object> session;
+    private String research;
 
     //=========  GETTERS & SETTERS  =========
-
 
     public List<OuvrageBean> getOuvrageList() {
         return ouvrageList;
@@ -23,12 +27,12 @@ public class OuvragesAction extends AbstractAction {
         this.ouvrageList = ouvrageList;
     }
 
-    public int getId() {
-        return id;
+    public int getOuvrageId() {
+        return ouvrageId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setOuvrageId(int ouvrageId) {
+        this.ouvrageId = ouvrageId;
     }
 
     public OuvrageBean getOuvrage() {
@@ -37,6 +41,25 @@ public class OuvragesAction extends AbstractAction {
 
     public void setOuvrage(OuvrageBean ouvrage) {
         this.ouvrage = ouvrage;
+    }
+
+    public void setSession(Map<String, Object> map) {
+    }
+
+    public String getResearch() {
+        return research;
+    }
+
+    public void setResearch(String research) {
+        this.research = research;
+    }
+
+    public OuvrageResponse getOuvragesResearch() {
+        return ouvragesResearch;
+    }
+
+    public void setOuvragesResearch(OuvrageResponse ouvragesResearch) {
+        this.ouvragesResearch = ouvragesResearch;
     }
 
     //=========  METHODS  =========
@@ -50,14 +73,20 @@ public class OuvragesAction extends AbstractAction {
             return ActionSupport.ERROR;
         }else
         {
+            session = ActionContext.getContext().getSession();
+            session.put("allOuvrages", ouvrageList);
             return ActionSupport.SUCCESS;
         }
     }
 
-
-    public String doDetail(int id)
+    public String doDetail()
     {
-        ouvrage = getBibliothekService().allOuvrages().getOuvrages().get(id);
+        session = ActionContext.getContext().getSession();
+        ouvrageList = (List<OuvrageBean>)session.get("allOuvrages");
+        if(session.get("allOuvrages") != null)
+        {
+            ouvrage = ouvrageList.get(ouvrageId);
+        }
 
         if(ouvrage == null)
         {
@@ -66,6 +95,22 @@ public class OuvragesAction extends AbstractAction {
         {
             return ActionSupport.SUCCESS;
         }
+    }
 
+    public String doResearch()
+    {
+        ouvragesResearch = getBibliothekService().ouvragesSearch("Harry");
+
+        ouvrageList = ouvragesResearch.getOuvrages();
+
+        if(ouvrageList.isEmpty())
+        {
+            return ActionSupport.ERROR;
+        }else
+        {
+            session = ActionContext.getContext().getSession();
+            session.put("ouvragesResearch", ouvrageList);
+            return ActionSupport.SUCCESS;
+        }
     }
 }

@@ -2,19 +2,24 @@ package com.bibliothek.gestion.impl;
 
 import com.bibliothek.DAO.exceptions.DaoException;
 import com.bibliothek.DAO.impl.AuteurDaoImpl;
+import com.bibliothek.DAO.interfaces.AuteurDao;
 import com.bibliothek.DAO.pojo.AuteurPojo;
 import com.bibliothek.gestion.beans.AuteurBean;
 import com.bibliothek.gestion.interfaces.GestionAuteur;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class GestionAuteurImpl implements GestionAuteur {
 
-    @Autowired
-    AuteurDaoImpl auteurDao = new AuteurDaoImpl();
+    //ATTRIBUTES
+    //@Autowired
+    private AuteurDao auteurDao = new AuteurDaoImpl();
 
+    //METHODS
     @Override
     public AuteurBean findAuteurById(int auteurId) throws DaoException
     {
@@ -54,9 +59,13 @@ public class GestionAuteurImpl implements GestionAuteur {
         auteurDao.delete(a);
     }
 
+    //GETTERS & SETTERS
 
+    public AuteurDao getAuteurDao() {
+        return auteurDao;
+    }
 
-
-
-
+    public void setAuteurDao(AuteurDao auteurDao) {
+        this.auteurDao = auteurDao;
+    }
 }

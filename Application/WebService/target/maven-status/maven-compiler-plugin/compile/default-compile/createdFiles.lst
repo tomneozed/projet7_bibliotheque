@@ -12,7 +12,6 @@ com\bibliothek\gestion\beans\AuteurAndOuvragesBean.class
 com\bibliothek\webservice\responses\OuvrageResponse.class
 com\bibliothek\DAO\impl\OuvrageDaoImpl.class
 com\bibliothek\DAO\interfaces\AuteurOuvrageDao.class
-com\bibliothek\gestion\beans\OuvrageAndAuteursBean.class
 com\bibliothek\DAO\impl\UtilisateurDaoImpl.class
 com\bibliothek\gestion\interfaces\GestionAuteur.class
 com\bibliothek\exceptions\TechnicalException.class
@@ -31,11 +30,11 @@ com\bibliothek\DAO\pojo\AuteurPojo.class
 com\bibliothek\gestion\beans\OuvrageBean.class
 com\bibliothek\DAO\impl\AuteurDaoImpl.class
 com\bibliothek\gestion\interfaces\GestionUtilisateur.class
+com\bibliothek\Main.class
 com\bibliothek\webservice\responses\PretResponse.class
 com\bibliothek\gestion\impl\GestionUtilisateurImpl.class
 com\bibliothek\webservice\responses\UtilisateurResponse.class
 com\bibliothek\DAO\pojo\OuvragePojo.class
-com\bibliothek\main.class
 com\bibliothek\webservice\BibliothekService.class
 com\bibliothek\DAO\interfaces\UtilisateurDao.class
 com\bibliothek\DAO\exceptions\DaoException.class

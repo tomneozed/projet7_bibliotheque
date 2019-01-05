@@ -16,9 +16,13 @@
     <%@ include file="_include/navbar.jsp" %>
 </header>
 INDEX
-
 <s:a action="all_ouvrages">
-    <s:text name="Rechercher un ouvrage"/>
+    <s:text name="Tous les ouvrages"/>
 </s:a>
+
+<s:form action="ouvrages_research">
+    <s:textfield label="Research " key="research" />
+    <s:submit />
+</s:form>
 </body>
 </html>

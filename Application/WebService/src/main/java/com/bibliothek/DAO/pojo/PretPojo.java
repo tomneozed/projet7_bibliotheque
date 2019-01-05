@@ -10,6 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @Table(name="pret")
 public class PretPojo implements Serializable {
 
+    //ATTRIBUTES
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -30,6 +31,7 @@ public class PretPojo implements Serializable {
     @Column(name="id_ouvrage")
     private int idOuvrage;
 
+    //CONTRUCTORS
     public PretPojo() {
     }
 
@@ -43,6 +45,7 @@ public class PretPojo implements Serializable {
         this.idOuvrage = idOuvrage;
     }
 
+    //GETTERS & SETTERS
     public int getId() {
         return id;
     }
@@ -134,8 +137,4 @@ public class PretPojo implements Serializable {
             return false;
         }
     }
-
-
-
-
 }

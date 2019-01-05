@@ -4,11 +4,14 @@ import com.bibliothek.DAO.impl.OuvrageDaoImpl;
 import com.bibliothek.DAO.impl.UtilisateurDaoImpl;
 import com.bibliothek.DAO.pojo.PretPojo;
 import com.bibliothek.DAO.pojo.UtilisateurPojo;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
+@Component
 public class PretBean {
 
+    //ATTRIBUTES
     private int id;
 
     private Date dateDebutPret;
@@ -23,11 +26,21 @@ public class PretBean {
 
     private OuvrageBean ouvrage;
 
+    //CONTRUCTORS
     public PretBean() {
     }
 
+    public PretBean(int id, Date dateDebutPret, Date dateFinPret, boolean prolongation, String etat, UtilisateurPojo utilisateurPojo, OuvrageBean ouvrage) {
+        this.id = id;
+        this.dateDebutPret = dateDebutPret;
+        this.dateFinPret = dateFinPret;
+        this.prolongation = prolongation;
+        this.etat = etat;
+        this.utilisateurPojo = utilisateurPojo;
+        this.ouvrage = ouvrage;
+    }
 
-
+    //GETTERS & SETTERS
     public Date getDateDebutPret() {
         return dateDebutPret;
     }

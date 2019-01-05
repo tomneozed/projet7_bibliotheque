@@ -2,6 +2,7 @@ package com.bibliothek.gestion.interfaces;
 
 import com.bibliothek.DAO.pojo.AuteurPojo;
 import com.bibliothek.gestion.beans.AuteurBean;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 

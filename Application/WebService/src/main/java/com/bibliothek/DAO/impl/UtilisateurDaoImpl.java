@@ -3,9 +3,11 @@ package com.bibliothek.DAO.impl;
 import com.bibliothek.DAO.exceptions.DaoException;
 import com.bibliothek.DAO.interfaces.UtilisateurDao;
 import com.bibliothek.DAO.pojo.UtilisateurPojo;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class UtilisateurDaoImpl extends AbstractDao implements UtilisateurDao {
 
     public UtilisateurDaoImpl(){

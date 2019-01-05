@@ -3,40 +3,47 @@ package com.bibliothek.webservice;
 import com.bibliothek.DAO.exceptions.DaoException;
 import com.bibliothek.DAO.impl.UtilisateurDaoImpl;
 import com.bibliothek.DAO.interfaces.UtilisateurDao;
+import com.bibliothek.DAO.pojo.AuteurPojo;
 import com.bibliothek.DAO.pojo.PretPojo;
 import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import com.bibliothek.exceptions.FunctionalException;
 import com.bibliothek.gestion.beans.AuteurAndOuvragesBean;
+import com.bibliothek.gestion.beans.OuvrageBean;
 import com.bibliothek.gestion.impl.GestionOuvrageImpl;
 import com.bibliothek.gestion.impl.GestionPretImpl;
 import com.bibliothek.gestion.impl.GestionUtilisateurImpl;
+import com.bibliothek.gestion.interfaces.GestionOuvrage;
+import com.bibliothek.gestion.interfaces.GestionPret;
 import com.bibliothek.webservice.request.PretRequest;
 import com.bibliothek.webservice.responses.OuvrageResponse;
 import com.bibliothek.webservice.responses.PretResponse;
 import com.bibliothek.webservice.responses.UtilisateurResponse;
+import org.hibernate.HibernateException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlElement;
+import java.util.List;
 
 @WebService()
 public class BibliothekService {
 
-    @Autowired
-    private GestionOuvrageImpl gestionOuvrage = new GestionOuvrageImpl();
+    //ATTRIBUTES
+    //@Autowired
+    protected GestionOuvrage gestionOuvrage = new GestionOuvrageImpl();
 
-    @Autowired
-    private GestionPretImpl gestionPretImpl = new GestionPretImpl();
+    //@Autowired
+    protected GestionPret gestionPret = new GestionPretImpl();
 
-    @Autowired
-    private UtilisateurDao utilisateurDao = new UtilisateurDaoImpl();
+    //CONSTRUCTORS
+    public BibliothekService() {
+    }
 
-    @Autowired
-    private AuteurAndOuvragesBean ouvragesByAuteur= new AuteurAndOuvragesBean();
-
-    private OuvrageResponse ouvrageResponse= new OuvrageResponse();
-
+    //WEB METHODS
     /**
      * Returns all the ouvrages depending on the research input
      * @param research
@@ -44,7 +51,7 @@ public class BibliothekService {
      */
     @WebMethod(operationName = "ouvragesSearch")
     public OuvrageResponse ouvragesSearch(@XmlElement(name = "research") String research){
-        gestionPretImpl.majPret();
+        gestionPret.majPret();
         OuvrageResponse ouvragesSearch = new OuvrageResponse();
         try{
             ouvragesSearch.setOuvrages(gestionOuvrage.findAllOuvragesByParameter(research));
@@ -64,7 +71,7 @@ public class BibliothekService {
         OuvrageResponse allOuvrages = new OuvrageResponse();
 
         try {
-            allOuvrages.setOuvrages(gestionOuvrage.findAllOuvrages());
+            allOuvrages.setOuvrages(getGestionOuvrage().findAllOuvrages());
             allOuvrages.setTypeErreur(0);
         }catch(Exception e){
             allOuvrages.setTypeErreur(1);
@@ -86,7 +93,13 @@ public class BibliothekService {
 
         if(gestionUtilisateurImpl.verifMotDePasse(pseudo, motDePasse))
         {
-            utilisateurResponse.getUtilisateurBeanList().add(gestionUtilisateurImpl.findUtilisateurByPseudo(pseudo));
+            try{
+                utilisateurResponse.getUtilisateurBeanList().add(gestionUtilisateurImpl.findUtilisateurByPseudo(pseudo));
+            }catch(HibernateException h)
+            {
+                utilisateurResponse.setTypeErreur(2);
+                utilisateurResponse.setMessageErreur(h.getMessage());
+            }
         }else
         {
             utilisateurResponse.setTypeErreur(2);
@@ -96,22 +109,6 @@ public class BibliothekService {
     }
 
     /**
-////     * Returns a list of loans from the specified user
-////     * @param utilisateurPojo
-////     * @return
-////     */
-////    @WebMethod(operationName = "userLoans")
-////    public PretResponse userLoans(@XmlElement(name = "utilisateurPojo") UtilisateurPojo utilisateurPojo)
-////    {
-////        gestionPretImpl.majPret();
-////        PretResponse pretResponse = new PretResponse();
-////
-////        pretResponse.setPretBeanList(gestionPretImpl.remonterPrets(utilisateurPojo.getId()));
-////
-////        return pretResponse;
-////    }
-
-    /**
      * Returns a list of loans from the specified user's pseudo
      * @param pseudo
      * @return
@@ -119,12 +116,13 @@ public class BibliothekService {
     @WebMethod(operationName = "userLoansByPseudo")
     public PretResponse userLoansByPseudo(@XmlElement(name = "pseudo") String pseudo)
     {
-        gestionPretImpl.majPret();
+        UtilisateurDao utilisateurDao = new UtilisateurDaoImpl();
+        gestionPret.majPret();
         PretResponse pretResponse = new PretResponse();
         UtilisateurPojo utilisateur;
         try{
             utilisateur = utilisateurDao.findByPseudo(pseudo);
-            pretResponse.setPretBeanList(gestionPretImpl.remonterPrets(utilisateur.getId()));
+            pretResponse.setPretBeanList(gestionPret.remonterPrets(utilisateur.getId()));
         }catch (DaoException e) {
             pretResponse.setTypeErreur(2);
             pretResponse.setMessageErreur(e.getMessage());
@@ -143,11 +141,11 @@ public class BibliothekService {
      */
     @WebMethod(operationName = "extendLoan")
     public PretResponse extendLoan(@XmlElement(name = "idPret") int idPret){
-        gestionPretImpl.majPret();
+        gestionPret.majPret();
         PretResponse extendedLoan = new PretResponse();
         try{
-            gestionPretImpl.prolongerPret(idPret);
-            extendedLoan.getPretBeanList().add(gestionPretImpl.remonterPret(idPret));
+            gestionPret.prolongerPret(idPret);
+            extendedLoan.getPretBeanList().add(gestionPret.remonterPret(idPret));
         }catch(FunctionalException fe)
         {
             extendedLoan.setTypeErreur(2);
@@ -166,10 +164,10 @@ public class BibliothekService {
      */
     @WebMethod(operationName = "notRenderedLoans")
     public PretResponse notRenderedLoans(){
-        gestionPretImpl.majPret();
+        gestionPret.majPret();
         PretResponse notRenderedLoans = new PretResponse();
 
-        notRenderedLoans.setPretBeanList(gestionPretImpl.remonterPretsNonRendus());
+        notRenderedLoans.setPretBeanList(gestionPret.remonterPretsNonRendus());
 
         return notRenderedLoans;
     }
@@ -181,10 +179,10 @@ public class BibliothekService {
      */
     @WebMethod(operationName = "loanReturn")
     public PretResponse loanReturn (@XmlElement(name = "idPret") int idPret){
-        gestionPretImpl.majPret();
+        gestionPret.majPret();
         PretResponse pretResponse = new PretResponse();
         try{
-            pretResponse.getPretBeanList().add(gestionPretImpl.retourPret(idPret));
+            pretResponse.getPretBeanList().add(gestionPret.retourPret(idPret));
         }catch(DaoException e){
             pretResponse.setMessageErreur(e.getMessage());
             pretResponse.setTypeErreur(2);
@@ -199,17 +197,16 @@ public class BibliothekService {
      */
     @WebMethod(operationName="loanCreation")
     public PretResponse createLoan(PretRequest pretReq){
-        gestionPretImpl.majPret();
+        gestionPret.majPret();
 
         PretResponse createdLoan = new PretResponse();
         PretPojo pretPojo;
-
 
         int idPret =0;
 
         try {
             pretPojo = pretReq.toPojo();
-            idPret = gestionPretImpl.nouveauPret(pretPojo);
+            idPret = gestionPret.nouveauPret(pretPojo);
         } catch (FunctionalException e) {
             createdLoan.setTypeErreur(2);
             createdLoan.setMessageErreur(e.getMessage());
@@ -219,7 +216,7 @@ public class BibliothekService {
             createdLoan.setMessageErreur(e.getMessage());
         }
         if(idPret!=0){
-            createdLoan.getPretBeanList().add(gestionPretImpl.remonterPret(idPret));
+            createdLoan.getPretBeanList().add(gestionPret.remonterPret(idPret));
         }
         return createdLoan;
     }
@@ -230,24 +227,29 @@ public class BibliothekService {
      */
     @WebMethod(operationName = "allLoans")
     public PretResponse allLoans(){
-        gestionPretImpl.majPret();
+        gestionPret.majPret();
         PretResponse allLoans = new PretResponse();
 
-        allLoans.setPretBeanList(gestionPretImpl.remonterTousLesPrets());
+        allLoans.setPretBeanList(gestionPret.remonterTousLesPrets());
 
         return allLoans;
     }
 
-    /**
-     * Returns all ouvrages from specified author
-     * @param auteurPojo
-     * @return
-     */
-//    @WebMethod
-//    public List<OuvrageBean> ouvragesByAuteurList(@XmlElement(name = "auteurPojo") AuteurPojo auteurPojo)
-//    {
-//        return ouvragesByAuteur.findOuvragesFromAuteur(auteurPojo.getId());
-//    }
+    //GETTERS & SETTERS
 
+    public GestionOuvrage getGestionOuvrage() {
+        return gestionOuvrage;
+    }
 
+    public void setGestionOuvrage(GestionOuvrage gestionOuvrage) {
+        this.gestionOuvrage = gestionOuvrage;
+    }
+
+    public GestionPret getGestionPret() {
+        return gestionPret;
+    }
+
+    public void setGestionPret(GestionPret gestionPret) {
+        this.gestionPret = gestionPret;
+    }
 }

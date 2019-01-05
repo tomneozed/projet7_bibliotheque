@@ -1,6 +1,7 @@
 package com.bibliothek.DAO.pojo;
 
 import org.hibernate.search.annotations.Field;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,6 +13,7 @@ import java.util.List;
 @Table(name="auteur")
 public class AuteurPojo implements Serializable {
 
+    //ATTRIBUTES
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "auteur_gen")
     @SequenceGenerator(name = "auteur_gen", sequenceName = "auteur_id_seq", schema="public" )
@@ -35,6 +37,7 @@ public class AuteurPojo implements Serializable {
     @JoinTable(name="auteur_ouvrage", joinColumns = @JoinColumn(name="id_auteur"), inverseJoinColumns = @JoinColumn(name="id_ouvrage"))
     private List<OuvragePojo> ouvragePojos = new ArrayList<OuvragePojo>();
 
+    //CONTRUCTORS
     public AuteurPojo() {
     }
 
@@ -47,6 +50,7 @@ public class AuteurPojo implements Serializable {
         this.dateDeces = dateDeces;
     }
 
+    //GETTERS & SETTERS
     public int getId() {
         return id;
     }

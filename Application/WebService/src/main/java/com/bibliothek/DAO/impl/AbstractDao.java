@@ -9,11 +9,12 @@ import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Component
 public abstract class AbstractDao {
 
     protected Session session;

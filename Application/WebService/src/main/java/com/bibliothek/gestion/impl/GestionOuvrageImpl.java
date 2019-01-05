@@ -2,24 +2,40 @@ package com.bibliothek.gestion.impl;
 
 import com.bibliothek.DAO.impl.AuteurDaoImpl;
 import com.bibliothek.DAO.impl.OuvrageDaoImpl;
+import com.bibliothek.DAO.interfaces.AuteurDao;
+import com.bibliothek.DAO.interfaces.OuvrageDao;
 import com.bibliothek.DAO.pojo.AuteurPojo;
 import com.bibliothek.DAO.pojo.OuvragePojo;
 import com.bibliothek.gestion.beans.AuteurAndOuvragesBean;
 import com.bibliothek.gestion.beans.OuvrageBean;
 import com.bibliothek.gestion.interfaces.GestionOuvrage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class GestionOuvrageImpl implements GestionOuvrage {
 
-    @Autowired
-    private OuvrageDaoImpl ouvrageDao = new OuvrageDaoImpl();
+    //ATTRIBUTES
+    //@Autowired
+    private OuvrageDao ouvrageDao = new OuvrageDaoImpl();
 
-    @Autowired
-    private AuteurDaoImpl auteurDao = new AuteurDaoImpl();
+    //@Autowired
+    private AuteurDao auteurDao = new AuteurDaoImpl();
 
+    //CONTRUCTORS
+    public GestionOuvrageImpl() {
+    }
+
+    public GestionOuvrageImpl(OuvrageDao ouvrageDao, AuteurDao auteurDao)
+    {
+        this.ouvrageDao = ouvrageDao;
+        this.auteurDao = auteurDao;
+    }
+
+    //METHODS
     @Override
     public OuvrageBean findOuvrageById(int id)
     {
@@ -76,5 +92,21 @@ public class GestionOuvrageImpl implements GestionOuvrage {
         ouvrageDao.delete(ouvragePojo);
     }
 
+    //GETTERS & SETTERS
 
+    public OuvrageDao getOuvrageDao() {
+        return ouvrageDao;
+    }
+
+    public void setOuvrageDao(OuvrageDao ouvrageDao) {
+        this.ouvrageDao = ouvrageDao;
+    }
+
+    public AuteurDao getAuteurDao() {
+        return auteurDao;
+    }
+
+    public void setAuteurDao(AuteurDao auteurDao) {
+        this.auteurDao = auteurDao;
+    }
 }

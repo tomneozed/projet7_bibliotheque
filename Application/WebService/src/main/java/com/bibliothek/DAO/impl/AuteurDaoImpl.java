@@ -63,6 +63,4 @@ public class AuteurDaoImpl extends AbstractDao implements AuteurDao {
         }
         return auteurPojos;
     }
-
-
 }

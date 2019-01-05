@@ -10,6 +10,7 @@ import java.io.Serializable;
 @Table(name="utilisateur")
 public class UtilisateurPojo implements Serializable {
 
+    //ATTRIBUTES
     @Id
     private int id;
 
@@ -35,7 +36,7 @@ public class UtilisateurPojo implements Serializable {
 
     private String pays;
 
-
+    //CONTRUCTORS
     public UtilisateurPojo() {
     }
 
@@ -53,6 +54,7 @@ public class UtilisateurPojo implements Serializable {
         this.pays = pays;
     }
 
+    //GETTERS & SETTERS
     public int getId() {
         return id;
     }
@@ -140,8 +142,4 @@ public class UtilisateurPojo implements Serializable {
     public void setPays(String pays) {
         this.pays = pays;
     }
-
-
-
-
 }

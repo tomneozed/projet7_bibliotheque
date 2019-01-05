@@ -21,11 +21,10 @@ C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\DAO\impl\UtilisateurDaoImpl.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\exceptions\FunctionalException.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\exceptions\TechnicalException.java
-C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\main.java
+C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\Main.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\DAO\pojo\AuteurPojo.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\gestion\beans\AuteurBean.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\DAO\impl\AbstractDao.java
-C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\gestion\beans\OuvrageAndAuteursBean.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\webservice\responses\OuvrageResponse.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\DAO\pojo\UtilisateurPojo.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebService\src\main\java\com\bibliothek\DAO\pojo\OuvragePojo.java

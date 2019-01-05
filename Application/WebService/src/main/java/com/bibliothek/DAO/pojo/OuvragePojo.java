@@ -14,6 +14,7 @@ import java.util.List;
 @Table(name="ouvrage")
 public class OuvragePojo implements Serializable {
 
+    //ATTRIBUTES
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ouvrage_gen")
     @SequenceGenerator(name = "ouvrage_gen", sequenceName = "ouvrage_id_seq", schema = "public")
@@ -47,9 +48,8 @@ public class OuvragePojo implements Serializable {
     @JoinTable(name="auteur_ouvrage", joinColumns = @JoinColumn(name="id_ouvrage"), inverseJoinColumns = @JoinColumn(name="id_auteur"))
     private List<AuteurPojo> auteurPojos = new ArrayList<AuteurPojo>();
 
+    //CONTRUCTORS
     public OuvragePojo() {
-
-
     }
 
     public OuvragePojo(String titre, String editeur, String nature, String resume, int nombrePages, Date dateParution, double prix, int nombreExemplaires, int nombreExemplairesDispo) {
@@ -64,6 +64,7 @@ public class OuvragePojo implements Serializable {
         this.nombreExemplairesDispo = nombreExemplairesDispo;
     }
 
+    //GETTERS & SETTERS
     public int getId() {
         return id;
     }

@@ -21,7 +21,7 @@
     <s:iterator value="ouvrageList">
         <li>
             <s:a action="ouvrage_detail">
-                <s:param name="id" value="id" />
+                <s:param name="ouvrageId" value="ouvrage.titre"/>
                 <s:property value="titre"/>
             </s:a>
         </li>
