@@ -2,9 +2,9 @@ package com.bibliothek.gestion.interfaces;
 
 import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import com.bibliothek.gestion.beans.UtilisateurBean;
-import org.springframework.stereotype.Component;
 
 public interface GestionUtilisateur {
+
     /**
      * Finds user by pseudo and check if the password is correct
      * @param pseudo

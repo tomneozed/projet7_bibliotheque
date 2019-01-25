@@ -4,8 +4,6 @@ import com.bibliothek.DAO.pojo.AuteurPojo;
 import com.bibliothek.DAO.pojo.OuvragePojo;
 import com.bibliothek.gestion.beans.AuteurAndOuvragesBean;
 import com.bibliothek.gestion.beans.OuvrageBean;
-import org.springframework.stereotype.Component;
-
 import java.util.List;
 
 public interface GestionOuvrage {

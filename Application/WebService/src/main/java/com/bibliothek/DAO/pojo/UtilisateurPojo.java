@@ -1,9 +1,6 @@
 package com.bibliothek.DAO.pojo;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity(name="utilisateur")
@@ -12,6 +9,8 @@ public class UtilisateurPojo implements Serializable {
 
     //ATTRIBUTES
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ouvrage_gen")
+    @SequenceGenerator(name = "auteur_gen", sequenceName = "utilisateur_id_seq", schema="public" )
     private int id;
 
     private String nom;

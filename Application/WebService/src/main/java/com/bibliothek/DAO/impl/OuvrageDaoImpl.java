@@ -5,13 +5,14 @@ import com.bibliothek.DAO.interfaces.OuvrageDao;
 import com.bibliothek.DAO.pojo.AuteurOuvragePojo;
 import com.bibliothek.DAO.pojo.AuteurPojo;
 import com.bibliothek.DAO.pojo.OuvragePojo;
-import org.springframework.stereotype.Component;
 
 import javax.inject.Named;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
 @Named
+@XmlRootElement(name="OuvrageDaoImpl")
 public class OuvrageDaoImpl extends AbstractDao implements OuvrageDao {
 
     public OuvrageDaoImpl(){
@@ -21,7 +22,6 @@ public class OuvrageDaoImpl extends AbstractDao implements OuvrageDao {
     @Override
     public OuvragePojo findById(int id) throws DaoException {
         OuvragePojo ouvragePojo = (OuvragePojo) super.find(OuvragePojo.class, id);
-        //ouvragePojo.setAuteurPojos(extractAuteurs(id));
         return ouvragePojo;
     }
 
@@ -72,11 +72,6 @@ public class OuvrageDaoImpl extends AbstractDao implements OuvrageDao {
     @Override
     public List findAll() throws DaoException{
         List<OuvragePojo> ouvragePojos = super.findAll(OuvragePojo.class);
-
-//        for (int i = 0; i < ouvragePojos.size(); i++) {
-//            ouvragePojos.get(i).setAuteurPojos(extractAuteurs(ouvragePojos.get(i).getId()));
-//        }
-
         return ouvragePojos;
     }
 

@@ -4,13 +4,14 @@ import com.bibliothek.DAO.exceptions.DaoException;
 import com.bibliothek.DAO.interfaces.AuteurDao;
 import com.bibliothek.DAO.pojo.AuteurOuvragePojo;
 import com.bibliothek.DAO.pojo.AuteurPojo;
-import org.springframework.stereotype.Component;
 
 import javax.inject.Named;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
 @Named
+@XmlRootElement(name="AuteurDaoImpl")
 public class AuteurDaoImpl extends AbstractDao implements AuteurDao {
 
     public AuteurDaoImpl(){

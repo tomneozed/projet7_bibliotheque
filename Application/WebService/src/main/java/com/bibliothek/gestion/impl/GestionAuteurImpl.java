@@ -1,20 +1,18 @@
 package com.bibliothek.gestion.impl;
 
 import com.bibliothek.DAO.exceptions.DaoException;
-import com.bibliothek.DAO.impl.AuteurDaoImpl;
 import com.bibliothek.DAO.interfaces.AuteurDao;
 import com.bibliothek.DAO.pojo.AuteurPojo;
 import com.bibliothek.gestion.beans.AuteurBean;
 import com.bibliothek.gestion.interfaces.GestionAuteur;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
 @Named
+@XmlRootElement(name="GestionAuteurImpl")
 public class GestionAuteurImpl implements GestionAuteur {
 
     //ATTRIBUTES
@@ -66,7 +64,6 @@ public class GestionAuteurImpl implements GestionAuteur {
     }
 
     //GETTERS & SETTERS
-
     public AuteurDao getAuteurDao() {
         return auteurDao;
     }
@@ -74,4 +71,6 @@ public class GestionAuteurImpl implements GestionAuteur {
     public void setAuteurDao(AuteurDao auteurDao) {
         this.auteurDao = auteurDao;
     }
+
+
 }

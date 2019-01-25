@@ -14,7 +14,7 @@
     <!-- Scanne les packages pour trouver les beans qui se déclarent (@Named...) -->
     <context:component-scan base-package="com.bibliothek"/>
 
-    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 
     <bean id="auteurDao" class="com.bibliothek.DAO.impl.AuteurDaoImpl"/>
     <bean id="auteurOuvrageDao" class="com.bibliothek.DAO.impl.AuteurOuvrageDaoImpl"/>
@@ -23,24 +23,22 @@
     <bean id="utilisateurDao" class="com.bibliothek.DAO.impl.UtilisateurDaoImpl"/>
 
     <bean id="gestionAuteur" class="com.bibliothek.gestion.impl.GestionAuteurImpl">
-        <property name = "auteurDao" ref="auteurDao" ></property>
+        <property name="auteurDao" ref="auteurDao"/>
     </bean>
 
     <bean id="gestionOuvrage" class="com.bibliothek.gestion.impl.GestionOuvrageImpl">
-        <property name = "ouvrageDao" ref="ouvrageDao" ></property>
+        <property name="ouvrageDao" ref="ouvrageDao"/>
     </bean>
 
     <bean id="gestionPret" class="com.bibliothek.gestion.impl.GestionPretImpl">
-        <property name = "pretDao" ref="pretDao" ></property>
+        <property name="pretDao" ref="pretDao"/>
     </bean>
 
-    <bean id="gestionUtilisateur" class="com.bibliothek.gestion.impl.GestionUtilisateurImpl">
-        <property name = "utilisateurDao" ref="utilisateurDao" ></property>
-    </bean>
+    <bean id="gestionUtilisateur" class="com.bibliothek.gestion.impl.GestionUtilisateurImpl"/>
 
     <bean id="bibliothekService" class="com.bibliothek.webservice.BibliothekService">
-        <property name = "gestionPret" ref="gestionPret" ></property>
-        <property name = "gestionOuvrage" ref="gestionOuvrage" ></property>
-        <property name = "gestionUtilisateur" ref="gestionUtilisateur" ></property>
+        <property name="gestionPret" ref="gestionPret"/>
+        <property name="gestionOuvrage" ref="gestionOuvrage"/>
+        <property name="gestionUtilisateur" ref="gestionUtilisateur"/>
     </bean>
 </beans>

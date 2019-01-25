@@ -1,12 +1,9 @@
 package com.bibliothek;
 
-import com.bibliothek.gestion.impl.GestionOuvrageImpl;
-import com.bibliothek.gestion.interfaces.GestionOuvrage;
 import com.bibliothek.webservice.BibliothekService;
 import com.bibliothek.webservice.responses.OuvrageResponse;
 import com.bibliothek.webservice.responses.PretResponse;
 import com.bibliothek.webservice.responses.UtilisateurResponse;
-import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -18,24 +15,22 @@ public class Main {
 
         BibliothekService vBS = vApplicationContext.getBean("bibliothekService", BibliothekService.class);
 
-        BibliothekService bibliothekService = new BibliothekService();
-
         //SOAP REQUESTS TESTS
 
-        OuvrageResponse search = bibliothekService.ouvragesSearch("Harry");
+        OuvrageResponse search = vBS.ouvragesSearch("Harry");
 
-        OuvrageResponse ouvrages =bibliothekService.allOuvrages();
+        OuvrageResponse ouvrages = vBS.allOuvrages();
 
-        UtilisateurResponse identifie = bibliothekService.identification("AlexTerrieur", "motDePasse");
+        UtilisateurResponse identifie = vBS.identification("alexTerrieur", "motDePasse");
 
-        PretResponse loansByPseudo = bibliothekService.userLoansByPseudo("alexTerrieur");
+        PretResponse loansByPseudo = vBS.userLoansByPseudo("alainTerrieur");
 
-        PretResponse extendedLoan = bibliothekService.extendLoan(6);
+        PretResponse extendedLoan = vBS.extendLoan(6);
 
-        PretResponse notRenderedLoans = bibliothekService.notRenderedLoans();
+        PretResponse notRenderedLoans = vBS.notRenderedLoans();
 
-        PretResponse loanReturn = bibliothekService.loanReturn(6);
+        PretResponse loanReturn = vBS.loanReturn(6);
 
-        PretResponse allLoans = bibliothekService.allLoans();
+        PretResponse allLoans = vBS.allLoans();
     }
 }

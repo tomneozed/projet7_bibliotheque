@@ -1,12 +1,13 @@
 package com.bibliothek.DAO.impl;
 
 import com.bibliothek.DAO.interfaces.AuteurOuvrageDao;
-import org.springframework.stereotype.Component;
 
 import javax.inject.Named;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @Named
+@XmlRootElement(name="AuteurOuvrageDaoImpl")
 public class AuteurOuvrageDaoImpl extends AbstractDao implements AuteurOuvrageDao {
 
     public AuteurOuvrageDaoImpl() {super();}

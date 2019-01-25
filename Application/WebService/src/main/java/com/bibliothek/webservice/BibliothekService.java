@@ -1,17 +1,11 @@
 package com.bibliothek.webservice;
 
 import com.bibliothek.DAO.exceptions.DaoException;
-import com.bibliothek.DAO.impl.UtilisateurDaoImpl;
-import com.bibliothek.DAO.interfaces.UtilisateurDao;
-import com.bibliothek.DAO.pojo.AuteurPojo;
 import com.bibliothek.DAO.pojo.PretPojo;
-import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import com.bibliothek.exceptions.FunctionalException;
-import com.bibliothek.gestion.beans.AuteurAndOuvragesBean;
-import com.bibliothek.gestion.beans.OuvrageBean;
+import com.bibliothek.gestion.beans.UtilisateurBean;
 import com.bibliothek.gestion.impl.GestionOuvrageImpl;
 import com.bibliothek.gestion.impl.GestionPretImpl;
-import com.bibliothek.gestion.impl.GestionUtilisateurImpl;
 import com.bibliothek.gestion.interfaces.GestionOuvrage;
 import com.bibliothek.gestion.interfaces.GestionPret;
 import com.bibliothek.gestion.interfaces.GestionUtilisateur;
@@ -20,17 +14,11 @@ import com.bibliothek.webservice.responses.OuvrageResponse;
 import com.bibliothek.webservice.responses.PretResponse;
 import com.bibliothek.webservice.responses.UtilisateurResponse;
 import org.hibernate.HibernateException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 @WebService()
 public class BibliothekService {
@@ -46,12 +34,6 @@ public class BibliothekService {
     protected GestionUtilisateur gestionUtilisateur;
 
     //CONSTRUCTORS
-    public BibliothekService(GestionOuvrage gestionOuvrage, GestionPret gestionPret,GestionUtilisateur gestionUtilisateur)
-    {
-        this.gestionPret = gestionPret;
-        this.gestionOuvrage = gestionOuvrage;
-        this.gestionUtilisateur = gestionUtilisateur;
-    }
 
     public BibliothekService() {
     }
@@ -128,12 +110,14 @@ public class BibliothekService {
     @WebMethod(operationName = "userLoansByPseudo")
     public PretResponse userLoansByPseudo(@XmlElement(name = "pseudo") String pseudo)
     {
-        UtilisateurDao utilisateurDao = new UtilisateurDaoImpl();
+        //UtilisateurDao utilisateurDao = new UtilisateurDaoImpl();
+        UtilisateurBean utilisateur;
         gestionPret.majPret();
         PretResponse pretResponse = new PretResponse();
-        UtilisateurPojo utilisateur;
+        //UtilisateurPojo utilisateur;
         try{
-            utilisateur = utilisateurDao.findByPseudo(pseudo);
+            utilisateur = gestionUtilisateur.findUtilisateurByPseudo(pseudo);
+            //utilisateur = utilisateurDao.findByPseudo(pseudo);
             pretResponse.setPretBeanList(gestionPret.remonterPrets(utilisateur.getId()));
         }catch (DaoException e) {
             pretResponse.setTypeErreur(2);
@@ -143,7 +127,6 @@ public class BibliothekService {
             pretResponse.setTypeErreur(1);
             pretResponse.setMessageErreur(e.getMessage());
         }
-
         return pretResponse;
     }
 
@@ -249,11 +232,12 @@ public class BibliothekService {
 
     //GETTERS & SETTERS
 
+
     public GestionOuvrage getGestionOuvrage() {
         return gestionOuvrage;
     }
 
-    public void setGestionOuvrage(GestionOuvrage gestionOuvrage) {
+    public void setGestionOuvrage(GestionOuvrageImpl gestionOuvrage) {
         this.gestionOuvrage = gestionOuvrage;
     }
 
@@ -261,7 +245,7 @@ public class BibliothekService {
         return gestionPret;
     }
 
-    public void setGestionPret(GestionPret gestionPret) {
+    public void setGestionPret(GestionPretImpl gestionPret) {
         this.gestionPret = gestionPret;
     }
 

@@ -1,17 +1,16 @@
 package com.bibliothek.gestion.impl;
 
-import com.bibliothek.DAO.impl.UtilisateurDaoImpl;
 import com.bibliothek.DAO.interfaces.UtilisateurDao;
 import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import com.bibliothek.gestion.beans.UtilisateurBean;
 import com.bibliothek.gestion.interfaces.GestionUtilisateur;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
+@XmlRootElement(name="GestionUtilisateurImpl")
 public class GestionUtilisateurImpl implements GestionUtilisateur {
 
     //ATTRIBUTES
@@ -19,7 +18,6 @@ public class GestionUtilisateurImpl implements GestionUtilisateur {
     private UtilisateurDao utilisateurDao;
 
     //CONSTRUCTORS
-
     public GestionUtilisateurImpl() {
     }
 

@@ -1,7 +1,5 @@
 package com.bibliothek.gestion.impl;
 
-import com.bibliothek.DAO.impl.AuteurDaoImpl;
-import com.bibliothek.DAO.impl.OuvrageDaoImpl;
 import com.bibliothek.DAO.interfaces.AuteurDao;
 import com.bibliothek.DAO.interfaces.OuvrageDao;
 import com.bibliothek.DAO.pojo.AuteurPojo;
@@ -9,32 +7,29 @@ import com.bibliothek.DAO.pojo.OuvragePojo;
 import com.bibliothek.gestion.beans.AuteurAndOuvragesBean;
 import com.bibliothek.gestion.beans.OuvrageBean;
 import com.bibliothek.gestion.interfaces.GestionOuvrage;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
 @Named
+@XmlRootElement(name="GestionOuvrageImpl")
 public class GestionOuvrageImpl implements GestionOuvrage {
 
     //ATTRIBUTES
     @Inject
+    @XmlAttribute
     private OuvrageDao ouvrageDao;
 
     @Inject
+    @XmlAttribute
     private AuteurDao auteurDao;
 
     //CONTRUCTORS
     public GestionOuvrageImpl() {
-    }
-
-    public GestionOuvrageImpl(OuvrageDao ouvrageDao, AuteurDao auteurDao)
-    {
-        this.ouvrageDao = ouvrageDao;
-        this.auteurDao = auteurDao;
     }
 
     //METHODS
@@ -111,4 +106,5 @@ public class GestionOuvrageImpl implements GestionOuvrage {
     public void setAuteurDao(AuteurDao auteurDao) {
         this.auteurDao = auteurDao;
     }
+
 }

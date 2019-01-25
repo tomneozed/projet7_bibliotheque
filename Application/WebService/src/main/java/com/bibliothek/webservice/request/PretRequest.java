@@ -59,6 +59,4 @@ public class PretRequest {
 
         return pretPojo;
     }
-
-
 }

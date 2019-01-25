@@ -1,7 +1,6 @@
 package com.bibliothek.DAO.pojo;
 
 import org.hibernate.search.annotations.Field;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.io.Serializable;

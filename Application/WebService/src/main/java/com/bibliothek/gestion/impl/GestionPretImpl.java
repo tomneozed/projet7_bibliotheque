@@ -1,9 +1,6 @@
 package com.bibliothek.gestion.impl;
 
 import com.bibliothek.DAO.exceptions.DaoException;
-import com.bibliothek.DAO.impl.OuvrageDaoImpl;
-import com.bibliothek.DAO.impl.PretDaoImpl;
-import com.bibliothek.DAO.impl.UtilisateurDaoImpl;
 import com.bibliothek.DAO.interfaces.OuvrageDao;
 import com.bibliothek.DAO.interfaces.PretDao;
 import com.bibliothek.DAO.interfaces.UtilisateurDao;
@@ -13,17 +10,16 @@ import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import com.bibliothek.exceptions.FunctionalException;
 import com.bibliothek.gestion.beans.PretBean;
 import com.bibliothek.gestion.interfaces.GestionPret;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
 @Named
+@XmlRootElement(name="GestionPretImpl")
 public class GestionPretImpl implements GestionPret {
 
     //ATTRIBUTES

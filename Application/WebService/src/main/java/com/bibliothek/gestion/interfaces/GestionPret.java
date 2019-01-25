@@ -5,11 +5,11 @@ import com.bibliothek.DAO.pojo.PretPojo;
 import com.bibliothek.DAO.pojo.UtilisateurPojo;
 import com.bibliothek.exceptions.FunctionalException;
 import com.bibliothek.gestion.beans.PretBean;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 public interface GestionPret {
+
     /**
      * Extends the loan of id idPret for 4 weeks
      * @param idPret

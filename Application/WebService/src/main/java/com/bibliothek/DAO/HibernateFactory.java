@@ -1,6 +1,5 @@
 package com.bibliothek.DAO;
 
-
 import com.bibliothek.DAO.exceptions.DaoException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
