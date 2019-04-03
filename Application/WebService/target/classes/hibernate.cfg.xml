@@ -33,11 +33,10 @@
         <property name="hbm2ddl.auto">update</property>
 
         <!-- Names the annotated entity class -->
-        <mapping class="com.bibliothek.DAO.pojo.AuteurOuvragePojo"/>
-        <mapping class="com.bibliothek.DAO.pojo.AuteurPojo"/>
-        <mapping class="com.bibliothek.DAO.pojo.OuvragePojo"/>
-        <mapping class="com.bibliothek.DAO.pojo.PretPojo"/>
-        <mapping class="com.bibliothek.DAO.pojo.UtilisateurPojo"/>
+        <mapping class="com.DAO.pojo.AuteurPojo"/>
+        <mapping class="com.DAO.pojo.OuvragePojo"/>
+        <mapping class="com.DAO.pojo.PretPojo"/>
+        <mapping class="com.DAO.pojo.UtilisateurPojo"/>
     </session-factory>
 
 </hibernate-configuration>
