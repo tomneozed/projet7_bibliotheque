@@ -5,7 +5,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.service.LoginService;
-import generated.UtilisateurResponse;
+import com.ws.UtilisateurResponse;
 import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.Map;
@@ -49,6 +49,7 @@ public class LoginAction extends AbstractAction implements ModelDriven<User>, Se
         {
             session = ActionContext.getContext().getSession();
             session.put("user", user);
+            System.out.println(user);
             vResult = ActionSupport.SUCCESS;
         }else
         {

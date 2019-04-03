@@ -48,7 +48,7 @@ public class BibliothekService {
 	private UtilisateurPojo utilisateurPojo;
 	
 	private void initBeans() {
-		context = new ClassPathXmlApplicationContext("/resources/spring.xml");
+		context = new ClassPathXmlApplicationContext("spring.xml");
 		
 		auteurResponse = (AuteurResponse) context.getBean("auteurResponse");
 		auteurDao = (AuteurDao) context.getBean("auteurDAO");

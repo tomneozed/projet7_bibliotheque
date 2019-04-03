@@ -19,7 +19,6 @@
     <li>
         <s:property value="#session.user.username"/>
     </li>
-
 </s:if>
     <ul>
         <li><s:a action="currentLoans">

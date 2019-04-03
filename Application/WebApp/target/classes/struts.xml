@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
-        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
-        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <package name="index" namespace="/" extends="struts-default">
+<package name="default" namespace="/" extends="struts-default">
         <action name="index">
             <result>/jsp/index.jsp</result>
         </action>
@@ -19,8 +19,6 @@
             <result name="input">/jsp/login.jsp</result>
             <result name="success" type="redirectAction">index</result>
         </action>
-    </package>
-    <package name="loans" namespace="/" extends="struts-default">
         <action name="currentLoans"
                 class="com.action.LoanAction"
                 method="doListByUser">
@@ -39,8 +37,6 @@
             <result name="success">/jsp/loan/detail.jsp</result>
             <result name="error">/jsp/loan/loans_list.jsp</result>
         </action>
-    </package>
-    <package name="ouvrages" namespace="/" extends="struts-default">
         <action name="all_ouvrages"
                 class="com.action.OuvragesAction"
                 method="doList">
@@ -59,5 +55,5 @@
             <result name="success">/jsp/ouvrage_detail.jsp</result>
             <result name="error">/jsp/error.jsp</result>
         </action>
-    </package>
+  </package>
 </struts>

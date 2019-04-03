@@ -3,8 +3,8 @@ package com.action;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-import generated.OuvragePojo;
-import generated.OuvrageResponse;
+import com.ws.OuvragePojo;
+import com.ws.OuvrageResponse;
 import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.List;
