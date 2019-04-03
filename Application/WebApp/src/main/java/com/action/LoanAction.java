@@ -1,8 +1,8 @@
 package com.action;
 
 import com.opensymphony.xwork2.ActionContext;
-import generated.bibliothek.PretBean;
-import generated.bibliothek.PretResponse;
+import generated.PretPojo;
+import generated.PretResponse;
 import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.ArrayList;
@@ -17,60 +17,61 @@ public class LoanAction extends AbstractAction implements SessionAware {
 
     private PretResponse userLoans = new PretResponse();
 
-    private List<PretBean> loansList= new ArrayList<PretBean>();
+    private List<PretPojo> loansList= new ArrayList<PretPojo>();
 
     private Map<String, Object> session;
 
-    private PretBean loan;
+    private PretPojo loan;
 
 
     //=========  GETTERS & SETTERS  =========
 
-    public PretResponse getUserLoans() {
-        return userLoans;
-    }
-
-    public void setUserLoans(PretResponse userLoans) {
-        this.userLoans = userLoans;
-    }
-
-    public List<PretBean> getLoansList() {
-        return loansList;
-    }
-
-    public void setLoansList(List<PretBean> loansList) {
-        this.loansList = loansList;
-    }
-
-    public void setSession(Map<String, Object> map) {
-        this.session = map;
-    }
-
-    public Map<String, Object> getSession() {
-        return session;
-    }
-
     public int getLoanId() {
-        return loanId;
-    }
+		return loanId;
+	}
 
-    public void setLoanId(int loanId) {
-        this.loanId = loanId;
-    }
+	public void setLoanId(int loanId) {
+		this.loanId = loanId;
+	}
 
-    public PretBean getLoan() {
-        return loan;
-    }
+	public PretResponse getUserLoans() {
+		return userLoans;
+	}
 
-    public void setLoan(PretBean loan) {
-        this.loan = loan;
-    }
+	public void setUserLoans(PretResponse userLoans) {
+		this.userLoans = userLoans;
+	}
+
+	public List<PretPojo> getLoansList() {
+		return loansList;
+	}
+
+	public void setLoansList(List<PretPojo> loansList) {
+		this.loansList = loansList;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+	public PretPojo getLoan() {
+		return loan;
+	}
+
+	public void setLoan(PretPojo loan) {
+		this.loan = loan;
+	}
+    
 
     //=========  METHODS  =========
-
+	/*
     public String doListByUser()
     {
-        userLoans = getBibliothekService().userLoansByPseudo("alainTerrieur");
+        userLoans = getBibliothekServiceService().userLoansByPseudo("alainTerrieur");
 
         loansList = userLoans.getPretBeanList();
 
@@ -86,7 +87,7 @@ public class LoanAction extends AbstractAction implements SessionAware {
         }
     }
 
-    public String doDetail()
+	public String doDetail()
     {
         userLoans = getBibliothekService().userLoansByPseudo("alainTerrieur");
 
@@ -118,4 +119,5 @@ public class LoanAction extends AbstractAction implements SessionAware {
         }
         return ERROR;
     }
+	*/
 }

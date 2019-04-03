@@ -96,7 +96,7 @@ public class HibernateFactory {
 	 */
 	private static SessionFactory configureSessionFactory() throws HibernateException {
 		Configuration config = new Configuration();
-		config.configure("/resources/hibernate.cfg.xml");
+		config.configure("hibernate.cfg.xml");
 		sessionFactory = config.buildSessionFactory();
 		return sessionFactory;
 	}

@@ -23,13 +23,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class main {
 	
-	static PretResponse pretResponse;
-	
 	public static void main(String[] args) {
 		
 		// TODO Auto-generated method stub
-		ApplicationContext context = new ClassPathXmlApplicationContext("/bibliothekTest2/src/main/resources/spring.xml");
+		//ApplicationContext context = new ClassPathXmlApplicationContext("com/spring.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		AuteurDao auteurDao = (AuteurDao) context.getBean("auteurDAO");
+		
+		System.out.println(System.getProperty("spring.xml"));
 		
 		List<AuteurPojo> auteurs = new ArrayList<AuteurPojo>();
 		
@@ -60,13 +61,13 @@ public class main {
 //			AR.setErrorMessage(e.getMessage());
 //		}
 		
-		UtilisateurDao utilisateurDao = (UtilisateurDao) context.getBean("utilisateurDao");
+		UtilisateurDao utilisateurDao = (UtilisateurDao) context.getBean("utilisateurDAO");
 		UtilisateurResponse UR = (UtilisateurResponse) context.getBean("utilisateurResponse");
 		
-		if(utilisateurDao.checkPassword("AlexTerrieur", "motDePasse"))
+		if(utilisateurDao.checkPassword("alainTerrieur", "motDePasse"))
 		{
 			try {
-				UR.getUtilisateurs().add(utilisateurDao.findByPseudo("AlexTerrieur"));
+				UR.getUtilisateurs().add(utilisateurDao.findByPseudo("alexTerrieur"));
 			}catch(HibernateException e) {
 				UR.setErrorType(2);
 				UR.setErrorMessage(e.getMessage());

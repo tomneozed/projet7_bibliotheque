@@ -1,33 +1,32 @@
 package com.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import generated.bibliothek.Bibliothek;
-import generated.bibliothek.BibliothekService;
+import generated.BibliothekService;
+import generated.BibliothekServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class AbstractAction extends ActionSupport {
 
     //=========  ATTRIBUTES  =========
-    Bibliothek bibliothekServiceService;
+    BibliothekServiceService bibliothekServiceService;
 
-    @Autowired
     private BibliothekService bibliothekService = bibliothekServiceService.getBibliothekServicePort();
 
-    //=========  GETTERS & SETTERS  =========
+  //=========  GETTERS & SETTERS  =========
+    
+	public BibliothekServiceService getBibliothekServiceService() {
+		return bibliothekServiceService;
+	}
 
-    public Bibliothek getBibliothekServiceService() {
-        return bibliothekServiceService;
-    }
+	public void setBibliothekServiceService(BibliothekServiceService bibliothekServiceService) {
+		this.bibliothekServiceService = bibliothekServiceService;
+	}
 
-    public void setBibliothekServiceService(Bibliothek bibliothekServiceService) {
-        this.bibliothekServiceService = bibliothekServiceService;
-    }
+	public BibliothekService getBibliothekService() {
+		return bibliothekService;
+	}
 
-    public BibliothekService getBibliothekService() {
-        return bibliothekService;
-    }
-
-    public void setBibliothekService(BibliothekService bibliothekService) {
-        this.bibliothekService = bibliothekService;
-    }
+	public void setBibliothekService(BibliothekService bibliothekService) {
+		this.bibliothekService = bibliothekService;
+	}    
 }

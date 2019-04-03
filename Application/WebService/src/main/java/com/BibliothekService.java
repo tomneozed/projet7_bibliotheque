@@ -39,7 +39,6 @@ public class BibliothekService {
 	private OuvrageDao ouvrageDao;
 	private OuvragePojo ouvragePojo;
 	
-	@Autowired
 	private PretResponse pretResponse;
 	private PretDao pretDao;
 	private PretPojo pretPojo;
@@ -48,29 +47,27 @@ public class BibliothekService {
 	private UtilisateurDao utilisateurDao;
 	private UtilisateurPojo utilisateurPojo;
 	
-	//Identification
-	@WebMethod()
-	public UtilisateurResponse identification(String pseudo, String motDePasse) {
-		initBeans();
+	private void initBeans() {
+		context = new ClassPathXmlApplicationContext("/resources/spring.xml");
 		
-		if(utilisateurDao.checkPassword(pseudo, motDePasse))
-		{
-			try {
-				utilisateurResponse.getUtilisateurs().add(utilisateurDao.findByPseudo(pseudo));
-			}catch(HibernateException e) {
-				utilisateurResponse.setErrorType(2);
-				utilisateurResponse.setErrorMessage(e.getMessage());
-			}
-		}else {
-			utilisateurResponse.setErrorType(2);
-			utilisateurResponse.setErrorMessage("Pseudo or password invalid");
-		}
+		auteurResponse = (AuteurResponse) context.getBean("auteurResponse");
+		auteurDao = (AuteurDao) context.getBean("auteurDAO");
+		auteurPojo = (AuteurPojo) context.getBean("auteurPojo");
 		
-		return utilisateurResponse;
+		ouvrageResponse = (OuvrageResponse) context.getBean("ouvrageResponse");
+		ouvrageDao = (OuvrageDao) context.getBean("ouvrageDAO");
+		ouvragePojo = (OuvragePojo) context.getBean("ouvragePojo");
+		
+		pretResponse = (PretResponse) context.getBean("pretResponse");
+		pretDao = (PretDao) context.getBean("pretDAO");
+		pretPojo = (PretPojo) context.getBean("pretPojo");
+		
+		utilisateurResponse = (UtilisateurResponse) context.getBean("utilisateurResponse");
+		utilisateurDao = (UtilisateurDao) context.getBean("utilisateurDAO");
+		utilisateurPojo = (UtilisateurPojo) context.getBean("utilisateurPojo");
 	}
-	
+
 	/************ AUTEUR CRUD ************/
-	
 	//Create auteur
 	@WebMethod
 	public int createAuteur(AuteurPojo auteur) {
@@ -138,7 +135,6 @@ public class BibliothekService {
 	}
 	
 	/************ OUVRAGES CRUD ************/
-	
 	//Create ouvrage
 	@WebMethod
 	public int createOuvrage(OuvragePojo ouvrage) {
@@ -212,7 +208,7 @@ public class BibliothekService {
 	
 	//Gets all loans
 	@WebMethod
-	public PretResponse allPrets() {
+	public PretResponse allLoans() {
 		initBeans();
 		pretDao.majPrets();
 		pretResponse.setPrets(pretDao.findAll());
@@ -221,7 +217,7 @@ public class BibliothekService {
 	
 	//Gets the specified loan
 	@WebMethod
-	public PretResponse getPret(int id) {
+	public PretResponse getLoan(int id) {
 		initBeans();
 		try {
 			pretDao.majPrets();
@@ -260,24 +256,29 @@ public class BibliothekService {
 	}
 	
 	/************ UTILISATEUR CRUD ************/
-	
-	private void initBeans() {
-		context = new ClassPathXmlApplicationContext("/resources/spring.xml");
+	//Identification
+	@WebMethod()
+	public UtilisateurResponse identification(String pseudo, String motDePasse) {
+		initBeans();
 		
-		auteurResponse = (AuteurResponse) context.getBean("auteurResponse");
-		auteurDao = (AuteurDao) context.getBean("auteurDAO");
-		auteurPojo = (AuteurPojo) context.getBean("auteurPojo");
+		if(utilisateurDao.checkPassword(pseudo, motDePasse))
+		{
+			try {
+				utilisateurResponse.getUtilisateurs().add(utilisateurDao.findByPseudo(pseudo));
+			}catch(HibernateException e) {
+				utilisateurResponse.setErrorType(2);
+				utilisateurResponse.setErrorMessage(e.getMessage());
+			}
+		}else {
+			utilisateurResponse.setErrorType(2);
+			utilisateurResponse.setErrorMessage("Pseudo or password invalid");
+		}
 		
-		ouvrageResponse = (OuvrageResponse) context.getBean("ouvrageResponse");
-		ouvrageDao = (OuvrageDao) context.getBean("ouvrageDAO");
-		ouvragePojo = (OuvragePojo) context.getBean("ouvragePojo");
-		
-		pretResponse = (PretResponse) context.getBean("pretResponse");
-		pretDao = (PretDao) context.getBean("pretDAO");
-		pretPojo = (PretPojo) context.getBean("pretPojo");
-		
-		utilisateurResponse = (UtilisateurResponse) context.getBean("utilisateurResponse");
-		utilisateurDao = (UtilisateurDao) context.getBean("utilisateurDAO");
-		utilisateurPojo = (UtilisateurPojo) context.getBean("utilisateurPojo");
+		return utilisateurResponse;
 	}
-}
+	}
+
+	
+
+
+
