@@ -260,7 +260,6 @@ public class BibliothekService {
 	@WebMethod()
 	public UtilisateurResponse identification(String pseudo, String motDePasse) {
 		initBeans();
-		
 		if(utilisateurDao.checkPassword(pseudo, motDePasse))
 		{
 			try {
@@ -273,10 +272,9 @@ public class BibliothekService {
 			utilisateurResponse.setErrorType(2);
 			utilisateurResponse.setErrorMessage("Pseudo or password invalid");
 		}
-		
 		return utilisateurResponse;
 	}
-	}
+}
 
 	
 

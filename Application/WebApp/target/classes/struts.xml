@@ -33,13 +33,19 @@
         <action name="loan_detail"
                 class="com.action.LoanAction"
                 method="doDetail">
-            <result name="success">/jsp/loan/detail.jsp</result>
+            <result name="success">/jsp/loan/loan_detail.jsp</result>
             <result name="error">/jsp/loan/loans_list.jsp</result>
         </action>
         <action name="extend_loan"
                 class="com.action.LoanAction"
                 method="doExtend">
-            <result name="success">/jsp/loan/detail.jsp</result>
+            <result name="success">/jsp/loan/loan_detail.jsp</result>
+            <result name="error">/jsp/loan/loans_list.jsp</result>
+        </action>
+        <action name="new_loan"
+                class="com.action.LoanAction"
+                method="doCreateLoan">
+            <result name="success">/jsp/loan/new_loan_confirm.jsp</result>
             <result name="error">/jsp/loan/loans_list.jsp</result>
         </action>
         <action name="all_ouvrages"

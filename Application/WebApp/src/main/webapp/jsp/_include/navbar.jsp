@@ -2,29 +2,29 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
-    <title>Title</title>
+    <title></title>
 </head>
 <body>
 
 <ul>
     <li><s:a action="index">
-            <s:text name="Home"/>
+            <s:text name="Accueil"/>
         </s:a>
     </li>
 
     <s:if test="#session.user">
         <li><s:a action="currentLoans">
-            <s:text name="Current Loans"/>
+            <s:text name="Prets en cours"/>
         </s:a>
         </li>
     </s:if>
     <s:if test="#session.user">
             <s:property value="#session.user.username"/>
-            <s:a action="logout">Logout</s:a>
+            <s:a action="logout">Deconnexion</s:a>
     </s:if>
     <s:else>
         <li>
-            <s:a action="goToLoginPage">Login</s:a>
+            <s:a action="goToLoginPage">Se connecter</s:a>
         </li>
     </s:else>
 </ul>

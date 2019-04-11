@@ -92,7 +92,7 @@ public class OuvragesAction extends AbstractAction implements SessionAware {
         ouvrageList = (List<OuvragePojo>)session.get("allOuvrages");
         if(session.get("allOuvrages") != null)
         {
-            ouvrage = ouvrageList.get(ouvrageId);
+            ouvrage = getBibliothekService().getOuvrage(ouvrageId).getOuvrages().get(0);
         }
 
         if(ouvrage == null)

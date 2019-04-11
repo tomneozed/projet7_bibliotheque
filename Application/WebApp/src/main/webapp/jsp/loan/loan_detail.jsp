@@ -9,10 +9,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Loans detail</title>
+    <title>Loan detail</title>
 </head>
 <body>
-<h2><s:text name="Loan detail"/></h2>
+<h2><s:text name="Detail du pret"/></h2>
 <header>
     <%@ include file="../_include/navbar.jsp" %>
 </header>

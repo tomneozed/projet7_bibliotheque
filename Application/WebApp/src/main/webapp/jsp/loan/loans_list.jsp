@@ -9,19 +9,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Loans List</title>
+    <title>Liste des prets</title>
 </head>
 <body>
 <header>
     <%@ include file="../_include/navbar.jsp" %>
 </header>
-    <h2><s:text name="Loans List"/></h2>
+    <h2><s:text name="Liste des prets"/></h2>
         <ul>
-            <s:iterator value="loansList">
+            <s:iterator value="loansToDisplay">
                 <li>
                     <s:a action="loan_detail">
-                        <s:param name="loanId" value="id"/>
-                        <s:property value="dateDebutPret"/>
+                        <s:param name="loanId" value="loan.id"/>
+                        <s:property value="ouvrage.titre"/>
                     </s:a>
                 </li>
             </s:iterator>

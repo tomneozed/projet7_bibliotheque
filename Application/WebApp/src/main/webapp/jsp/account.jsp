@@ -22,7 +22,7 @@
 </s:if>
     <ul>
         <li><s:a action="currentLoans">
-                <s:text name="Loans"/>
+                <s:text name="Prets"/>
             </s:a>
         </li>
     </ul>

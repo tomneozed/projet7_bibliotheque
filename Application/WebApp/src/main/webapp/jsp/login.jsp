@@ -16,8 +16,8 @@
     <%@include file="_include/navbar.jsp"%>
 </header>
 <s:form action="login">
-    <s:textfield label="Username " key="user.username" />
-    <s:password label="Password " key="user.password" />
+    <s:textfield label="Login " key="user.username" />
+    <s:password label="Mot de passe " key="user.password" />
     <s:submit />
     <s:if test="#session.error">
     	<s:property value="#session.error.error"/>

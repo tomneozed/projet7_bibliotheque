@@ -9,19 +9,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Index</title>
+    <title>Accueil</title>
 </head>
 <body>
 <header>
     <%@ include file="_include/navbar.jsp" %>
 </header>
-INDEX
+
 <s:a action="all_ouvrages">
     <s:text name="Tous les ouvrages"/>
 </s:a>
 
 <s:form action="ouvrages_research">
-    <s:textfield label="Research " key="research" />
+    <s:textfield label="Recherche " key="research" />
     <s:submit />
 </s:form>
 </body>

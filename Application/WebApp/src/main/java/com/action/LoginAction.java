@@ -72,8 +72,6 @@ public class LoginAction extends AbstractAction implements ModelDriven<User>, Se
     
     public String goToPage() {
     	return ActionSupport.INPUT;
-    	//System.out.print(session.get("user"));
-    	//return ActionSupport.SUCCESS;
     }
 
     public String doLogout() {
