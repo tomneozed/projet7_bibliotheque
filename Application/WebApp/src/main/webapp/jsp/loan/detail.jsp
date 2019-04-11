@@ -13,22 +13,26 @@
 </head>
 <body>
 <h2><s:text name="Loan detail"/></h2>
-
+<header>
+    <%@ include file="../_include/navbar.jsp" %>
+</header>
 <s:if test="#session.user">
-    <li>
-        <s:property value="#session.user.username"/>
-    </li>
-
     <table>
         <tbody>
             <tr>
                 <td><s:text name="Titre"/></td>
-                <td><s:property value="loan.ouvrage.titre"/></td>
+                <td><s:property value="ouvrage.titre"/></td>
             </tr>
             <tr>
                 <td><s:text name="Date debut pret"/></td>
                 <td><s:property value="loan.dateDebutPret"/></td>
             </tr>
+            <s:if test="!loan.prolongation">
+            	<tr>
+	                <td><s:text name="Date fin pret"/></td>
+	                <td><s:property value="loan.dateFinPret"/></td>
+	            </tr>
+            </s:if>
             <tr>
                 <td><s:text name="Prolonger"/></td>
                 <s:if test="loan.prolongation">

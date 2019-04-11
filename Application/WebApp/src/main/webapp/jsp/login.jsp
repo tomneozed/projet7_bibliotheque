@@ -19,6 +19,9 @@
     <s:textfield label="Username " key="user.username" />
     <s:password label="Password " key="user.password" />
     <s:submit />
+    <s:if test="#session.error">
+    	<s:property value="#session.error.error"/>
+    </s:if>
 </s:form>
 </body>
 </html>

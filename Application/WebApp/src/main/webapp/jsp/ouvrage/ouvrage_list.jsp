@@ -6,7 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
     <title>Ouvrages</title>
@@ -21,7 +20,7 @@
     <s:iterator value="ouvrageList">
         <li>
             <s:a action="ouvrage_detail">
-                <s:param name="ouvrageId" value="ouvrage.titre"/>
+                <s:param name="ouvrageId" value="id"/>
                 <s:property value="titre"/>
             </s:a>
         </li>

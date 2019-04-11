@@ -85,7 +85,7 @@ public class OuvragesAction extends AbstractAction implements SessionAware {
             return ActionSupport.SUCCESS;
         }
     }
-    /*
+    
 	public String doDetail()
     {
         session = ActionContext.getContext().getSession();
@@ -104,6 +104,7 @@ public class OuvragesAction extends AbstractAction implements SessionAware {
         }
     }
 
+	/*
     public String doResearch()
     {
         ouvragesResearch = getBibliothekService().ouvragesSearch("Harry");

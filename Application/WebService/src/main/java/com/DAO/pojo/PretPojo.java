@@ -28,10 +28,10 @@ public class PretPojo {
 	
 	private boolean prolongation;
 	
-	@Column(name="id_utilisateur")
+	@Column(name="id_ouvrage")
 	private int idOuvrage;
 	
-	@Column(name="id_ouvrage")
+	@Column(name="id_utilisateur")
 	private int idUtilisateur;
 	
 	public PretPojo() {

@@ -1,4 +1,3 @@
-<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
         Created by IntelliJ IDEA.
         User: Thomas
@@ -10,15 +9,10 @@
 <html>
 <head>
     <title>Ouvrage detail</title>
+    <%@ include file="../_include/navbar.jsp" %>
 </head>
 <body>
 <h2><s:text name="Ouvrage detail"/></h2>
-
-<s:if test="#session.user">
-    <li>
-        <s:property value="#session.user.username"/>
-    </li>
-</s:if>
 
     <table>
         <tbody>
@@ -35,7 +29,7 @@
             <td><s:property value="ouvrage.nombrePages"/></td>
         </tr>
         <tr>
-            <td><s:text name="Nombre d'exemplaires disponibles"/></td>
+            <td><s:text name="Nombre d/'exemplaires disponibles"/></td>
             <td><s:property value="ouvrage.nombreExemplairesDispo"/></td>
         </tr>
         <tr>
@@ -60,5 +54,6 @@
         <%--</tr>--%>
         </tbody>
     </table>
+    
 </body>
 </html>

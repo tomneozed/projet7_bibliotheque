@@ -12,23 +12,19 @@
     <title>Loans List</title>
 </head>
 <body>
+<header>
+    <%@ include file="../_include/navbar.jsp" %>
+</header>
     <h2><s:text name="Loans List"/></h2>
-        <s:if test="#session.user">
-        <li>
-            <s:property value="#session.user.username"/>
-            <s:a action="logout">Logout</s:a>
-        </li>
-
         <ul>
             <s:iterator value="loansList">
                 <li>
                     <s:a action="loan_detail">
                         <s:param name="loanId" value="id"/>
-                        <s:property value="ouvrage.titre"/>
+                        <s:property value="dateDebutPret"/>
                     </s:a>
                 </li>
             </s:iterator>
         </ul>
-    </s:if>
 </body>
 </html>

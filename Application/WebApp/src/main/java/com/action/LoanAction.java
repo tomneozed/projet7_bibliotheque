@@ -1,8 +1,12 @@
 package com.action;
 
+import com.model.User;
 import com.opensymphony.xwork2.ActionContext;
+import com.ws.OuvragePojo;
 import com.ws.PretPojo;
 import com.ws.PretResponse;
+import com.ws.UtilisateurResponse;
+
 import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.ArrayList;
@@ -22,6 +26,8 @@ public class LoanAction extends AbstractAction implements SessionAware {
     private Map<String, Object> session;
 
     private PretPojo loan;
+    
+    private OuvragePojo ouvrage;
 
 
     //=========  GETTERS & SETTERS  =========
@@ -66,14 +72,29 @@ public class LoanAction extends AbstractAction implements SessionAware {
 		this.loan = loan;
 	}
     
+	public OuvragePojo getOuvrage() {
+		return ouvrage;
+	}
 
+	public void setOuvrage(OuvragePojo ouvrage) {
+		this.ouvrage = ouvrage;
+	}
+	
     //=========  METHODS  =========
-	/*
-    public String doListByUser()
+	
+	public String doListByUser()
     {
-        userLoans = getBibliothekServiceService().userLoansByPseudo("alainTerrieur");
+        PretResponse allLoans = getBibliothekService().allLoans();
+        User user = (User) session.get("user");
+        
+        for(int i = 0; i < allLoans.getPrets().size(); i++){
+        	PretPojo loan = allLoans.getPrets().get(i);
+        	if(loan != null && loan.getIdUtilisateur() == user.getId()) {
+        		loansList.add(loan);
+        	}
+        }
 
-        loansList = userLoans.getPretBeanList();
+        //loansList = userLoans.getPretBeanList();
 
         if(loansList.size() == 0)
         {
@@ -89,16 +110,19 @@ public class LoanAction extends AbstractAction implements SessionAware {
 
 	public String doDetail()
     {
-        userLoans = getBibliothekService().userLoansByPseudo("alainTerrieur");
+        //userLoans = getBibliothekService().userLoansByPseudo("alainTerrieur");
 
-        loansList = (List<PretBean>)session.get("userLoanList");
+        loansList = (List<PretPojo>)session.get("userLoanList");
         if(!loansList.isEmpty())
         {
-            for (PretBean p : loansList) {
+        	//loan = loansList.get(loanId);
+            for (PretPojo p : loansList) {
                 if(p.getId() == loanId){
                     loan = p;
                 }
             }
+            
+            ouvrage = getBibliothekService().getOuvrage(loan.getIdOuvrage()).getOuvrages().get(0);
         }
         if(loan == null)
         {
@@ -109,7 +133,7 @@ public class LoanAction extends AbstractAction implements SessionAware {
             return SUCCESS;
         }
     }
-
+    /*
     public String doExtend()
     {
         if(getLoanId() > 0)
@@ -118,6 +142,5 @@ public class LoanAction extends AbstractAction implements SessionAware {
             return SUCCESS;
         }
         return ERROR;
-    }
-	*/
+    }*/
 }

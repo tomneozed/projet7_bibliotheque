@@ -79,7 +79,7 @@ public class PretDaoImpl extends AbstractDao implements PretDao {
 	}
 	
 	public void majDisponibilite(List<PretPojo> prets) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("/resources/spring.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("/spring.xml");
 		OuvrageDao ouvrageDao = (OuvrageDao) context.getBean("ouvrageDAO");
 		
 		List<OuvragePojo> ouvrages = ouvrageDao.findAll();

@@ -41,21 +41,39 @@ public class LoginAction extends AbstractAction implements ModelDriven<User>, Se
     public String doLogin()
     {
         String vResult = ActionSupport.INPUT;
+        if(session.get("error") != null) {
+        	session.remove("error");
+        }
+        //= ActionSupport.INPUT;
+        if(user.getUsername().length() == 0 || user.getPassword().length() == 0) {
+        	String error = "Login ou password non renseigné";
+        	session.put("error", error);
+        	return vResult;
+        }
         UtilisateurResponse userbean ;
-        userbean = getBibliothekService().identification(user.getUsername(), user.getPassword());
+    	userbean = getBibliothekService().identification(user.getUsername(), user.getPassword());
         LoginService loginService = new LoginService();
 
         if(userbean != null)
         {
+        	user.setId(userbean.getUtilisateurs().get(0).getId());
             session = ActionContext.getContext().getSession();
             session.put("user", user);
-            System.out.println(user);
+            System.out.println(session.get("user"));
             vResult = ActionSupport.SUCCESS;
         }else
         {
-            vResult = ActionSupport.LOGIN;
+        	String error = "Login ou password incorrect";
+        	session.put("error", error);
+            vResult = ActionSupport.INPUT;
         }
         return vResult;
+    }
+    
+    public String goToPage() {
+    	return ActionSupport.INPUT;
+    	//System.out.print(session.get("user"));
+    	//return ActionSupport.SUCCESS;
     }
 
     public String doLogout() {

@@ -19,6 +19,11 @@
             <result name="input">/jsp/login.jsp</result>
             <result name="success" type="redirectAction">index</result>
         </action>
+        <action name="goToLoginPage"
+                class="com.action.LoginAction"
+                method="goToPage">
+            <result name="input">/jsp/login.jsp</result>
+        </action>
         <action name="currentLoans"
                 class="com.action.LoanAction"
                 method="doListByUser">
@@ -52,7 +57,7 @@
         <action name="ouvrage_detail"
                 class="com.action.OuvragesAction"
                 method="doDetail">
-            <result name="success">/jsp/ouvrage_detail.jsp</result>
+            <result name="success">/jsp/ouvrage/ouvrage_detail.jsp</result>
             <result name="error">/jsp/error.jsp</result>
         </action>
   </package>

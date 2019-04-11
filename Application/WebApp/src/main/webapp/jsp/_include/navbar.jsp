@@ -24,7 +24,7 @@
     </s:if>
     <s:else>
         <li>
-            <s:a action="login">Login</s:a>
+            <s:a action="goToLoginPage">Login</s:a>
         </li>
     </s:else>
 </ul>
