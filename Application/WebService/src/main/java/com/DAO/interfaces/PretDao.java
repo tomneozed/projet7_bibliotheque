@@ -19,5 +19,9 @@ public interface PretDao {
 	
 	void majPrets();
 	
+	PretPojo extendLoan(PretPojo pret) throws DaoException;
+	
+	PretPojo returnLoan(PretPojo pret) throws DaoException;
+	
 	List<PretPojo> notRenderedLoans();
 }

@@ -12,22 +12,20 @@
     <%@ include file="../_include/navbar.jsp" %>
 </head>
 <body>
-<h2><s:text name="Detail de l'ouvrage"/></h2>
+<div class="container">
+	<h2 class="text-center"><s:text name="Detail de l ouvrage"/></h2>
+	
 	<s:if test="#session.user && ouvrage.nombreExemplairesDispo > 0">
         <s:a action="new_loan">
-	  		<s:param name="ouvrageId" value="ouvrageId"></s:param>
+	  		<s:param name="ouvrageId" value="ouvrage.id"></s:param>
 	      	<s:text name="Reserver cet ouvrage"/>
         </s:a>
     </s:if>
     <s:if test="ouvrage.nombreExemplairesDispo == 0">
     	<s:text name="Plus d'exemplaires disponibles"/>
     </s:if>
-    <table>
+    <table class="table bordered">
         <tbody>
-        <tr>
-            <td><s:text name="OuvrageID"/></td>
-            <td><s:property value="ouvrageId"/></td>
-        </tr>
         <tr>
             <td><s:text name="Titre"/></td>
             <td><s:property value="ouvrage.titre"/></td>
@@ -41,7 +39,7 @@
             <td><s:property value="ouvrage.nombrePages"/></td>
         </tr>
         <tr>
-            <td><s:text name="Nombre d'exemplaires disponibles"/></td>
+            <td><s:text name="Nombre d exemplaires disponibles"/></td>
             <td><s:property value="ouvrage.nombreExemplairesDispo"/></td>
         </tr>
         <tr>
@@ -54,6 +52,6 @@
         </tr>
         </tbody>
     </table>
-    
+</div>    
 </body>
 </html>

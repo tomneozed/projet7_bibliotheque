@@ -17,7 +17,7 @@
     <%@ include file="../_include/navbar.jsp" %>
 </header>
 <s:if test="#session.user">
-    <table>
+    <table class="table bordered">
         <tbody>
             <tr>
                 <td><s:text name="Titre"/></td>
@@ -27,23 +27,29 @@
                 <td><s:text name="Date debut pret"/></td>
                 <td><s:property value="loan.dateDebutPret"/></td>
             </tr>
-            <s:if test="!loan.prolongation">
-            	<tr>
-	                <td><s:text name="Date fin pret"/></td>
-	                <td><s:property value="loan.dateFinPret"/></td>
-	            </tr>
-            </s:if>
+           	<tr>
+                <td><s:text name="Date fin pret"/></td>
+                <td><s:property value="loan.dateFinPret"/></td>
+            </tr>
+            <tr>
+                <td><s:text name="Etat"/></td>
+                <td><s:property value="loan.etat"/></td>
+            </tr>
             <tr>
                 <td><s:text name="Prolonger"/></td>
-                <s:if test="loan.prolongation">
+                <s:if test="!loan.prolongation && loan.etat !='rendu'">
                     <td><s:a action = "extend_loan">
                             <s:param name="loanId" value="loan.id"/>
                         <s:text name="Prolonger"/>
-                        </s:a></td>
+                        </s:a>
+                   	</td>
                 </s:if>
-                <s:else>
-                    <td><s:text name="Impossible de prolonger ce pret"/></td>
-                </s:else>
+                <s:elseif test="loan.prolongation">
+                    <td><s:text name="Pret deja prolonge"/></td>
+                </s:elseif>
+                 <s:elseif test="loan.etat == 'rendu'">
+                    <td><s:text name="Pret rendu"/></td>
+                </s:elseif>
             </tr>
         </tbody>
     </table>

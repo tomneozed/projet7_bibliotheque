@@ -7,6 +7,7 @@ import com.ws.OuvragePojo;
 import com.ws.OuvrageResponse;
 import org.apache.struts2.interceptor.SessionAware;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -14,13 +15,13 @@ public class OuvragesAction extends AbstractAction implements SessionAware {
 
     //=========  ATTRIBUTES  =========
     private List<OuvragePojo> ouvrageList;
-    private OuvrageResponse ouvragesResearch;
+    private List<OuvragePojo> ouvragesResearch;
     private int ouvrageId;
     private OuvragePojo ouvrage;
     private Map<String, Object> session;
     private String research;
 
-    //=========  GETTERS & SETTERS  =========
+	//=========  GETTERS & SETTERS  =========
     public List<OuvragePojo> getOuvrageList() {
 		return ouvrageList;
 	}
@@ -29,11 +30,11 @@ public class OuvragesAction extends AbstractAction implements SessionAware {
 		this.ouvrageList = ouvrageList;
 	}
 
-	public OuvrageResponse getOuvragesResearch() {
+	public List<OuvragePojo> getOuvragesResearch() {
 		return ouvragesResearch;
 	}
 
-	public void setOuvragesResearch(OuvrageResponse ouvragesResearch) {
+	public void setOuvragesResearch(List<OuvragePojo> ouvragesResearch) {
 		this.ouvragesResearch = ouvragesResearch;
 	}
 
@@ -104,22 +105,33 @@ public class OuvragesAction extends AbstractAction implements SessionAware {
         }
     }
 
-	/*
     public String doResearch()
     {
-        ouvragesResearch = getBibliothekService().ouvragesSearch("Harry");
+    	if(research == null || research.isEmpty())
+    	{
+    		addActionError("Veuillez entrer une recherche");
+            return ActionSupport.ERROR;
+    	}
+    	
+    	ouvrageList = getBibliothekService().allOuvrages().getOuvrages();
+    	
+    	ouvragesResearch = new ArrayList<OuvragePojo>();
+    	for(OuvragePojo o : ouvrageList) {
+    		if(o.getTitre().toLowerCase().contains(research.toLowerCase())) {
+    			ouvragesResearch.add(o);
+    		}
+    	}
 
-        ouvrageList = ouvragesResearch.getOuvrages();
-
-        if(ouvrageList.isEmpty())
+        if(ouvragesResearch.isEmpty() || research.isEmpty())
         {
+        	addActionError("Pas d'ouvrage correspondant a la recherche");
             return ActionSupport.ERROR;
         }else
         {
+        	ouvrageList = ouvragesResearch;
             session = ActionContext.getContext().getSession();
             session.put("ouvragesResearch", ouvrageList);
             return ActionSupport.SUCCESS;
         }
     }
-    */
 }

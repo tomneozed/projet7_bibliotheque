@@ -59,6 +59,36 @@ public class PretDaoImpl extends AbstractDao implements PretDao {
 		return notRenderedLoans;
 	}
 	
+	public PretPojo extendLoan(PretPojo pret) throws DaoException {
+		try {
+			//pret.isProlongation() == false : non prolongé
+			if(!pret.isProlongation()) {
+				 pret.setProlongation(true);
+				 Calendar calendar = Calendar.getInstance();
+				 calendar.setTime(pret.getDateFinPret());
+				 calendar.add(Calendar.WEEK_OF_MONTH, 2);
+				 Date dateFinPret = calendar.getTime();
+				 pret.setDateFinPret(dateFinPret);
+				 this.update(pret);
+				 
+			}
+		}catch(DaoException e) {
+			e.printStackTrace();
+		}
+		return pret;
+	}
+	
+	@Override
+	public PretPojo returnLoan(PretPojo pret) throws DaoException {
+		try {
+			pret.setEtat("rendu");
+			this.update(pret);
+		}catch(DaoException e) {
+			e.printStackTrace();
+		}
+		return pret;
+	}
+	
 	public void majPrets() {
 		List<PretPojo> pretPojoList = findAll();
 		if(pretPojoList != null) {
@@ -99,9 +129,4 @@ public class PretDaoImpl extends AbstractDao implements PretDao {
 			}
 		}
 	}
-	
-//	public List<PretPojo> findAllByUser(UtilisateurPojo utilisateur) throws DaoException{
-//		return super.findAllPretByUtilisateur(utilisateur);
-//	}
-
 }

@@ -197,16 +197,29 @@ public class LoanAction extends AbstractAction implements SessionAware {
         }
     }
 	
-    /*
+    
     public String doExtend()
     {
         if(getLoanId() > 0)
         {
-            getBibliothekService().extendLoan(loanId);
+            PretResponse pr = getBibliothekService().extendLoan(loanId);
+            this.loan = getBibliothekService().getLoan(loanId).getPrets().get(0);
+            ouvrage = getBibliothekService().getOuvrage(loan.getIdOuvrage()).getOuvrages().get(0);
             return SUCCESS;
         }
         return ERROR;
-    }*/
+    }
+    
+    public String doReturn()
+    {
+    	if(getLoanId() > 0) {
+    		PretResponse pr = getBibliothekService().loanReturn(loanId);
+    		this.loan = getBibliothekService().getLoan(loanId).getPrets().get(0);
+    		ouvrage = getBibliothekService().getOuvrage(loan.getIdOuvrage()).getOuvrages().get(0);
+    		return SUCCESS;
+    	}
+    	return ERROR;
+    }
 	
 	
 	public String doCreateLoan() {

@@ -15,13 +15,38 @@
 <header>
     <%@include file="_include/navbar.jsp"%>
 </header>
-<s:form action="login">
-    <s:textfield label="Login " key="user.username" />
-    <s:password label="Mot de passe " key="user.password" />
-    <s:submit />
-    <s:if test="#session.error">
-    	<s:property value="#session.error.error"/>
-    </s:if>
-</s:form>
+	<s:form action="login" theme="simple" cssClass="form-search">
+		<div class="row">
+			<div class="col-md-5"></div>
+			<div class="col-md-2">
+				<s:textfield placeholder="Login" label="Login" key="user.username" class="form-control"/>
+			</div>
+		    <div class="col-md-5"></div>
+	    </div>
+	    <div class="row">
+	    	<div class="col-md-5"></div>
+		    <div class="col-md-2">
+		    	<s:password placeholder="mot de passe" label="Mot de passe " key="user.password" class="form-control"/>
+		    </div>
+		    <div class="col-md-5"></div>
+	    </div>
+	    <div class="row">
+	    	<div class="col-md-5"></div>
+	    	<div class="col-md-2">
+	    		<s:submit class="btn btn-primary"/>
+	    	</div>
+	    	<div class="col-md-5"></div>
+	    </div>
+	    <s:if test="hasActionErrors()">
+	    	<br/>
+		    <div class="row">
+		    	<div class="col-md-5"></div>
+		    	<div class="col-md-2">
+		    		<s:actionerror/>
+		    	</div>
+		    	<div class="col-md-5"></div>
+		    </div>
+	    </s:if>
+	</s:form>
 </body>
 </html>

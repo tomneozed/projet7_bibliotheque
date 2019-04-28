@@ -122,84 +122,7 @@ public class AbstractDao {
         }
         return objects;
     }
-
-
-//    protected Object findByPseudo(String pseudo) throws DaoException
-//    {
-//        Object object = null;
-//        try{
-//            startOperation();
-//            object = session.createQuery("from utilisateur where pseudo = :pseudo").setParameter("pseudo", pseudo).getSingleResult();
-//            if(object == null)
-//            {
-//                throw new DaoException("Pseudo " + pseudo +" doesn't seems to correspond to any object from the database " );
-//            }
-//            transaction.commit();
-//        }catch(HibernateException e)
-//        {
-//            handleException(e);
-//        }finally{
-//            HibernateFactory.close(session);
-//        }
-//        return object;
-//    }
-
-//    protected List<PretPojo> findAllPretByUtilisateur(UtilisateurPojo util) throws DaoException
-//    {
-//        List<PretPojo> pretPojos = null;
-//        try{
-//            startOperation();
-//            pretPojos = session.createQuery("from pret where idUtilisateur = :idUtil").setParameter("idUtil", util.getId()).getResultList();
-//            if(pretPojos.isEmpty())
-//            {
-//                throw new DaoException("There is no loan for the user : " + util.getNom()+ " " + util.getPrenom()) ;
-//            }
-//            transaction.commit();
-//        }catch(HibernateException e)
-//        {
-//            handleException(e);
-//        }finally{
-//            HibernateFactory.close(session);
-//        }
-//        return pretPojos;
-//    }
-
-//    protected List<OuvragePojo> findAllByParam(String param) throws DaoException{
-//        List<OuvragePojo> ouvragePojos = new ArrayList<>();
-//        List<OuvragePojo> ouvragePojosByTitre ;
-//        List<AuteurPojo> auteurPojoList;
-//        String params[] = param.split(" ");
-//
-//
-//        try{
-//            startOperation();
-//
-//            for(int i = 0; i< params.length; i++)
-//            {
-//                params[i] = params[i].toLowerCase();
-//                params[i] = "%"+params[i]+"%";
-//                ouvragePojosByTitre = session.createQuery("from ouvrage where lower(titre) like :param").setParameter("param", params[i]).getResultList();
-//                auteurPojoList = session.createQuery("from auteur where lower(nom) like :param or lower(prenom) like :param").setParameter("param", params[i]).getResultList();
-//
-//                ouvragePojos = addList(ouvragePojos, ouvragePojosByTitre, auteurPojoList);
-//            }
-//
-//
-//            if(ouvragePojos.isEmpty())
-//            {
-//                throw new DaoException(param + " doesn't seems to correspond to any object from the database" ) ;
-//            }
-//            transaction.commit();
-//        }catch(HibernateException e)
-//        {
-//            handleException(e);
-//        }finally{
-//            HibernateFactory.close(session);
-//        }
-//        return ouvragePojos;
-//    }
-
-
+    
     /**
      * Rollbaks current Transaction and throws DaoException
      * @param e
@@ -219,48 +142,6 @@ public class AbstractDao {
         transaction = session.beginTransaction();
     }
 
-//    private List<OuvragePojo> addList(List<OuvragePojo> ouvragePojoARetourner, List<OuvragePojo> ouvragePojoList, List<AuteurPojo> auteurPojoList)
-//    {
-//        if(!auteurPojoList.isEmpty())
-//        {
-//            for(int i = 0; i < auteurPojoList.size(); i++)
-//            {
-//                for(int j = 0; j < auteurPojoList.get(i).getOuvragePojos().size(); j++)
-//                {
-//                    if(!ouvragePojoARetourner.isEmpty()){
-//
-//                        if(!ouvragePojoARetourner.contains(auteurPojoList.get(i).getOuvragePojos().get(j)))
-//                        {
-//                            ouvragePojoARetourner.add(auteurPojoList.get(i).getOuvragePojos().get(j));
-//                        }
-//                    }else{
-//                        ouvragePojoARetourner.add(auteurPojoList.get(i).getOuvragePojos().get(j));
-//                    }
-//
-//                }
-//            }
-//        }
-//
-//        if(!ouvragePojoList.isEmpty())
-//        {
-//            for(int i = 0; i < ouvragePojoList.size(); i++)
-//            {
-//                if(!ouvragePojoARetourner.isEmpty())
-//                {
-//                    if(!ouvragePojoARetourner.contains(ouvragePojoList.get(i)))
-//                    {
-//                        ouvragePojoARetourner.add(ouvragePojoList.get(i));
-//                    }
-//                }else{
-//                    ouvragePojoARetourner.add(ouvragePojoList.get(i));
-//                }
-//            }
-//        }
-//
-//        return ouvragePojoARetourner;
-//    }
-
-
     private String parsePojo(String str)
     {
         String value ="";
@@ -270,5 +151,4 @@ public class AbstractDao {
         }
         return value;
     }
-	
 }

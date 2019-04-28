@@ -47,7 +47,7 @@ public class LoginAction extends AbstractAction implements ModelDriven<User>, Se
         //= ActionSupport.INPUT;
         if(user.getUsername().length() == 0 || user.getPassword().length() == 0) {
         	String error = "Login ou password non renseigné";
-        	session.put("error", error);
+        	addActionError(error);
         	return vResult;
         }
         UtilisateurResponse userbean ;

@@ -1,13 +1,14 @@
 package com.batch;
 
-import generated.bibliothekservice.BibliothekService;
-import generated.bibliothekservice.PretResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
+
+import com.ws.BibliothekService;
+import com.ws.UtilisateurPojo;
 
 import java.io.File;
 import java.util.Properties;
@@ -46,11 +47,17 @@ public class SendMail {
         int i;
         if(bibliothek != null)
         {
-            if(bibliothek.notRenderedLoans().getPretBeanList().size() > 0)
+            if(bibliothek.notRenderedLoans().getPrets().size() > 0)
             {
-                for(i = 0; i < bibliothek.notRenderedLoans().getPretBeanList().size(); i++)
+                for(i = 0; i < bibliothek.notRenderedLoans().getPrets().size(); i++)
                 {
-                    sendNotification(bibliothek.notRenderedLoans().getPretBeanList().get(0).getUtilisateurPojo().getEmail());
+                	int idUtilisateur = 0;
+                	idUtilisateur = bibliothek.notRenderedLoans().getPrets().get(0).getIdUtilisateur();
+                	UtilisateurPojo user = bibliothek.getUser(idUtilisateur).getUtilisateurs().get(0);
+                	if(user != null) {
+                		sendNotification(user.getEmail());
+                	}
+                    
                 }
                 logger.info("Emails sent to " + (i+1) + " persons ");
             }else

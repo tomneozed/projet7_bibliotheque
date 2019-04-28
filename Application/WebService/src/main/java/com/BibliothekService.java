@@ -206,6 +206,27 @@ public class BibliothekService {
 		return id;
 	}
 	
+	//Updates loan 
+	@WebMethod
+	public PretResponse extendLoan(int id) {
+		initBeans();
+		pretDao.majPrets();
+		pretPojo = pretDao.findById(id);
+		if(pretPojo == null) {
+			pretResponse.setErrorMessage("Pret inexistant");
+			pretResponse.setErrorType(2);
+		}
+		
+		if(pretPojo.isProlongation()) {
+			pretResponse.setErrorMessage("Pret deja prolonge");
+			pretResponse.setErrorType(2);
+		}else {
+			pretPojo = pretDao.extendLoan(pretPojo); 
+		}
+		pretResponse.getPrets().add(pretPojo);
+		return pretResponse;
+	}
+	
 	//Gets all loans
 	@WebMethod
 	public PretResponse allLoans() {
@@ -251,8 +272,25 @@ public class BibliothekService {
 	}
 	
 	//Returns loan
+	@WebMethod
 	public PretResponse loanReturn(int id) {
-		return new PretResponse();
+		initBeans();
+		pretDao.majPrets();
+		pretPojo = pretDao.findById(id);
+		if(pretPojo == null) {
+			pretResponse.setErrorMessage("Pret inexistant");
+			pretResponse.setErrorType(2);
+		}
+		
+		if(pretPojo.getEtat() == "rendu") {
+			pretResponse.setErrorMessage("Pret deja rendu");
+			pretResponse.setErrorType(2);
+		}else {
+			pretPojo = pretDao.returnLoan(pretPojo); 
+		}
+		pretResponse.getPrets().add(pretPojo);
+		pretDao.majPrets();
+		return pretResponse;
 	}
 	
 	/************ UTILISATEUR CRUD ************/
@@ -274,9 +312,17 @@ public class BibliothekService {
 		}
 		return utilisateurResponse;
 	}
-}
-
 	
-
-
-
+	//Returns the specified user
+	@WebMethod
+	public UtilisateurResponse getUser(int userId) {
+		initBeans();
+		try {
+			utilisateurResponse.getUtilisateurs().add(utilisateurDao.findById(userId));
+		}catch(HibernateException e) {
+			utilisateurResponse.setErrorType(2);
+			utilisateurResponse.setErrorMessage(e.getMessage());
+		}
+		return utilisateurResponse;
+	}
+}

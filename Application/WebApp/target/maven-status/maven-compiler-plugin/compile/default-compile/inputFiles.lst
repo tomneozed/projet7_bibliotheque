@@ -19,6 +19,7 @@ C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\mai
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\DeleteOuvrage.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\AllAuteursResponse.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\CreateAuteurResponse.java
+C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\ExtendLoanResponse.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\PretResponse.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\action\LoginAction.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\CreateAuteur.java
@@ -36,8 +37,10 @@ C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\mai
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\LoanReturnResponse.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\BibliothekService.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\CreateOuvrage.java
+C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\model\LoanToDisplay.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\AllOuvrages.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\GetOuvrageResponse.java
+C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\ExtendLoan.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\UtilisateurResponse.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\AllAuteurs.java
 C:\Users\Thomas\Documents\GitHub\projet7_bibliotheque\Application\WebApp\src\main\java\com\ws\GetLoanResponse.java
