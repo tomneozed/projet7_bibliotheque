@@ -47,7 +47,7 @@ public class PretDaoImpl extends AbstractDao implements PretDao {
 	
 	public List<PretPojo> notRenderedLoans() throws DaoException {
 		List<PretPojo> allLoans = findAll();
-		List<PretPojo> notRenderedLoans = null;
+		List<PretPojo> notRenderedLoans = new ArrayList<PretPojo>();
 		for(PretPojo pret : allLoans) {
 			if(pret.getEtat().equals("non rendu")) {
 				notRenderedLoans.add(pret);

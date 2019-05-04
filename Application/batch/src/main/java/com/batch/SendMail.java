@@ -8,9 +8,14 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 import com.ws.BibliothekService;
+import com.ws.BibliothekServiceService;
+import com.ws.PretPojo;
+import com.ws.PretResponse;
 import com.ws.UtilisateurPojo;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class SendMail {
@@ -18,8 +23,9 @@ public class SendMail {
     @Autowired
     private JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
 
-    @Autowired
-    private BibliothekService bibliothek;
+    BibliothekServiceService bibliothekServiceService = new BibliothekServiceService();
+    
+    private BibliothekService bibliothekService = bibliothekServiceService.getBibliothekServicePort();
 
     //Logger
     private static final Logger logger = LogManager.getLogger(SendMail.class);
@@ -45,19 +51,29 @@ public class SendMail {
     public void sendMailToThieves()
     {
         int i;
-        if(bibliothek != null)
-        {
-            if(bibliothek.notRenderedLoans().getPrets().size() > 0)
+        if(bibliothekService != null)
+        {        	
+        	//List<PretPojo> pr = bibliothekService.notRenderedLoans().getPrets();
+        	List<PretPojo> allLoans = bibliothekService.allLoans().getPrets();
+        	List<PretPojo> notRenderedLoans = new ArrayList<PretPojo>();
+        	for(PretPojo p : allLoans) {
+        		if(p.getEtat().equals("non rendu"))
+        		{
+        			notRenderedLoans.add(p);
+        		}
+        	}
+        	
+        	System.out.println(allLoans.size());
+            if(notRenderedLoans.size() > 0)
             {
-                for(i = 0; i < bibliothek.notRenderedLoans().getPrets().size(); i++)
+                for(i = 0; i < notRenderedLoans.size(); i++)
                 {
                 	int idUtilisateur = 0;
-                	idUtilisateur = bibliothek.notRenderedLoans().getPrets().get(0).getIdUtilisateur();
-                	UtilisateurPojo user = bibliothek.getUser(idUtilisateur).getUtilisateurs().get(0);
+                	idUtilisateur = bibliothekService.notRenderedLoans().getPrets().get(0).getIdUtilisateur();
+                	UtilisateurPojo user = bibliothekService.getUser(idUtilisateur).getUtilisateurs().get(0);
                 	if(user != null) {
                 		sendNotification(user.getEmail());
                 	}
-                    
                 }
                 logger.info("Emails sent to " + (i+1) + " persons ");
             }else
