@@ -190,21 +190,21 @@
    </folder>
   </table>
   <relationships>
-   <relationship id="REL53" populated="true" UUID="a98715cb-eb00-49d6-aac1-701689315799" deferrability="7" deleteRule="3" fk-table-ref="TAB23" fkCardinality="7" identifying="false" name="Ouvrage_Pret_fk" physicalName="ouvrage_pret_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+   <relationship id="REL53" populated="true" UUID="a98715cb-eb00-49d6-aac1-701689315799" deferrability="7" deleteRule="3" fk-table-ref="TAB23" fkCardinality="7" identifying="false" name="Ouvrage_Pret_fk" physicalName="Ouvrage_Pret_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP54" populated="true" UUID="cd5ccfc5-42cf-4b84-bf6a-e38925291cb5" fk-column-ref="COL30" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL55" populated="true" UUID="63fd4d59-89f6-45ce-b221-97dd66f4401d" deferrability="7" deleteRule="3" fk-table-ref="TAB47" fkCardinality="7" identifying="false" name="Ouvrage_Auteur_Ouvrage_fk" physicalName="ouvrage_auteur_ouvrage_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+   <relationship id="REL55" populated="true" UUID="63fd4d59-89f6-45ce-b221-97dd66f4401d" deferrability="7" deleteRule="3" fk-table-ref="TAB47" fkCardinality="7" identifying="false" name="Ouvrage_Auteur_Ouvrage_fk" physicalName="Ouvrage_Auteur_Ouvrage_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP56" populated="true" UUID="912cf5a1-006a-4629-9a2e-8f37c361816f" fk-column-ref="COL49" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL57" populated="true" UUID="601665b1-8544-4c9a-a9d8-4a5ab6a1a0d6" deferrability="7" deleteRule="3" fk-table-ref="TAB47" fkCardinality="7" identifying="false" name="Auteur_Auteur_Ouvrage_fk" physicalName="auteur_auteur_ouvrage_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="3" >
+   <relationship id="REL57" populated="true" UUID="601665b1-8544-4c9a-a9d8-4a5ab6a1a0d6" deferrability="7" deleteRule="3" fk-table-ref="TAB47" fkCardinality="7" identifying="false" name="Auteur_Auteur_Ouvrage_fk" physicalName="Auteur_Auteur_Ouvrage_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP58" populated="true" UUID="21a0da98-7f72-4502-9140-3d1833e2fd72" fk-column-ref="COL48" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL15" />
    </relationship>
-   <relationship id="REL59" populated="true" UUID="65926900-ac83-4239-bee3-f8dc5057de36" deferrability="7" deleteRule="3" fk-table-ref="TAB23" fkCardinality="7" identifying="false" name="Utilisateur_Pret_fk" physicalName="utilisateur_pret_fk" pk-table-ref="TAB33" pkCardinality="2" updateRule="3" >
+   <relationship id="REL59" populated="true" UUID="65926900-ac83-4239-bee3-f8dc5057de36" deferrability="7" deleteRule="3" fk-table-ref="TAB23" fkCardinality="7" identifying="false" name="Utilisateur_Pret_fk" physicalName="Utilisateur_Pret_fk" pk-table-ref="TAB33" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP60" populated="true" UUID="645626d1-3861-4a30-8660-f3d2e10d4ab6" fk-column-ref="COL29" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL34" />
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="true" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
