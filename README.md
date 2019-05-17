@@ -18,4 +18,11 @@ Le dossier **Conception** comprend 3 sous dossiers :
 
 * Dossier ***Scripts SQL*** qui contient les scripts sql de création de la base de données sous PostgreSQL
 
+Pour déployer l'application : 
+
+- Déployer le WebServcie.war sur tomcat
+
+- Déployer la WebApp.war sur tomcat
+
+- Déployer le batch.war sur tomcat
 
