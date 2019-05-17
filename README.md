@@ -20,9 +20,9 @@ Le dossier **Conception** comprend 3 sous dossiers :
 
 Pour déployer l'application : 
 
-- Déployer le WebServcie.war sur tomcat
+- Déployer le bibliothek.war contenu dans Application/WebService/target sur tomcat
 
-- Déployer la WebApp.war sur tomcat
+- Déployer la bibliothekWebapp.war contenu dans Application/WebApp/target sur tomcat
 
-- Déployer le batch.war sur tomcat
+- Lancer l'exécutable batch contenu dans Application/batch
 
